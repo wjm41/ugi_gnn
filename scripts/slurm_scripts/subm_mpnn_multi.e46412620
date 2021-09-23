@@ -1,0 +1,97 @@
+Using backend: pytorch
+Using backend: pytorch
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 313, in run
+    main(rank, dev_id, args)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 44, in main
+    y_train = pd.read_csv(args.path)['dock_score'].to_numpy()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 374, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File /rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv does not exist: '/rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv'
+Using backend: pytorch
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 313, in run
+    main(rank, dev_id, args)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 44, in main
+    y_train = pd.read_csv(args.path)['dock_score'].to_numpy()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 374, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File /rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv does not exist: '/rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv'
+Using backend: pytorch
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 313, in run
+    main(rank, dev_id, args)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 44, in main
+    y_train = pd.read_csv(args.path)['dock_score'].to_numpy()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 374, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File /rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv does not exist: '/rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv'
+Using backend: pytorch
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 313, in run
+    main(rank, dev_id, args)
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/scripts/mpnn_batched_multi.py", line 44, in main
+    y_train = pd.read_csv(args.path)['dock_score'].to_numpy()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.6/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 374, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File /rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv does not exist: '/rds-d2/user/wjm41/hpc-work/datasets/Ugis/ugis_processed.csv'

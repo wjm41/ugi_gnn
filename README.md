@@ -1,6 +1,10 @@
-# Constrained docking of 1.7M Ugi library from Alpha Lee
+# ugi_gnn
 
-## Manifest
+Using GNNs pretrained on docking scores to predict pIC50 for enrichment.
+
+## Constrained docking of 1.7M Ugi library from Alpha Lee
+
+### Manifest
 * `total_ugi_library.csv` - the Ugi library (SMILES)
 * `dock-all-chunks.sh` - LSF script to dock chunks of the library
 * `dock-chunk.py` - Python script to dock single chunk
@@ -14,7 +18,7 @@
 * `output/` - docked chunks in `.oeb` format
 * `docked/` - docked chunks in `.sdf.bz2` format
 
-## Docking the library
+### Docking the library
 
 ```bash
 # Create the environment
@@ -29,7 +33,7 @@ python combine-chunks.py --chunkprefix=output/ugis-* --output=combined.sdf.gz
 # TODO
 ```
 
-## Methodology
+### Methodology
 
 The Fragalysis X-ray structure `P0030` was used for protein and ligand reference structure.
 An OpenEye OEReceptor was generated using the OpenEye SpruceTK (as implemented in the [fah_prep](https://github.com/choderalab/fah_prep) pipeline) to prepare the un-aligned structure for docking, modeling the dimer with neutral catalytic dyad.
@@ -39,4 +43,3 @@ The resulting conformers were superimposed onto matching atoms of the reference 
 The top score from the resulting poses, as determined by Chemgauss4 (which accounts for steric and other interactions), was selected as the top-scoring pose for that protonation, tautomeric, and stereoisomer state and written out.
 The OpenEye Python Toolkit 2020.2.2 was used throughout.
 
-# ugi_gnn

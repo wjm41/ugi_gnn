@@ -1,0 +1,37 @@
+#!/bin/bash
+#SBATCH -J ugi_array
+#SBATCH -A LEE-WJM41-SL2-CPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --array=0-31
+#SBATCH --time=01:00:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --mail-type=ALL
+#SBATCH -p skylake-himem
+
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel7/default-peta4            # REQUIRED - loads the basic environment
+
+module load miniconda/3
+source activate felix_md
+#module load gcc/5
+#module load openbabel/2.4.0
+
+echo "This is job" $SLURM_ARRAY_TASK_ID
+if [ $SLURM_ARRAY_TASK_ID -lt 10 ]; then
+
+#while read fname; do
+#echo $fname
+python remove_stereo.py fold00$SLURM_ARRAY_TASK_ID
+#babel --append docking_score $fname.sdf $fname.can
+#done < fold00$SLURM_ARRAY_TASK_ID
+else 
+
+#while read fname; do
+#echo $fname
+python remove_stereo.py fold0$SLURM_ARRAY_TASK_ID
+#babel --append docking_score $fname.sdf $fname.can
+#done < fold0$SLURM_ARRAY_TASK_ID
+fi

@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -J subm_tautcan
+#SBATCH --time=12:00:00
+#SBATCH -A LEE-SL3-CPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --array=0-448
+#SBATCH --cpus-per-task=1
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=wjm41@cam.ac.uk
+##SBATCH --no-requeue
+#SBATCH -p cclake
+
+. /etc/profile.d/modules.sh
+module purge
+module load rhel7/default-ccl
+# module load rhel8/default-icl
+module load miniconda/3
+source activate felix_md
+
+DIR=/rds-d2/user/wjm41/hpc-work/datasets/Ugis
+
+python mpi_tautcan.py $DIR $SLURM_ARRAY_TASK_ID 448
+# mpirun -np 56 -ppn 56 python mpi_tautcan.py $DIR
+# mpirun -np 76 -ppn 76 python mpi_tautcan.py $DIR

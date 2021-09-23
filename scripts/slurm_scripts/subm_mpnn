@@ -1,0 +1,51 @@
+#!/bin/bash
+#SBATCH -J ugi_taut
+#SBATCH -A LEE-WJM41-SL2-GPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=12:00:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --mail-type=ALL
+#SBATCH --output=slurm_logs/ugi_taut.out
+#SBATCH -p pascal
+
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel7/default-gpu
+module load intel/bundles/complib/2019.3
+module unload cuda/8.0
+module load cuda/10.1
+
+module load miniconda/3
+source activate dgl_life
+
+DIR=/rds-d2/user/wjm41/hpc-work/datasets/Ugis
+model_dir=/rds-d2/user/wjm41/hpc-work/models
+load_name=ugi_taut/model_mol5632000.ckpt
+
+# python mpnn_batched.py -p $DIR/ugis_processed_new.csv \
+#                        -n_trials 1 -batch_size 1024 -n_epochs 150 -ts 0 -lr 1e-2 \
+#                        -save_name ugi_full \
+#                        -write_batch 10 \
+#                        -load_name $model_dir/$load_name
+
+python mpnn_batched.py -p $DIR/scripts/tautcan_lib.csv \
+                       -n_trials 1 -batch_size 1024 -n_epochs 150 -ts 0 -lr 1e-2 \
+                       -save_name ugi_taut \
+                       -write_batch 10 #\
+                       -load_name $model_dir/$load_name
+
+#python mpnn_batched.py -p $DIR/ugis_processed.csv -val_path $DIR/docked2/ugis_processed.csv -n_trials 1 -batch_size 1024 -n_epochs 3 -ts 0 -lr 1e-3 -save_name ugi_small_model #-load_name $model_dir/ugi_pretrained_smalllr/model_epoch_1.pt
+
+#model_dir=/rds-d2/user/wjm41/hpc-work/models/ugi_pretrained
+#python mpnn_batched.py -p $DIR/ugis_processed_new.csv -n_trials 1 -batch_size 1024 -n_epochs 3 -ts 0.1 -lr 1e-3 -test -save_name ugi_pretrained_new
+#python mpnn_batched_weighted.py -p $DIR/ugis_processed_new.csv -n_trials 1 -batch_size 1024 -n_epochs 3 -ts 0 -lr 1e-5 -save_name ugi_pretrained_smalllr
+#python mpnn_batched_weighted.py -p $DIR/ugis_weighted_split.csv -n_trials 1 -batch_size 1024 -n_epochs 3 -ts 0 -lr 5e-3 -save_name ugi_weighted_split -load_name $model_dir/ugi_weighted_split/model_mol8245428.pt
+#python mpnn_batched_weighted.py -p $DIR/ugis_weighted_all.csv -n_trials 1 -batch_size 1024 -n_epochs 3 -ts 0 -lr 5e-3 -save_name ugi_weighted_all -load_name $model_dir/ugi_weighted_all/model_mol8254904.pt
+#python mpnn_batched.py -p $DIR/big_test.csv -n_trials 1 -batch_size 1024 -n_epochs 150 -ts 0 -lr 1e-2 -save_name big_test -val_path $DIR/docked2/ugis_processed.csv -write_batch 10 #-load_name $model_dir/model_epoch_1.pt
+#python mpnn_batched.py -p $DIR/docked2/ugis_processed.csv -n_trials 1 -batch_size 1024 -n_epochs 150 -ts 0 -lr 1e-2 -save_name val_test -val_path $DIR/docked2/ugis_processed.csv -write_batch 10 #-load_name $model_dir/model_epoch_1.pt
+#python mpnn_batched.py -p $DIR/ugis_processed_new.csv -n_trials 1 -batch_size 1024 -n_epochs 150 -ts 0 -lr 1e-2 -save_name goodlr_big -val_path $DIR/docked2/ugis_processed.csv -write_batch 10 #-load_name $model_dir/model_epoch_1.pt
+#python mpnn_batched_unweight.py -p $DIR/ugis_processed.csv -n_trials 1 -batch_size 1024 -n_epochs 150 -ts 0 -lr 1e-2 -save_name unweight -val_path $DIR/docked2/ugis_processed.csv -write_batch 10 #-load_name $model_dir/model_epoch_1.pt
+#python mpnn_genfps.py -p $DIR/ugis_processed.csv -save_name ugi_docked.npy
+#python mpnn_predict.py -p $DIR/ugis_processed.csv -tp $DIR/docked2/ugis_processed.csv

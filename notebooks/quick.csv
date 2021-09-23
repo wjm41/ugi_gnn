@@ -1,0 +1,7 @@
+SMILES
+O=C(c1[nH]cnc1)N(C(c2cnccc2)C(NCCc3cc(F)ccc3)=O)c4ccc(OC(C)C)cc4
+O=C(c1[nH]cnc1)N(C(c2cnccc2)C(NCCc3cc(F)ccc3)=O)c4ccc(OC5CCC5)cc4
+O=C(c1[nH]cnc1)N(C(c2cnccc2)C(NCCc3cc(F)ccc3)=O)c4ccc(C(C)(C)C)cc4
+O=C(c1[nH]cnc1)N(C(c2cnccc2)C(NCCc3cc(F)ccc3)=O)c4ccc(CC5COC5)cc4
+O=C(c1[nH]cnc1)N(C(c2cnccc2)C(NCCc3cc(F)ccc3)=O)c4ccc(C5COC5)cc4
+CC(C)Oc1ccc(cc1)N(C(C(=O)NCCc1cccc(F)c1)c1cccnc1)C(=O)c1c[nH]cn1
