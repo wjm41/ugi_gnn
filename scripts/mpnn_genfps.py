@@ -149,7 +149,7 @@ if __name__ == '__main__':
     parser.add_argument('-save', '--save', type=store_true,
                         help='Whether or not to save the fingerprint as a .npy file')
     parser.add_argument('-save_name', '--save_name', type=str, default='ugi_mpnn_fps.npy',
-                        help='name for .npy file with saved ugi fingerprint')
+                        help='name for .npy file with saved ugi')
     parser.add_argument('-load_name', '--load_name', default=model_dir + '/model_mol8517741.pt',
                         help='name for directory containing saved model params and tensorboard logs')
 

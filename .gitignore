@@ -1,0 +1,15 @@
+.ipynb_checkpoints/
+
+attic/
+datasets/
+docked/
+docked2/
+new_lib/
+receptors/
+runs/
+ugi2/
+scripts/runs/
+scripts/slurm_*
+
+.DS_Store
+*.npy
