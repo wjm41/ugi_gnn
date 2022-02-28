@@ -2,6 +2,10 @@
 
 Using learnt embeddings from GNNs pretrained on docking scores to predict pIC50 for enrichment. Two cases are considered: Compounds from the Ugi reaction as SARS-CoV-2 Mpro inhibitors, as well as \<insert protein target here.\>
 
+## Log
+
+28 Feb - Downloaded CDK2 dataset of IC50s (Alpha will ask John Chodera to dock) and I have downloaded datasets from Stoichet Nature paper on Ultra-Large docking to D4 Dopamine receptor and AmpC beta-lactamase.
+
 ## Workflow for Ugi compounds
 
 ```mermaid
