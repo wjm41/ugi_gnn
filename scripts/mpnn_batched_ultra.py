@@ -5,6 +5,8 @@ import subprocess
 import argparse
 import logging
 import random
+from math import log, floor
+
 from datetime import datetime
 
 import dgl
@@ -46,6 +48,25 @@ else:
 def bash_command(cmd):
     p = subprocess.Popen(cmd, shell=True, executable='/bin/bash')
     p.communicate()
+
+
+def human_len(list_like):
+    """Given a list like, returns the length of the object in human-readable form
+
+    As an example, human_bytes(12500) = 12.5K
+
+    Args:
+        list_like: An object with the __len__ method.
+
+    Returns:
+        length_string (string): Human-readable string of the object size.
+    """
+    number = len(list_like)
+    units = ['', 'K', 'M', 'G', 'T', 'P']
+    k = 1000.0
+    magnitude = int(floor(log(number, k)))
+    length_string = '%.2f%s' % (number / k**magnitude, units[magnitude])
+    return length_string
 
 
 class SummaryWriter(SummaryWriter):
@@ -142,7 +163,7 @@ def main(args):
     if args.val:
         val_ind = np.random.choice(
             np.arange(len_df), args.val_size, replace=False)
-        train_ind = np.arange(len_df)[~val_ind]
+        train_ind = np.delete(np.arange(len_df), val_ind)
     else:
         train_ind = range(len_df)
 
@@ -160,6 +181,14 @@ def main(args):
         val_loader = UltraLoader(
             args.val_path, inds=val_ind, batch_size=args.batch_size, shuffle=False, y_scaler=y_scaler)
 
+    print(
+        f'Length of dataset: {len_df}({human_len(pd.read_pickle(args.path))})')
+    print(f'Length of training set: {human_len(train_ind)}')
+    print(f'Length of validation set: {human_len(val_ind)}')
+
+    print(f'Number of epochs to train: {args.n_epochs}')
+    print(f'Number of batches per epoch{int(len(train_ind)/args.batch_size)}')
+    # raise Exception
     # mpnn_net = MPNNPredictor(node_in_feats=n_feats,
     #                         edge_in_feats=e_feats,
     #                         num_layer_set2set=6)
@@ -432,14 +461,6 @@ def main(args):
         'batch': 0,
     }, args.save_name +
         '/model_epoch_final.ckpt')
-    if args.test:
-        r2_list = np.array(r2_list)
-        rmse_list = np.array(rmse_list)
-
-        print("\nmean R^2: {:.4f} +- {:.4f}".format(np.mean(r2_list),
-              np.std(r2_list)/np.sqrt(len(r2_list))))
-        print("mean RMSE: {:.4f} +- {:.4f}".format(np.mean(rmse_list),
-              np.std(rmse_list)/np.sqrt(len(rmse_list))))
 
 
 if __name__ == '__main__':
