@@ -7,7 +7,7 @@ from src import dataloader
     # fmt : off
     "test_input,expected_output",
     [
-        pytest.param([0, 1], [tuple((tuple((0, 1)),))],
+        pytest.param('test_data.pkl', hello,
                      id="one_pair"),
         pytest.param([0, 1, 2], None, marks=pytest.mark.xfail(raises=ValueError, reason='Requires even number of particles'),
                      id='odd_pair')
@@ -16,4 +16,5 @@ from src import dataloader
 # fmt : on
 def test_ultraloader(test_input, expected_output):
     test_loader = dataloader.UltraLoader(test_input)
-    assert test_loader == expected_output
+    # TODO test length, n_batches, random_state, inds, y_transform
+    assert len(test_loader) == expected_output
