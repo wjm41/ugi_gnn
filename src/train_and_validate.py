@@ -237,8 +237,6 @@ def main(args):
             labs[n: n + len(smiles)] = batch_labs.reshape(len(batch_labs), 1)
             n += len(smiles)
 
-            # TODO REDUCE TENSORBOARD FREQUENCY
-
             if (i != 0 and i % args.write_batch == 0) or epoch % args.write_batch == 0:
                 if args.debug:
                     print('label: {}'.format(labels))
@@ -442,9 +440,9 @@ if __name__ == '__main__':
                             help='int specifying number of random train/test splits to use')
     group_data.add_argument('-batch_size', '--batch_size', type=int, default=64,
                             help='int specifying batch_size for training and evaluations')
-    group_data.add_argument('-write_batch', '--write_batch', type=int, default=100,
+    group_data.add_argument('-write_batch', '--write_batch', type=int, default=1000,
                             help='int specifying number of steps per tensorboard write')
-    group_data.add_argument('-save_batch', '--save_batch', type=int, default=500,
+    group_data.add_argument('-save_batch', '--save_batch', type=int, default=5000,
                             help='int specifying number of batches per model save')
     group_data.add_argument('-n_epochs', '--n_epochs', type=int, default=10,
                             help='int specifying number of random train/test splits to use')
