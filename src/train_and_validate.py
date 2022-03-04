@@ -207,9 +207,6 @@ def main(args):
                         m += len(smiles)
 
                     scheduler.step(val_loss)
-                    p = spearmanr(val_preds, val_labs)[0]
-                    rmse = np.sqrt(mean_squared_error(val_preds, val_labs))
-                    r2 = r2_score(val_preds, val_labs)
 
                     logger.log(n_mols, val_loss, val_preds, val_labs,
                                split='val', log=True)

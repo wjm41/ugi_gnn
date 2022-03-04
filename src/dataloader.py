@@ -1,3 +1,5 @@
+import logging
+
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -109,16 +111,16 @@ def load_data(args, log=True):
         val_loader = None
 
     if log:
-        print(f'Length of dataset: {human_len(len_train)}')
-        print(f'Length of training set: {human_len(train_loader)}')
+        logging.info(f'Length of dataset: {human_len(len_train)}')
+        logging.info(f'Length of training set: {human_len(train_loader)}')
 
-        print(f'Number of epochs to train: {human_len(args.n_epochs)}')
-        print(
+        logging.info(f'Number of epochs to train: {human_len(args.n_epochs)}')
+        logging.info(
             f'Number of batches (size {args.batch_size}) per epoch: {human_len(train_loader.n_batches)}')
 
     if val_loader is not None:
         if log:
-            print(f'Length of validation set: {human_len(val_loader)}')
+            logging.info(f'Length of validation set: {human_len(val_loader)}')
         return train_loader, val_loader
     else:
         return train_loader
