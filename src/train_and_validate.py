@@ -26,7 +26,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.tensorboard.summary import hparams
 
-from dataloader import UltraLoader
+from dataloader import load_data
 from optimizers import SGDHD, AdamHD, FelixHD, FelixExpHD
 from utils import bash_command, human_len
 
@@ -61,9 +61,6 @@ class SummaryWriter(SummaryWriter):
 
 
 def main(args):
-    len_df = len(pd.read_pickle(args.path))
-
-    y_scaler = StandardScaler()
 
     # Initialise featurisers
     atom_featurizer = CanonicalAtomFeaturizer()
@@ -73,45 +70,13 @@ def main(args):
     n_feats = atom_featurizer.feat_size('h')
     print('Number of features: ', n_feats)
 
-    r2_list = []
-    rmse_list = []
-    skipped_trials = 0
-
     current_time = datetime.now().strftime('%b%d_%H-%M-%S')
     writer = SummaryWriter(args.log_dir+current_time)
     writer.add_hparams({'optimizer': args.optimizer},
                        {'batch_size': args.batch_size, 'lr': args.lr, 'hypergrad': args.hypergrad_lr})
-    if args.val:
-        val_ind = np.random.choice(
-            np.arange(len_df), args.val_size, replace=False)
-        train_ind = np.delete(np.arange(len_df), val_ind)
-    else:
-        train_ind = range(len_df)
 
-    y_scaler = y_scaler.fit(pd.read_pickle(args.path)[
-                            'dockscore'].to_numpy()[train_ind].reshape(-1, 1))
+    data_loaders = load_data(args)
 
-    # TODO decompose into its own function for testing
-
-    train_loader = UltraLoader(
-        args.path, inds=train_ind, batch_size=args.batch_size, shuffle=True, y_scaler=y_scaler)
-    val_loader = None
-    if args.val:
-        val_loader = UltraLoader(
-            args.path, inds=val_ind, batch_size=args.batch_size, shuffle=False, y_scaler=y_scaler)
-    if args.val_path is not None:
-        val_ind = range(len(pd.read_csv(args.val_path)))
-        val_loader = UltraLoader(
-            args.val_path, inds=val_ind, batch_size=args.batch_size, shuffle=False, y_scaler=y_scaler)
-
-    print(
-        f'Length of dataset: {len_df}({human_len(pd.read_pickle(args.path))})')
-    print(f'Length of training set: {human_len(train_ind)}')
-    print(f'Length of validation set: {human_len(val_ind)}')
-
-    print(f'Number of epochs to train: {args.n_epochs}')
-    print(
-        f'Number of batches per epoch: {int(len(train_ind)/args.batch_size)}')
     # raise Exception
     # mpnn_net = MPNNPredictor(node_in_feats=n_feats,
     #                         edge_in_feats=e_feats,
