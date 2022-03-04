@@ -1,11 +1,8 @@
 """
 Property prediction using a Message-Passing Neural Network.
 """
-import subprocess
 import argparse
 import logging
-import random
-from math import log, floor
 
 from datetime import datetime
 
@@ -30,7 +27,8 @@ from torch.utils.tensorboard import SummaryWriter
 from torch.utils.tensorboard.summary import hparams
 
 from dataloader import UltraLoader
-from utils import SGDHD, AdamHD, FelixHD, FelixExpHD
+from optimizers import SGDHD, AdamHD, FelixHD, FelixExpHD
+from utils import bash_command, human_len
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -42,30 +40,6 @@ if torch.cuda.is_available():
 else:
     print('use CPU')
     device = 'cpu'
-
-
-def bash_command(cmd):
-    p = subprocess.Popen(cmd, shell=True, executable='/bin/bash')
-    p.communicate()
-
-
-def human_len(list_like):
-    """Given a list like, returns the length of the object in human-readable form
-
-    As an example, human_bytes(12500) = 12.5K
-
-    Args:
-        list_like: An object with the __len__ method.
-
-    Returns:
-        length_string (string): Human-readable string of the object size.
-    """
-    number = len(list_like)
-    units = ['', 'K', 'M', 'G', 'T', 'P']
-    k = 1000.0
-    magnitude = int(floor(log(number, k)))
-    length_string = '%.2f%s' % (number / k**magnitude, units[magnitude])
-    return length_string
 
 
 class SummaryWriter(SummaryWriter):
@@ -198,8 +172,14 @@ def main(args):
         labs = np.array([None] * len(train_ind)).reshape(-1, 1)
         n = 0
         start_batch = 0
-        # TODO print less frequently
-        for i, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch), initial=start_batch, total=int(len(train_ind)/args.batch_size)):
+
+        for i, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
+                                        initial=start_batch,
+                                        total=int(len(train_ind) /
+                                                  args.batch_size),
+                                        miniters=10000,
+                                        unit='batch',
+                                        unit_scale=True):
 
             # TODO multithread graph featurizer
             bg = [mol_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
