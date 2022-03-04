@@ -1,6 +1,7 @@
 """
 Property prediction using a Message-Passing Neural Network.
 """
+import os
 import argparse
 import logging
 
@@ -61,7 +62,7 @@ def main(args):
 
     e_feats = bond_featurizer.feat_size('e')
     n_feats = atom_featurizer.feat_size('h')
-    print('Number of features: ', n_feats)
+    logging.info('Number of features: ', n_feats)
 
     if args.val or args.val_path is not None:
         train_loader, val_loader = load_data(args)
@@ -85,8 +86,6 @@ def main(args):
 
     loss_fn = MSELoss()
     scheduler = ReduceLROnPlateau(optimizer, 'min')
-    start_epoch = 1
-    start_batch = 0
 
     if args.load_name is not None:
         checkpoint = torch.load(args.load_name, map_location=device)
@@ -94,27 +93,28 @@ def main(args):
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
         start_epoch = checkpoint['epoch']
-        loss = checkpoint['loss']
         start_batch = checkpoint['batch']
+    else:
+        start_epoch = 0
+        start_batch = 0
 
-    print('Number of parameters: {}'.format(sum(p.numel()
-          for p in mpnn_net.parameters() if p.requires_grad)))
+    logging.info('Number of parameters: {}'.format(sum(p.numel()
+                                                       for p in mpnn_net.parameters() if p.requires_grad)))
 
-    print('beginning training...')
+    logging.info('beginning training...')
     logger = Logger(args)
-    for epoch in range(start_epoch, args.n_epochs+1):
+    for epoch in range(start_epoch, args.n_epochs):
         mpnn_net.train()
-        epoch_loss = 0
 
         n = 0
         start_batch = 0
 
-        for i, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
-                                        initial=start_batch,
-                                        total=train_loader.n_batches,
-                                        miniters=10000,
-                                        unit='batch',
-                                        unit_scale=True):
+        for batch_num, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
+                                                initial=start_batch,
+                                                total=train_loader.n_batches,
+                                                miniters=10000,
+                                                unit='batch',
+                                                unit_scale=True):
 
             bg = generate_batch(smiles, atom_featurizer,
                                 bond_featurizer).to(device)
@@ -134,11 +134,10 @@ def main(args):
             else:
                 optimizer.step()
 
-            epoch_loss += loss.detach().item()
-
             n += len(smiles)
+            n_mols = batch_num*args.batch_size + epoch*len(train_loader)
 
-            if i != 0 and i % args.write_batch == 0:
+            if batch_num % args.write_batch == 0:
 
                 batch_preds = train_loader.y_scaler.inverse_transform(
                     y_pred.cpu().detach().numpy())
@@ -146,7 +145,6 @@ def main(args):
                     labels.cpu().detach().numpy())
 
                 # number of mols seen by model
-                n_mols = i*args.batch_size + (epoch-1)*len(train_loader)
                 if 'Felix' in args.optimizer:
                     logger.log(n_mols, loss, batch_preds, batch_labs,
                                split='train', state_lrs=state_lrs)
@@ -195,68 +193,19 @@ def main(args):
 
                     mpnn_net.train()
 
-            if (i != 0 and i % args.save_batch == 0) or epoch % args.write_batch == 0:
-                try:
-                    torch.save({
-                        'epoch': epoch,
-                        'mpnn_state_dict': mpnn_net.state_dict(),
-                        'optimizer_state_dict': optimizer.state_dict(),
-                        'scheduler_state_dict': scheduler.state_dict(),
-                        'loss': loss,
-                        'batch': i,
-                    }, args.save_name +
-                        '/model_mol' + str(i*n_mols)+'.ckpt')
-                except FileNotFoundError:
-                    cmd = 'mkdir ' + args.save_name
+            if batch_num % args.save_batch == 0:
+                if not os.path.isdir(args.save_dir):
+                    cmd = 'mkdir ' + args.save_dir
                     bash_command(cmd)
-                    torch.save({
-                        'epoch': epoch,
-                        'mpnn_state_dict': mpnn_net.state_dict(),
-                        'optimizer_state_dict': optimizer.state_dict(),
-                        'scheduler_state_dict': scheduler.state_dict(),
-                        'loss': loss,
-                        'batch': i,
-                    }, args.save_name +
-                        '/model_mol' + str(i*n_mols)+'.ckpt')
-
-        if epoch % 10 == 0:
-            logging.info(f"epoch: {epoch}, "
-                         f"LOSS: {epoch_loss:.3f}, "
-                         f"RMSE: {rmse:.3f}, "
-                         f"RHO: {p:.3f}, "
-                         f"R2: {r2:.3f}")
-            try:
                 torch.save({
                     'epoch': epoch,
                     'mpnn_state_dict': mpnn_net.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
                     'scheduler_state_dict': scheduler.state_dict(),
                     'loss': loss,
-                    'batch': 0,
-                }, args.save_name +
-                    '/model_epoch' + str(epoch)+'.ckpt')
-            except FileNotFoundError:
-                cmd = 'mkdir ' + args.save_name
-                bash_command(cmd)
-                torch.save({
-                    'epoch': epoch,
-                    'mpnn_state_dict': mpnn_net.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict(),
-                    'scheduler_state_dict': scheduler.state_dict(),
-                    'loss': loss,
-                    'batch': 0,
-                }, args.save_name +
-                    '/model_epoch' + str(epoch)+'.ckpt')
-
-    torch.save({
-        'epoch': epoch,
-        'mpnn_state_dict': mpnn_net.state_dict(),
-        'optimizer_state_dict': optimizer.state_dict(),
-        'scheduler_state_dict': scheduler.state_dict(),
-        'loss': loss,
-        'batch': 0,
-    }, args.save_name +
-        '/model_epoch_final.ckpt')
+                    'batch': batch_num,
+                }, args.save_dir +
+                    f'/model_mol_{n_mols}.ckpt')
 
 
 if __name__ == '__main__':
@@ -268,7 +217,7 @@ if __name__ == '__main__':
                           help='Path to the data.csv file.')
     group_io.add_argument('-log_dir', '--log_dir', type=str, default='.',
                           help='directory containing tensorboard logs')
-    group_io.add_argument('-save_name', '--save_name', type=str, default='ugi-pretrained',
+    group_io.add_argument('-save_dir', '--save_dir', type=str, default='ugi-pretrained',
                           help='directory for saving model params')
     group_io.add_argument('-load_name', '--load_name', default=None,
                           help='name for directory containing saved model params checkpoint file for continued training.')
