@@ -75,9 +75,11 @@ def main(args):
     writer.add_hparams({'optimizer': args.optimizer},
                        {'batch_size': args.batch_size, 'lr': args.lr, 'hypergrad': args.hypergrad_lr})
 
-    data_loaders = load_data(args)
+    if args.val or args.val_path is not None:
+        train_loader, val_loader = load_data(args)
+    else:
+        train_loader = load_data(args)
 
-    # raise Exception
     # mpnn_net = MPNNPredictor(node_in_feats=n_feats,
     #                         edge_in_feats=e_feats,
     #                         num_layer_set2set=6)
@@ -133,15 +135,13 @@ def main(args):
     for epoch in range(start_epoch, args.n_epochs+1):
         mpnn_net.train()
         epoch_loss = 0
-        preds = np.array([None] * len(train_ind)).reshape(-1, 1)
-        labs = np.array([None] * len(train_ind)).reshape(-1, 1)
+
         n = 0
         start_batch = 0
 
         for i, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
                                         initial=start_batch,
-                                        total=int(len(train_ind) /
-                                                  args.batch_size),
+                                        total=train_loader.n_batches,
                                         miniters=10000,
                                         unit='batch',
                                         unit_scale=True):
@@ -173,13 +173,11 @@ def main(args):
 
             epoch_loss += loss.detach().item()
 
-            batch_preds = y_scaler.inverse_transform(
+            batch_preds = train_loader.y_scaler.inverse_transform(
                 y_pred.cpu().detach().numpy())
-            batch_labs = y_scaler.inverse_transform(
+            batch_labs = train_loader.y_scaler.inverse_transform(
                 labels.cpu().detach().numpy())
 
-            preds[n: n + len(smiles)] = batch_preds
-            labs[n: n + len(smiles)] = batch_labs.reshape(len(batch_labs), 1)
             n += len(smiles)
 
             if (i != 0 and i % args.write_batch == 0) or epoch % args.write_batch == 0:
@@ -191,17 +189,19 @@ def main(args):
                 rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
                 r2 = r2_score(batch_preds, batch_labs)
 
+                # number of mols seen by model
+                n_mols = i*args.batch_size + (epoch-1)*len(train_loader)
                 writer.add_scalar('loss/train', loss.detach().item(),
-                                  i*args.batch_size + (epoch-1)*len(train_ind))
+                                  n_mols)
                 writer.add_scalar('train/rmse', rmse, i *
-                                  args.batch_size + (epoch-1)*len(train_ind))
+                                  n_mols)
                 writer.add_scalar('train/rho', p, i *
-                                  args.batch_size + (epoch-1)*len(train_ind))
+                                  n_mols)
                 writer.add_scalar('train/R2', r2, i *
-                                  args.batch_size + (epoch-1)*len(train_ind))
+                                  n_mols)
                 if 'Felix' in args.optimizer:
                     writer.add_histogram('train/lrT', state_lrs, i *
-                                         args.batch_size + (epoch-1)*len(train_ind))
+                                         n_mols)
                 df = pd.DataFrame(
                     data={'dock_score': batch_labs.flatten(), 'preds': batch_preds.flatten()})
                 plot = sns.jointplot(
@@ -212,14 +212,16 @@ def main(args):
                 plt.xlabel('Dock Scores')
                 plt.ylabel('Predictions')
                 writer.add_figure('Training batch', plot.fig, global_step=i *
-                                  args.batch_size + (epoch-1)*len(train_ind))
+                                  n_mols)
                 writer.flush()
 
                 if val_loader is not None:
                     mpnn_net.eval()
 
-                    val_preds = np.array([None] * len(val_ind)).reshape(-1, 1)
-                    val_labs = np.array([None] * len(val_ind)).reshape(-1, 1)
+                    val_preds = np.array(
+                        [None] * len(val_loader)).reshape(-1, 1)
+                    val_labs = np.array(
+                        [None] * len(val_loader)).reshape(-1, 1)
 
                     m = 0
                     val_loss = 0
@@ -239,9 +241,9 @@ def main(args):
                         loss = loss_fn(y_pred, labels)
 
                         val_loss += loss.detach().item()
-                        batch_preds_val = y_scaler.inverse_transform(
+                        batch_preds_val = train_loader.y_scaler.inverse_transform(
                             y_pred.cpu().detach().numpy())
-                        batch_labs_val = y_scaler.inverse_transform(
+                        batch_labs_val = train_loader.y_scaler.inverse_transform(
                             labels.cpu().detach().numpy())
 
                         val_preds[m: m + len(smiles)] = batch_preds_val
@@ -260,13 +262,13 @@ def main(args):
                         f'Validation RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
 
                     writer.add_scalar(
-                        'loss/val', loss.detach().item(), i*args.batch_size + (epoch-1)*len(train_ind))
+                        'loss/val', loss.detach().item(), i*n_mols)
                     writer.add_scalar(
-                        'val/rmse', rmse, i*args.batch_size + (epoch-1)*len(train_ind))
+                        'val/rmse', rmse, i*n_mols)
                     writer.add_scalar(
-                        'val/rho', p, i*args.batch_size + (epoch-1)*len(train_ind))
+                        'val/rho', p, i*n_mols)
                     writer.add_scalar(
-                        'val/R2', r2, i*args.batch_size + (epoch-1)*len(train_ind))
+                        'val/R2', r2, i*n_mols)
 
                     df = pd.DataFrame(
                         data={'dock_score': val_labs.flatten(), 'preds': val_preds.flatten()})
@@ -282,7 +284,7 @@ def main(args):
                     plt.xlabel('Dock Scores')
                     plt.ylabel('Predictions')
                     writer.add_figure(
-                        'Validation Set', plot.fig, global_step=i*args.batch_size + (epoch-1)*len(train_ind))
+                        'Validation Set', plot.fig, global_step=i*n_mols)
                     writer.flush()
 
                     mpnn_net.train()
@@ -297,7 +299,7 @@ def main(args):
                         'loss': loss,
                         'batch': i,
                     }, args.save_name +
-                        '/model_mol' + str(i*args.batch_size + (epoch-1)*len(train_ind))+'.ckpt')
+                        '/model_mol' + str(i*n_mols)+'.ckpt')
                 except FileNotFoundError:
                     cmd = 'mkdir ' + args.save_name
                     bash_command(cmd)
@@ -309,17 +311,7 @@ def main(args):
                         'loss': loss,
                         'batch': i,
                     }, args.save_name +
-                        '/model_mol' + str(i*args.batch_size + (epoch-1)*len(train_ind))+'.ckpt')
-        p = spearmanr(preds, labs)[0]
-        rmse = np.sqrt(mean_squared_error(preds, labs))
-        r2 = r2_score(preds, labs)
-
-        if args.debug:
-            print(f"epoch: {epoch}, "
-                  f"LOSS: {epoch_loss:.3f}, "
-                  f"RMSE: {rmse:.3f}, "
-                  f"RHO: {p:.3f}, "
-                  f"R2: {r2:.3f}")
+                        '/model_mol' + str(i*n_mols)+'.ckpt')
 
         if epoch % 10 == 0:
             print(f"epoch: {epoch}, "
@@ -371,7 +363,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     group_io = parser.add_argument_group("I/O")
-    group_io.add_argument('-p', '--path', type=str, default='ugis-00000000.csv',
+    group_io.add_argument('-p', '--train_path', type=str, default='ugis-00000000.csv',
                           help='Path to the data.csv file.')
     group_io.add_argument('-log_dir', '--log_dir', type=str, default='.',
                           help='directory containing tensorboard logs')
