@@ -2,8 +2,8 @@
 
 datasets/
 docking_files/
-scripts/runs/
-scripts/slurm_*
+runs/
+slurm/slurm_logs/
 
 .DS_Store
 settings.json

@@ -253,7 +253,7 @@ def main(args):
         start_batch = 0
         # TODO print less frequently
         for i, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch), initial=start_batch, total=int(len(train_ind)/args.batch_size)):
-            
+
             # TODO multithread graph featurizer
             bg = [mol_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
                                  edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
@@ -289,6 +289,8 @@ def main(args):
             preds[n: n + len(smiles)] = batch_preds
             labs[n: n + len(smiles)] = batch_labs.reshape(len(batch_labs), 1)
             n += len(smiles)
+
+            # TODO REDUCE TENSORBOARD FREQUENCY
 
             if (i != 0 and i % args.write_batch == 0) or epoch % args.write_batch == 0:
                 if args.debug:

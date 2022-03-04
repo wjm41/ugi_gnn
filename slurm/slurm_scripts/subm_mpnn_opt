@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -J ugi_taut_$optimizer
+#SBATCH -A LEE-WJM41-SL2-GPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:05:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --mail-type=ALL
+#SBATCH -p ampere
+
+. /etc/profile.d/modules.sh
+module purge
+
+module load rhel8/default-amp
+module load miniconda/3
+source activate dgl_life
+
+data_dir=/rds-d2/user/wjm41/hpc-work/datasets/Ugis
+script_dir=/home/wjm41/symlinks/rds/datasets/Ugis/scripts
+
+python ${script_dir}/mpnn_batched_opt.py -p ${data_dir}/datasets/tautcan_lib.csv \
+                       -n_trials 1 -batch_size 32 -n_epochs 150 -ts 0 \
+                       -lr 1e-4 -hypergrad_lr 1e-1 \
+                       -save_name ${save_name} \
+                       -optimizer ${optimizer} \
+                       -log_dir ${log_dir} \
+                       -write_batch 10 -val -val_set_size 0.00001 \
+                       -debug
