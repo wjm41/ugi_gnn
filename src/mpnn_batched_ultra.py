@@ -12,7 +12,7 @@ from datetime import datetime
 import dgl
 import pandas as pd
 import numpy as np
-import numpy.ma as ma
+
 from tqdm import tqdm
 from dgllife.model.model_zoo import MPNNPredictor
 from dgllife.utils import CanonicalAtomFeaturizer, CanonicalBondFeaturizer, mol_to_bigraph
@@ -24,10 +24,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 import torch
-from torch import nn
 from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch.utils.data import Dataset, DataLoader
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.tensorboard.summary import hparams
 
