@@ -11,6 +11,8 @@ Using learnt embeddings from GNNs pretrained on docking scores to predict pIC50 
 
 ## Log
 
+2 Mar - Tested preprocessing of graphs, completely unfeasible: 12M `.csv` mapped to 2.3G of `.bin` graphs, will have to implement multithread instead.
+
 1 Mar - Wrote notebooks to visualise ultra-large docking datasets, pickled slightly preprocessed dataframes for fast loading, began thinking about starting training
 
 28 Feb - Downloaded CDK2 dataset of IC50s (Alpha will ask John Chodera to dock) and I have downloaded datasets from Stoichet Nature paper on Ultra-Large docking to D4 Dopamine receptor and AmpC beta-lactamase.
