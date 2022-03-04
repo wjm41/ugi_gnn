@@ -4,7 +4,6 @@ Property prediction using a Message-Passing Neural Network.
 import argparse
 import logging
 
-from datetime import datetime
 
 import dgl
 import pandas as pd
@@ -17,22 +16,18 @@ from rdkit import Chem
 from scipy.stats import spearmanr
 
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
 
 import torch
 from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch.utils.tensorboard import SummaryWriter
 from torch.utils.tensorboard.summary import hparams
 
 from dataloader import load_data
 from optimizers import SGDHD, AdamHD, FelixHD, FelixExpHD
+
+from tensorboard_logging import Logger
 from utils import bash_command, human_len
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set(rc={"figure.dpi": 200})
 
 if torch.cuda.is_available():
     print('use GPU')
@@ -42,25 +37,8 @@ else:
     device = 'cpu'
 
 
-class SummaryWriter(SummaryWriter):
-    def add_hparams(self, hparam_dict, metric_dict):
-        torch._C._log_api_usage_once("tensorboard.logging.add_hparams")
-        if type(hparam_dict) is not dict or type(metric_dict) is not dict:
-            raise TypeError(
-                'hparam_dict and metric_dict should be dictionary.')
-        exp, ssi, sei = hparams(hparam_dict, metric_dict)
-
-        logdir = self._get_file_writer().get_logdir()
-
-        with SummaryWriter(log_dir=logdir) as w_hp:
-            w_hp.file_writer.add_summary(exp)
-            w_hp.file_writer.add_summary(ssi)
-            w_hp.file_writer.add_summary(sei)
-            for k, v in metric_dict.items():
-                w_hp.add_scalar(k, v)
-
-
 def main(args):
+    logging.basicConfig(level=logging.INFO)
 
     # Initialise featurisers
     atom_featurizer = CanonicalAtomFeaturizer()
@@ -69,11 +47,6 @@ def main(args):
     e_feats = bond_featurizer.feat_size('e')
     n_feats = atom_featurizer.feat_size('h')
     print('Number of features: ', n_feats)
-
-    current_time = datetime.now().strftime('%b%d_%H-%M-%S')
-    writer = SummaryWriter(args.log_dir+current_time)
-    writer.add_hparams({'optimizer': args.optimizer},
-                       {'batch_size': args.batch_size, 'lr': args.lr, 'hypergrad': args.hypergrad_lr})
 
     if args.val or args.val_path is not None:
         train_loader, val_loader = load_data(args)
@@ -132,6 +105,7 @@ def main(args):
           for p in mpnn_net.parameters() if p.requires_grad)))
 
     print('beginning training...')
+    logger = Logger(args)
     for epoch in range(start_epoch, args.n_epochs+1):
         mpnn_net.train()
         epoch_loss = 0
@@ -173,47 +147,27 @@ def main(args):
 
             epoch_loss += loss.detach().item()
 
-            batch_preds = train_loader.y_scaler.inverse_transform(
-                y_pred.cpu().detach().numpy())
-            batch_labs = train_loader.y_scaler.inverse_transform(
-                labels.cpu().detach().numpy())
-
             n += len(smiles)
 
-            if (i != 0 and i % args.write_batch == 0) or epoch % args.write_batch == 0:
-                if args.debug:
-                    print('label: {}'.format(labels))
-                    print('y_pred: {}'.format(y_pred))
+            if i != 0 and i % args.write_batch == 0:
 
-                p = spearmanr(batch_preds, batch_labs)[0]
-                rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
-                r2 = r2_score(batch_preds, batch_labs)
+                batch_preds = train_loader.y_scaler.inverse_transform(
+                    y_pred.cpu().detach().numpy())
+                batch_labs = train_loader.y_scaler.inverse_transform(
+                    labels.cpu().detach().numpy())
 
                 # number of mols seen by model
                 n_mols = i*args.batch_size + (epoch-1)*len(train_loader)
-                writer.add_scalar('loss/train', loss.detach().item(),
-                                  n_mols)
-                writer.add_scalar('train/rmse', rmse, i *
-                                  n_mols)
-                writer.add_scalar('train/rho', p, i *
-                                  n_mols)
-                writer.add_scalar('train/R2', r2, i *
-                                  n_mols)
                 if 'Felix' in args.optimizer:
-                    writer.add_histogram('train/lrT', state_lrs, i *
-                                         n_mols)
-                df = pd.DataFrame(
-                    data={'dock_score': batch_labs.flatten(), 'preds': batch_preds.flatten()})
-                plot = sns.jointplot(
-                    data=df, x='dock_score', y='preds', kind='scatter')
-                dot_line = [np.amin(df['dock_score']),
-                            np.amax(df['dock_score'])]
-                plot.ax_joint.plot(dot_line, dot_line, 'k:')
-                plt.xlabel('Dock Scores')
-                plt.ylabel('Predictions')
-                writer.add_figure('Training batch', plot.fig, global_step=i *
-                                  n_mols)
-                writer.flush()
+                    logger.log(n_mols, loss, batch_preds, batch_labs,
+                               split='train', state_lrs=state_lrs)
+                else:
+                    logger.log(n_mols, loss, batch_preds, batch_labs,
+                               split='train')
+
+                if args.debug:
+                    print('label: {}'.format(labels))
+                    print('y_pred: {}'.format(y_pred))
 
                 if val_loader is not None:
                     mpnn_net.eval()
@@ -225,7 +179,8 @@ def main(args):
 
                     m = 0
                     val_loss = 0
-                    for j, (smiles, labels) in enumerate(val_loader):
+                    # TODO no-grad!!!
+                    for smiles, labels in val_loader:
                         bg = [mol_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
                                              edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
                         bg = dgl.batch(bg).to(device)
@@ -255,37 +210,9 @@ def main(args):
                     p = spearmanr(val_preds, val_labs)[0]
                     rmse = np.sqrt(mean_squared_error(val_preds, val_labs))
                     r2 = r2_score(val_preds, val_labs)
-                    # TODO change logging
-                    print(
-                        f'Validation RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
-                    logging.warning(
-                        f'Validation RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
 
-                    writer.add_scalar(
-                        'loss/val', loss.detach().item(), i*n_mols)
-                    writer.add_scalar(
-                        'val/rmse', rmse, i*n_mols)
-                    writer.add_scalar(
-                        'val/rho', p, i*n_mols)
-                    writer.add_scalar(
-                        'val/R2', r2, i*n_mols)
-
-                    df = pd.DataFrame(
-                        data={'dock_score': val_labs.flatten(), 'preds': val_preds.flatten()})
-                    # df = df[df['dock_score'] < 5]
-
-                    # TODO fix axes
-
-                    plot = sns.jointplot(
-                        data=df, x='dock_score', y='preds', kind='scatter')
-                    dot_line = [np.amin(df['dock_score']),
-                                np.amax(df['dock_score'])]
-                    plot.ax_joint.plot(dot_line, dot_line, 'k:')
-                    plt.xlabel('Dock Scores')
-                    plt.ylabel('Predictions')
-                    writer.add_figure(
-                        'Validation Set', plot.fig, global_step=i*n_mols)
-                    writer.flush()
+                    logger.log(n_mols, val_loss, val_preds, val_labs,
+                               split='val', log=True)
 
                     mpnn_net.train()
 
@@ -314,16 +241,11 @@ def main(args):
                         '/model_mol' + str(i*n_mols)+'.ckpt')
 
         if epoch % 10 == 0:
-            print(f"epoch: {epoch}, "
-                  f"LOSS: {epoch_loss:.3f}, "
-                  f"RMSE: {rmse:.3f}, "
-                  f"RHO: {p:.3f}, "
-                  f"R2: {r2:.3f}")
-            logging.warning(f"epoch: {epoch}, "
-                            f"LOSS: {epoch_loss:.3f}, "
-                            f"RMSE: {rmse:.3f}, "
-                            f"RHO: {p:.3f}, "
-                            f"R2: {r2:.3f}")
+            logging.info(f"epoch: {epoch}, "
+                         f"LOSS: {epoch_loss:.3f}, "
+                         f"RMSE: {rmse:.3f}, "
+                         f"RHO: {p:.3f}, "
+                         f"R2: {r2:.3f}")
             try:
                 torch.save({
                     'epoch': epoch,
