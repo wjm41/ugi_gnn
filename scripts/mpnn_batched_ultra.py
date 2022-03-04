@@ -170,6 +170,8 @@ def main(args):
     y_scaler = y_scaler.fit(pd.read_pickle(args.path)[
                             'dockscore'].to_numpy()[train_ind].reshape(-1, 1))
 
+    # TODO decompose into its own function for testing
+
     train_loader = UltraLoader(
         args.path, inds=train_ind, batch_size=args.batch_size, shuffle=True, y_scaler=y_scaler)
     val_loader = None
@@ -187,7 +189,8 @@ def main(args):
     print(f'Length of validation set: {human_len(val_ind)}')
 
     print(f'Number of epochs to train: {args.n_epochs}')
-    print(f'Number of batches per epoch{int(len(train_ind)/args.batch_size)}')
+    print(
+        f'Number of batches per epoch: {int(len(train_ind)/args.batch_size)}')
     # raise Exception
     # mpnn_net = MPNNPredictor(node_in_feats=n_feats,
     #                         edge_in_feats=e_feats,
@@ -201,6 +204,8 @@ def main(args):
                              num_step_set2set=2,
                              num_layer_set2set=3)
     mpnn_net = mpnn_net.to(device)
+
+    # TODO warmup for adam
     if args.optimizer == 'Adam':
         optimizer = torch.optim.Adam(mpnn_net.parameters(), lr=args.lr)
     elif args.optimizer == 'AdamHD':
@@ -246,7 +251,10 @@ def main(args):
         labs = np.array([None] * len(train_ind)).reshape(-1, 1)
         n = 0
         start_batch = 0
+        # TODO print less frequently
         for i, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch), initial=start_batch, total=int(len(train_ind)/args.batch_size)):
+            
+            # TODO multithread graph featurizer
             bg = [mol_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
                                  edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
             bg = dgl.batch(bg).to(device)
@@ -353,6 +361,7 @@ def main(args):
                     p = spearmanr(val_preds, val_labs)[0]
                     rmse = np.sqrt(mean_squared_error(val_preds, val_labs))
                     r2 = r2_score(val_preds, val_labs)
+                    # TODO change logging
                     print(
                         f'Validation RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
                     logging.warning(
@@ -370,6 +379,8 @@ def main(args):
                     df = pd.DataFrame(
                         data={'dock_score': val_labs.flatten(), 'preds': val_preds.flatten()})
                     # df = df[df['dock_score'] < 5]
+
+                    # TODO fix axes
 
                     plot = sns.jointplot(
                         data=df, x='dock_score', y='preds', kind='scatter')
