@@ -22,7 +22,7 @@ class Logger:
 
         self.writer.add_text()
 
-    def log(self, n_mols, loss, batch_preds, batch_labs, split='train', state_lrs=None, log=True):
+    def log(self, n_mols, loss, batch_preds, batch_labs, split='train', state_lrs=None):
         p = spearmanr(batch_preds, batch_labs)[0]
         rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
         r2 = r2_score(batch_preds, batch_labs)
@@ -48,6 +48,5 @@ class Logger:
         self.writer.add_figure(f'{split} batch', plot.fig, global_step=n_mols)
         self.writer.flush()
 
-        if log:
-            logging.info(
-                f'{split} RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
+        logging.info(
+            f'{split} RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
