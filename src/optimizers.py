@@ -4,6 +4,30 @@ from functools import reduce
 import torch
 
 
+def load_optimizer(args, model):
+    # TODO warmup for adam
+    if args.optimizer == 'Adam':
+        optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
+    elif args.optimizer == 'AdamHD':
+        optimizer = AdamHD(model.parameters(), lr=args.lr,
+                           hypergrad_lr=args.hypergrad_lr)
+    elif args.optimizer == 'SGD':
+        optimizer = torch.optim.SGD(model.parameters(), lr=args.lr)
+    elif args.optimizer == 'SGDHD':
+        optimizer = AdamHD(model.parameters(), lr=args.lr,
+                           hypergrad_lr=args.hypergrad_lr)
+    elif args.optimizer == 'FelixHD':
+        optimizer = FelixHD(model.parameters(), lr=args.lr,
+                            hypergrad_lr=args.hypergrad_lr)
+    elif args.optimizer == 'FelixExpHD':
+        optimizer = FelixExpHD(model.parameters(), lr=args.lr,
+                               hypergrad_lr=args.hypergrad_lr)
+    else:
+        print(args.optimizer)
+        raise Exception('scrub')
+    return optimizer
+
+
 class AdamHD(Optimizer):
     """Implements Adam algorithm.
     It has been proposed in `Adam: A Method for Stochastic Optimization`_.

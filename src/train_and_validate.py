@@ -4,26 +4,20 @@ Property prediction using a Message-Passing Neural Network.
 import argparse
 import logging
 
-
 import dgl
-import pandas as pd
 import numpy as np
 
 from tqdm import tqdm
 from dgllife.model.model_zoo import MPNNPredictor
-from dgllife.utils import CanonicalAtomFeaturizer, CanonicalBondFeaturizer, mol_to_bigraph
+from dgllife.utils import CanonicalAtomFeaturizer, CanonicalBondFeaturizer, smiles_to_bigraph
 from rdkit import Chem
-from scipy.stats import spearmanr
-
-from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 import torch
 from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch.utils.tensorboard.summary import hparams
 
 from dataloader import load_data
-from optimizers import SGDHD, AdamHD, FelixHD, FelixExpHD
+from optimizers import load_optimizer
 
 from tensorboard_logging import Logger
 from utils import bash_command, human_len
@@ -35,6 +29,27 @@ if torch.cuda.is_available():
 else:
     print('use CPU')
     device = 'cpu'
+
+
+def generate_batch(smiles, atom_featurizer, bond_featurizer):
+    # TODO multithread graph featurizer
+    bg = [smiles_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
+                            edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
+    bg = dgl.batch(bg)
+    return bg
+
+
+def run_batch(model, bg):
+    bg.set_n_initializer(dgl.init.zero_initializer)
+    bg.set_e_initializer(dgl.init.zero_initializer)
+
+    atom_feats = bg.ndata.pop('h').to(device)
+    bond_feats = bg.edata.pop('e').to(device)
+    atom_feats, bond_feats = atom_feats.to(device), bond_feats.to(
+        device),
+    y_pred = model(bg, atom_feats, bond_feats)
+
+    return y_pred
 
 
 def main(args):
@@ -66,26 +81,7 @@ def main(args):
                              num_layer_set2set=3)
     mpnn_net = mpnn_net.to(device)
 
-    # TODO warmup for adam
-    if args.optimizer == 'Adam':
-        optimizer = torch.optim.Adam(mpnn_net.parameters(), lr=args.lr)
-    elif args.optimizer == 'AdamHD':
-        optimizer = AdamHD(mpnn_net.parameters(), lr=args.lr,
-                           hypergrad_lr=args.hypergrad_lr)
-    elif args.optimizer == 'SGD':
-        optimizer = torch.optim.SGD(mpnn_net.parameters(), lr=args.lr)
-    elif args.optimizer == 'SGDHD':
-        optimizer = AdamHD(mpnn_net.parameters(), lr=args.lr,
-                           hypergrad_lr=args.hypergrad_lr)
-    elif args.optimizer == 'FelixHD':
-        optimizer = FelixHD(mpnn_net.parameters(), lr=args.lr,
-                            hypergrad_lr=args.hypergrad_lr)
-    elif args.optimizer == 'FelixExpHD':
-        optimizer = FelixExpHD(mpnn_net.parameters(), lr=args.lr,
-                               hypergrad_lr=args.hypergrad_lr)
-    else:
-        print(args.optimizer)
-        raise Exception('scrub')
+    optimizer = load_optimizer(args, mpnn_net)
 
     loss_fn = MSELoss()
     scheduler = ReduceLROnPlateau(optimizer, 'min')
@@ -120,18 +116,11 @@ def main(args):
                                         unit='batch',
                                         unit_scale=True):
 
-            # TODO multithread graph featurizer
-            bg = [mol_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
-                                 edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
-            bg = dgl.batch(bg).to(device)
-            bg.set_n_initializer(dgl.init.zero_initializer)
-            bg.set_e_initializer(dgl.init.zero_initializer)
+            bg = generate_batch(smiles, atom_featurizer,
+                                bond_featurizer).to(device)
+            y_pred = run_batch(mpnn_net, bg)
 
-            atom_feats = bg.ndata.pop('h').to(device)
-            bond_feats = bg.edata.pop('e').to(device)
-            atom_feats, bond_feats, labels = atom_feats.to(device), bond_feats.to(
-                device), torch.tensor(labels, dtype=torch.float32).to(device)
-            y_pred = mpnn_net(bg, atom_feats, bond_feats)
+            labels = torch.tensor(labels, dtype=torch.float32).to(device)
 
             if args.debug:
                 print('label: {}'.format(labels))
@@ -179,19 +168,12 @@ def main(args):
 
                     m = 0
                     val_loss = 0
-                    # TODO no-grad!!!
-                    for smiles, labels in val_loader:
-                        bg = [mol_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
-                                             edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
-                        bg = dgl.batch(bg).to(device)
-                        bg.set_n_initializer(dgl.init.zero_initializer)
-                        bg.set_e_initializer(dgl.init.zero_initializer)
 
-                        atom_feats = bg.ndata.pop('h').to(device)
-                        bond_feats = bg.edata.pop('e').to(device)
-                        atom_feats, bond_feats, labels = atom_feats.to(device), bond_feats.to(
-                            device), torch.tensor(labels, dtype=torch.float32).to(device)
-                        y_pred = mpnn_net(bg, atom_feats, bond_feats)
+                    for smiles, labels in val_loader:
+                        bg = generate_batch(smiles, atom_featurizer,
+                                            bond_featurizer).to(device)
+                        with torch.no_grad():
+                            y_pred = run_batch(mpnn_net, bg)
 
                         loss = loss_fn(y_pred, labels)
 
