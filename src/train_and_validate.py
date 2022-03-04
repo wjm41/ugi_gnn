@@ -23,38 +23,59 @@ from optimizers import load_optimizer
 from tensorboard_logging import Logger
 from utils import bash_command, human_len
 
-
-if torch.cuda.is_available():
-    print('use GPU')
-    device = 'cuda'
-else:
-    print('use CPU')
-    device = 'cpu'
-
-
-def generate_batch(smiles, atom_featurizer, bond_featurizer):
+def generate_batch(smiles, atom_featurizer, bond_featurizer, device):
     # TODO multithread graph featurizer
     bg = [smiles_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
                             edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
     bg = dgl.batch(bg)
-    return bg
-
-
-def run_batch(model, bg):
     bg.set_n_initializer(dgl.init.zero_initializer)
     bg.set_e_initializer(dgl.init.zero_initializer)
 
-    atom_feats = bg.ndata.pop('h').to(device)
-    bond_feats = bg.edata.pop('e').to(device)
-    atom_feats, bond_feats = atom_feats.to(device), bond_feats.to(
-        device),
-    y_pred = model(bg, atom_feats, bond_feats)
-
-    return y_pred
+    atom_feats = bg.ndata.pop('h')
+    bond_feats = bg.edata.pop('e')
+    return bg.to(device), atom_feats.to(device), bond_feats.to(device)
 
 
-def main(args):
-    logging.basicConfig(level=logging.INFO)
+def validate(val_loader, model, atom_featurizer, bond_featurizer, loss_fn, device, y_scaler=None):
+    model.eval()
+    val_preds = np.empty((len(val_loader), 1))
+    val_labs = np.empty((len(val_loader), 1))
+    m = 0
+    val_loss = 0
+
+    for smiles, labels in val_loader:
+        bg, atom_feats, bond_feats = generate_batch(
+            smiles, atom_featurizer, bond_featurizer, device)
+        with torch.no_grad():
+            y_pred = model(bg, atom_feats, bond_feats)
+
+        loss = loss_fn(y_pred, labels)
+        val_loss += loss.detach().item()
+
+        if y_scaler is not None:
+            batch_preds_val = y_scaler.inverse_transform(
+                y_pred.cpu().detach().numpy())
+            batch_labs_val = y_scaler.inverse_transform(
+                labels.cpu().detach().numpy())
+        else:
+            batch_preds_val = y_pred.cpu().detach().numpy()
+            batch_labs_val = labels.cpu().detach().numpy()
+
+        val_preds[m: m + len(smiles)] = batch_preds_val
+        val_labs[m: m + len(smiles)] = batch_labs_val
+        m += len(smiles)
+
+    model.train()
+    return val_loss, val_preds, val_labs
+
+
+def main(args, device):
+
+    # load data
+    if args.val or args.val_path is not None:
+        train_loader, val_loader = load_data(args)
+    else:
+        train_loader = load_data(args)
 
     # Initialise featurisers
     atom_featurizer = CanonicalAtomFeaturizer()
@@ -62,13 +83,8 @@ def main(args):
 
     e_feats = bond_featurizer.feat_size('e')
     n_feats = atom_featurizer.feat_size('h')
-    logging.info('Number of features: ', n_feats)
 
-    if args.val or args.val_path is not None:
-        train_loader, val_loader = load_data(args)
-    else:
-        train_loader = load_data(args)
-
+    # set up model
     # mpnn_net = MPNNPredictor(node_in_feats=n_feats,
     #                         edge_in_feats=e_feats,
     #                         num_layer_set2set=6)
@@ -80,11 +96,16 @@ def main(args):
                              num_step_message_passing=4,
                              num_step_set2set=2,
                              num_layer_set2set=3)
+
     mpnn_net = mpnn_net.to(device)
+
+    logging.info('Number of model parameters: {}'.format(sum(p.numel()
+                                                             for p in mpnn_net.parameters() if p.requires_grad)))
+    logging.info(f'Number of node features: {n_feats}')
+    logging.info(f'Number of edge features: {e_feats}')
 
     optimizer = load_optimizer(args, mpnn_net)
 
-    loss_fn = MSELoss()
     scheduler = ReduceLROnPlateau(optimizer, 'min')
 
     if args.load_name is not None:
@@ -98,8 +119,7 @@ def main(args):
         start_epoch = 0
         start_batch = 0
 
-    logging.info('Number of parameters: {}'.format(sum(p.numel()
-                                                       for p in mpnn_net.parameters() if p.requires_grad)))
+    loss_fn = MSELoss()
 
     logging.info('beginning training...')
     logger = Logger(args)
@@ -116,17 +136,13 @@ def main(args):
                                                 unit='batch',
                                                 unit_scale=True):
 
-            bg = generate_batch(smiles, atom_featurizer,
-                                bond_featurizer).to(device)
-            y_pred = run_batch(mpnn_net, bg)
+            bg, atom_feats, bond_feats = generate_batch(
+                smiles, atom_featurizer, bond_featurizer, device)
+            y_pred = mpnn_net(bg, atom_feats, bond_feats)
 
             labels = torch.tensor(labels, dtype=torch.float32).to(device)
-
-            if args.debug:
-                print('label: {}'.format(labels))
-                print('y_pred: {}'.format(y_pred))
-
             loss = loss_fn(y_pred, labels)
+
             optimizer.zero_grad()
             loss.backward()
             if 'Felix' in args.optimizer:
@@ -137,7 +153,7 @@ def main(args):
             n += len(smiles)
             n_mols = batch_num*args.batch_size + epoch*len(train_loader)
 
-            if batch_num % args.write_batch == 0:
+            if batch_num % args.log_batch == 0:
 
                 batch_preds = train_loader.y_scaler.inverse_transform(
                     y_pred.cpu().detach().numpy())
@@ -152,46 +168,19 @@ def main(args):
                     logger.log(n_mols, loss, batch_preds, batch_labs,
                                split='train')
 
-                if args.debug:
-                    print('label: {}'.format(labels))
-                    print('y_pred: {}'.format(y_pred))
-
                 if val_loader is not None:
-                    mpnn_net.eval()
 
-                    val_preds = np.array(
-                        [None] * len(val_loader)).reshape(-1, 1)
-                    val_labs = np.array(
-                        [None] * len(val_loader)).reshape(-1, 1)
-
-                    m = 0
-                    val_loss = 0
-
-                    for smiles, labels in val_loader:
-                        bg = generate_batch(smiles, atom_featurizer,
-                                            bond_featurizer).to(device)
-                        with torch.no_grad():
-                            y_pred = run_batch(mpnn_net, bg)
-
-                        loss = loss_fn(y_pred, labels)
-
-                        val_loss += loss.detach().item()
-                        batch_preds_val = train_loader.y_scaler.inverse_transform(
-                            y_pred.cpu().detach().numpy())
-                        batch_labs_val = train_loader.y_scaler.inverse_transform(
-                            labels.cpu().detach().numpy())
-
-                        val_preds[m: m + len(smiles)] = batch_preds_val
-                        val_labs[m: m + len(smiles)
-                                 ] = batch_labs_val.reshape(len(batch_labs_val), 1)
-                        m += len(smiles)
-
+                    val_loss, val_preds, val_labs = validate(val_loader=val_loader,
+                                                             model=mpnn_net,
+                                                             atom_featurizer=atom_featurizer,
+                                                             bond_featurizer=bond_featurizer,
+                                                             loss_fn=loss_fn,
+                                                             device=device,
+                                                             y_scaler=train_loader.y_scaler)
                     scheduler.step(val_loss)
 
                     logger.log(n_mols, val_loss, val_preds, val_labs,
                                split='val', log=True)
-
-                    mpnn_net.train()
 
             if batch_num % args.save_batch == 0:
                 if not os.path.isdir(args.save_dir):
@@ -227,8 +216,8 @@ if __name__ == '__main__':
                             help='int specifying number of random train/test splits to use')
     group_data.add_argument('-batch_size', '--batch_size', type=int, default=64,
                             help='int specifying batch_size for training and evaluations')
-    group_data.add_argument('-write_batch', '--write_batch', type=int, default=1000,
-                            help='int specifying number of steps per tensorboard write')
+    group_data.add_argument('-log_batch', '--log_batch', type=int, default=1000,
+                            help='int specifying number of steps per validation and tensorboard log')
     group_data.add_argument('-save_batch', '--save_batch', type=int, default=5000,
                             help='int specifying number of batches per model save')
     group_data.add_argument('-n_epochs', '--n_epochs', type=int, default=10,
@@ -263,4 +252,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    main(args)
+    logging.basicConfig(level=logging.INFO)
+    if torch.cuda.is_available():
+        print('use GPU')
+        device = 'cuda'
+    else:
+        print('use CPU')
+        device = 'cpu'
+    main(args, device)
