@@ -4,8 +4,9 @@ datasets/
 docking_files/
 runs/
 slurm/slurm_logs/
-
+test/test_runs/
 *.npy
+
 # VS Code
 .vscode/*
 .DS_Store
