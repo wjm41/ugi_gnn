@@ -17,12 +17,11 @@ import torch
 from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
-from dataloader import load_data
-from optimizers import load_optimizer
-
-from tensorboard_logging import Logger
-import parsing
-from utils import bash_command, human_len
+from .dataloader import load_data
+from .optimizers import load_optimizer
+from .tensorboard_logging import Logger
+from .utils import bash_command, human_len, get_device
+from . import parsing
 
 
 def generate_batch(smiles, atom_featurizer, bond_featurizer, device):
@@ -210,10 +209,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO)
-    if torch.cuda.is_available():
-        print('use GPU')
-        device = 'cuda'
-    else:
-        print('use CPU')
-        device = 'cpu'
+    device = get_device()
     main(args, device)

@@ -1,6 +1,8 @@
+import logging
 from math import log, floor
 import subprocess
 
+import torch
 # import torch.distributed as dist
 
 
@@ -31,6 +33,15 @@ def bash_command(cmd):
     p = subprocess.Popen(cmd, shell=True, executable='/bin/bash')
     p.communicate()
 
+
+def get_device():
+    if torch.cuda.is_available():
+        logging.info(f'using GPU: {torch.cuda.get_device_name()}')
+        device = 'cuda'
+    else:
+        logging.info('No GPU found, using CPU')
+        device = 'cpu'
+    return device
 
 # class Optimizer(nn.Module):
 #     """Wrapper for optimization
