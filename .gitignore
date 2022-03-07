@@ -1,10 +1,11 @@
 .ipynb_checkpoints/
-
+ß
 datasets/
 docking_files/
 runs/
 slurm/slurm_logs/
 
-.DS_Store
-settings.json
 *.npy
+# VS Code
+.vscode/*
+.DS_Store
