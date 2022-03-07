@@ -70,6 +70,7 @@ def validate(val_loader, model, atom_featurizer, bond_featurizer, loss_fn, devic
     return val_loss, val_preds, val_labs
 
 
+@profile
 def main(args, device):
 
     # load data (val_loader is None if no args.val and args.val_path is None)
@@ -138,7 +139,7 @@ def main(args, device):
 
             bg, atom_feats, bond_feats = generate_batch(
                 smiles, atom_featurizer, bond_featurizer, device)
-            y_pred = mpnn_net(bg, atom_feats, bond_feats)
+            y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
 
             labels = torch.tensor(labels, dtype=torch.float32).to(device)
             loss = loss_fn(y_pred, labels)

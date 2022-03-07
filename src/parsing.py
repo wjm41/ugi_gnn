@@ -18,7 +18,7 @@ def add_data_args(parser):
     group_data = parser.add_argument_group("Training - data")
     group_data.add_argument('-n_trials', '--n_trials', type=int, default=1,
                             help='int specifying number of random train/test splits to use')
-    group_data.add_argument('-batch_size', '--batch_size', type=int, default=64,
+    group_data.add_argument('-batch_size', '--batch_size', type=int, default=10000,
                             help='int specifying batch_size for training and evaluations')
     group_data.add_argument('-log_batch', '--log_batch', type=int, default=1000,
                             help='int specifying number of steps per validation and tensorboard log')

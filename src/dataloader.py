@@ -91,6 +91,8 @@ class BigSmilesLoader:
 
 
 def load_data(args):
+    logging.info(f'Loading dataset: {args.train_path}')
+
     if args.train_path.split('.')[-1] == 'pkl':
         train_df = pd.read_pickle(args.train_path).reset_index()
     elif args.train_path.split('.')[-1] == 'csv':
