@@ -26,7 +26,7 @@ from . import parsing
 
 def generate_batch(smiles, atom_featurizer, bond_featurizer, device):
     # TODO multithread graph featurizer
-    bg = [smiles_to_bigraph(Chem.MolFromSmiles(smi), node_featurizer=atom_featurizer,
+    bg = [smiles_to_bigraph(smi, node_featurizer=atom_featurizer,
                             edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
     bg = dgl.batch(bg)
     bg.set_n_initializer(dgl.init.zero_initializer)
@@ -55,9 +55,9 @@ def validate(val_loader, model, atom_featurizer, bond_featurizer, loss_fn, devic
 
         if y_scaler is not None:
             batch_preds_val = y_scaler.inverse_transform(
-                y_pred.cpu().detach().numpy())
+                y_pred.cpu().detach().numpy().reshape(-1, 1))
             batch_labs_val = y_scaler.inverse_transform(
-                labels.cpu().detach().numpy())
+                labels.cpu().detach().numpy().reshape(-1, 1))
         else:
             batch_preds_val = y_pred.cpu().detach().numpy()
             batch_labs_val = labels.cpu().detach().numpy()
@@ -158,9 +158,9 @@ def main(args, device):
             if batch_num % args.log_batch == 0 and args.log_dir is not None:
 
                 batch_preds = train_loader.y_scaler.inverse_transform(
-                    y_pred.cpu().detach().numpy())
+                    y_pred.cpu().detach().numpy().reshape(-1, 1))
                 batch_labs = train_loader.y_scaler.inverse_transform(
-                    labels.cpu().detach().numpy())
+                    labels.cpu().detach().numpy().reshape(-1, 1))
 
                 # number of mols seen by model
                 if 'Felix' in args.optimizer:
