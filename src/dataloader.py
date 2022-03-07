@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-from utils import human_len
+from .utils import human_len
 
 
 class BigSmilesLoader:
