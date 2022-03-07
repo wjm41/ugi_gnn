@@ -6,13 +6,14 @@ import torch
 # import torch.distributed as dist
 
 
-def human_len(input):
+def human_len(input, byte=False):
     """Given a number or list like, returns the size/length of the object in human-readable form
 
-    As an example, human_len(12500) = 12.5K ; human_len(np.ones(14000)) = 14K
+    As an example, human_len(2048, byte=True) = 2KB ; human_len(np.ones(14000)) = 14K;
 
     Args:
         input: A number or an object with the __len__ method.
+        byte: Whether or not to treat the length in byte form.
 
     Returns:
         length_string (string): Human-readable string of the object size.
@@ -22,8 +23,12 @@ def human_len(input):
     except AttributeError:
         pass
 
-    units = ['', 'K', 'M', 'G', 'T', 'P']
-    k = 1000.0
+    if byte:
+        units = ['', 'K', 'M', 'G', 'T', 'P']
+        k = 1000.0
+    else:
+        units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
+        k = 1024.0
     magnitude = int(floor(log(input, k)))
     length_string = '%.2f%s' % (input / k**magnitude, units[magnitude])
     return length_string
