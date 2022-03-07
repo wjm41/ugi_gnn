@@ -5,14 +5,16 @@ Using learnt embeddings from GNNs pretrained on docking scores to predict pIC50 
 
 ## Backlog
 
-- [ ] Write tests for data loading and other utility functions
-- [ ] Decouple scripts
+- [x] Write tests for data loading and other utility functions
+- [x] Decouple scripts
   - [ ] genfps
   - [x] training
 - [ ] Weigh data by dockscore - how much of a difference does it make to the model performance?
 - [x] Begin model training
 
 ## Log
+
+7 Mar - Code mostly decoupled, ran test confirming that my current script is MUCH slower than benchmark (GPU 1min / CPU 4mins per epoch of HIV vs reported 2.5s!) - couldn't get line profiler working but suspect the issue is with on-the-fly featurisation ; should attempt multithread next
 
 2 Mar - Tested preprocessing of graphs, completely unfeasible: 12M `.csv` mapped to 2.3G of `.bin` graphs, will have to implement multithread instead.
 
