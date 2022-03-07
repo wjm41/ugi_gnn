@@ -21,7 +21,9 @@ from dataloader import load_data
 from optimizers import load_optimizer
 
 from tensorboard_logging import Logger
+import parsing
 from utils import bash_command, human_len
+
 
 def generate_batch(smiles, atom_featurizer, bond_featurizer, device):
     # TODO multithread graph featurizer
@@ -200,55 +202,9 @@ def main(args, device):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-
-    group_io = parser.add_argument_group("I/O")
-    group_io.add_argument('-p', '--train_path', type=str, default='ugis-00000000.csv',
-                          help='Path to the data.csv file.')
-    group_io.add_argument('-log_dir', '--log_dir', type=str, default='.',
-                          help='directory containing tensorboard logs')
-    group_io.add_argument('-save_dir', '--save_dir', type=str, default='ugi-pretrained',
-                          help='directory for saving model params')
-    group_io.add_argument('-load_name', '--load_name', default=None,
-                          help='name for directory containing saved model params checkpoint file for continued training.')
-
-    group_data = parser.add_argument_group("Training - data")
-    group_data.add_argument('-n_trials', '--n_trials', type=int, default=3,
-                            help='int specifying number of random train/test splits to use')
-    group_data.add_argument('-batch_size', '--batch_size', type=int, default=64,
-                            help='int specifying batch_size for training and evaluations')
-    group_data.add_argument('-log_batch', '--log_batch', type=int, default=1000,
-                            help='int specifying number of steps per validation and tensorboard log')
-    group_data.add_argument('-save_batch', '--save_batch', type=int, default=5000,
-                            help='int specifying number of batches per model save')
-    group_data.add_argument('-n_epochs', '--n_epochs', type=int, default=10,
-                            help='int specifying number of random train/test splits to use')
-    group_data.add_argument('-ts', '--test_set_size', type=float, default=0.1,
-                            help='float in range [0, 1] specifying fraction of dataset to use as test set')
-    group_data.add_argument('-val', action='store_true',
-                            help='whether or not to do random train/val split and log val_loss')
-    group_data.add_argument('-val_size', type=int, default=1000,
-                            help='Integer size of training set datapoints to use as random validation set.')
-    group_data.add_argument('-val_path', type=str, default=None,
-                            help='path to separate validation set ; if not None, overwrites -val options')
-
-    group_optim = parser.add_argument_group("Training - optimizer")
-    group_optim.add_argument('-optimizer', '--optimizer', type=str, default=None,
-                             choices=['Adam', 'AdamHD', 'SGD',
-                                      'SGDHD', 'FelixHD', 'FelixExpHD'],
-                             help='name of optimizer to use during training.')
-    group_optim.add_argument('-lr', '--lr', type=float, default=1e-3,
-                             help='float specifying learning rate used during training.')
-    group_optim.add_argument('-hypergrad_lr', '--hypergrad_lr', type=float, default=1e-3,
-                             help='float specifying hypergradient learning rate used during training.')
-    group_optim.add_argument('-hypergrad_lr_decay', '--hypergrad_lr_decay', type=float, default=1e-5,
-                             help='float specifying hypergradient lr decay used during training.')
-    group_optim.add_argument('-weight_decay', '--weight_decay', type=float, default=1e-4,
-                             help='float specifying hypergradient weight decay used during training.')
-    group_optim.add_argument('-hypergrad_warmup', '--hypergrad_warmup', type=int, default=100,
-                             help='Number of steps warming up hypergrad before using for optimisation.')
-
-    parser.add_argument('-debug', action='store_true',
-                        help='whether or not to print predictions and model weight gradients')
+    parser = parsing.add_io_args(parser)
+    parser = parsing.add_data_args(parser)
+    parser = parsing.add_optim_args(parser)
 
     args = parser.parse_args()
 
