@@ -17,10 +17,11 @@ class Logger:
 
         current_time = datetime.now().strftime('%b%d_%H-%M-%S')
         self.writer = SummaryWriter(args.log_dir+current_time)
-        self.writer.add_hparams({'optimizer': args.optimizer},
-                                {'batch_size': args.batch_size, 'lr': args.lr, 'hypergrad': args.hypergrad_lr})
 
-        self.writer.add_text()
+        self.writer.add_text('optimizer', args.optimizer, 0)
+        self.writer.add_text('batch_size', args.batch_size, 0)
+        self.writer.add_text('lr', args.lr, 0)
+        self.writer.add_text('hypergrad', args.hypergrad, 0)
 
     def log(self, n_mols, loss, batch_preds, batch_labs, split='train', state_lrs=None):
         p = spearmanr(batch_preds, batch_labs)[0]
