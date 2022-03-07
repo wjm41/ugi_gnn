@@ -72,11 +72,8 @@ def validate(val_loader, model, atom_featurizer, bond_featurizer, loss_fn, devic
 
 def main(args, device):
 
-    # load data
-    if args.val or args.val_path is not None:
-        train_loader, val_loader = load_data(args)
-    else:
-        train_loader = load_data(args)
+    # load data (val_loader is None if no args.val and args.val_path is None)
+    train_loader, val_loader = load_data(args)
 
     # Initialise featurisers
     atom_featurizer = CanonicalAtomFeaturizer()
@@ -134,7 +131,8 @@ def main(args, device):
         for batch_num, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
                                                 initial=start_batch,
                                                 total=train_loader.n_batches,
-                                                miniters=10000,
+                                                miniters=int(
+                                                    train_loader.n_batches/100),
                                                 unit='batch',
                                                 unit_scale=True):
 

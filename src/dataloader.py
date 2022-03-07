@@ -84,7 +84,7 @@ class BigSmilesLoader:
         df_batch = self.df.iloc[self.i:self.i+self.batch_size]
         self.i += self.batch_size
 
-        return df_batch['smiles'].values, df_batch[self.y_col]
+        return df_batch['smiles'].values, df_batch[self.y_col].to_numpy()
 
     def __len__(self):
         return self.dataset_len
@@ -126,6 +126,4 @@ def load_data(args):
 
     if val_loader is not None:
         logging.info(f'Length of validation set: {human_len(val_loader)}')
-        return train_loader, val_loader
-    else:
-        return train_loader
+    return train_loader, val_loader

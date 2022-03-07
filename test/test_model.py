@@ -1,5 +1,6 @@
 import argparse
 import pytest
+import logging
 import time
 from unittest.mock import MagicMock
 
@@ -28,3 +29,7 @@ def test_model_speed():
     main(args, device)
     end_time = time.perf_counter()
     assert end_time - start_time < 30
+
+
+logging.basicConfig(level=logging.INFO)
+test_model_speed()
