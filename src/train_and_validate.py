@@ -70,7 +70,6 @@ def validate(val_loader, model, atom_featurizer, bond_featurizer, loss_fn, devic
     return val_loss, val_preds, val_labs
 
 
-@profile
 def main(args, device):
 
     # load data (val_loader is None if no args.val and args.val_path is None)
