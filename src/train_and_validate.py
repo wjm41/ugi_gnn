@@ -124,7 +124,8 @@ def main(args, device):
     loss_fn = MSELoss()
 
     logging.info('beginning training...')
-    logger = Logger(args)
+    if args.log_dir is not None:
+        logger = Logger(args)
     for epoch in range(start_epoch, args.n_epochs):
         mpnn_net.train()
 
@@ -155,7 +156,7 @@ def main(args, device):
             n += len(smiles)
             n_mols = batch_num*args.batch_size + epoch*len(train_loader)
 
-            if batch_num % args.log_batch == 0:
+            if batch_num % args.log_batch == 0 and args.log_dir is not None:
 
                 batch_preds = train_loader.y_scaler.inverse_transform(
                     y_pred.cpu().detach().numpy())
@@ -184,7 +185,7 @@ def main(args, device):
                     logger.log(n_mols, val_loss, val_preds, val_labs,
                                split='val', log=True)
 
-            if batch_num % args.save_batch == 0:
+            if batch_num % args.save_batch == 0 and args.save_dir is not None:
                 if not os.path.isdir(args.save_dir):
                     cmd = 'mkdir ' + args.save_dir
                     bash_command(cmd)

@@ -5,16 +5,16 @@ def add_io_args(parser):
                           help='Path to the data.csv file.')
     group_io.add_argument('-log_dir', '--log_dir', type=str, default=None,
                           help='directory containing tensorboard logs')
-    group_io.add_argument('-save_dir', '--save_dir', type=str, default='ugi-pretrained',
-                          help='directory for saving model params')
+    group_io.add_argument('-save_dir', '--save_dir', type=str, default=None,
+                          help='directory for saving model params. If None (default), no model saving will be done')
     group_io.add_argument('-load_name', '--load_name', default=None,
-                          help='name for directory containing saved model params checkpoint file for continued training.')
+                          help='name for directory containing saved model params checkpoint file for continued training. If None (default), no model loading will occur.')
     return parser
 
 
 def add_data_args(parser):
     group_data = parser.add_argument_group("Training - data")
-    group_data.add_argument('-n_trials', '--n_trials', type=int, default=3,
+    group_data.add_argument('-n_trials', '--n_trials', type=int, default=1,
                             help='int specifying number of random train/test splits to use')
     group_data.add_argument('-batch_size', '--batch_size', type=int, default=64,
                             help='int specifying batch_size for training and evaluations')
