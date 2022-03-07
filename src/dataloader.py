@@ -19,7 +19,7 @@ class BigSmilesLoader:
                  file_path: str = None,
                  df: pd.DataFrame = None,
                  inds: np.ndarray = None,
-                 y_col: str = 'dockscore',
+                 y_col: str = None,
                  scale_y: bool = False,
                  y_scaler: StandardScaler = None,
                  batch_size: int = 32,
@@ -59,7 +59,7 @@ class BigSmilesLoader:
         if scale_y:
             self.y_scaler = StandardScaler()
 
-            self.df[y_col] = self.y_scaler.fit_trainsform(
+            self.df[y_col] = self.y_scaler.fit_transform(
                 self.df[y_col].to_numpy().reshape(-1, 1))
 
         # apply external scaling
@@ -99,9 +99,9 @@ def load_data(args):
 
     if args.val_path is not None:  # external validation set
         train_loader = BigSmilesLoader(
-            df=train_df, inds=None, batch_size=args.batch_size, shuffle=True, scale_y=True)
+            df=train_df, inds=None, batch_size=args.batch_size, shuffle=True, scale_y=True, y_col=args.y_col)
         val_loader = BigSmilesLoader(
-            args.val_path, inds=None, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler)
+            args.val_path, inds=None, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler, y_col=args.y_col)
 
     elif args.val:  # random train/val split
         val_ind = np.random.choice(
@@ -109,12 +109,12 @@ def load_data(args):
         train_ind = np.delete(np.arange(len_train), val_ind)
 
         train_loader = BigSmilesLoader(
-            df=train_df, inds=train_ind, batch_size=args.batch_size, shuffle=True, scale_y=True)
+            df=train_df, inds=train_ind, batch_size=args.batch_size, shuffle=True, scale_y=True, y_col=args.y_col)
         val_loader = BigSmilesLoader(
-            df=train_df, inds=val_ind, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler)
+            df=train_df, inds=val_ind, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler, y_col=args.y_col)
     else:  # no validation set
         train_loader = BigSmilesLoader(
-            df=train_df, inds=None, batch_size=args.batch_size, shuffle=True, scale_y=True)
+            df=train_df, inds=None, batch_size=args.batch_size, shuffle=True, scale_y=True, y_col=args.y_col)
         val_loader = None
 
     logging.info(f'Length of dataset: {human_len(len_train)}')
