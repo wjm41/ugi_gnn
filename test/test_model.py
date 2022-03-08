@@ -23,7 +23,8 @@ def test_model_speed():
 
     args = parser.parse_args(['-p', 'test/test_data/HIV.csv',
                               '-log_dir', 'test/test_runs/HIV',
-                              '-y_col', 'activity'])
+                              '-y_col', 'activity',
+                              '-batch_size', '41128'])
     device = get_device()
     start_time = time.perf_counter()
     main(args, device)

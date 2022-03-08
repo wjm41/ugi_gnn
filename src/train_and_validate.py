@@ -1,6 +1,7 @@
 """
 Property prediction using a Message-Passing Neural Network.
 """
+import time
 import os
 import argparse
 import logging
@@ -128,6 +129,7 @@ def main(args, device):
         n = 0
         start_batch = 0
 
+        # start_time = time.perf_counter()
         for batch_num, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
                                                 initial=start_batch,
                                                 total=train_loader.n_batches,
@@ -138,6 +140,8 @@ def main(args, device):
 
             bg, atom_feats, bond_feats = generate_batch(
                 smiles, atom_featurizer, bond_featurizer, device)
+            if args.time_forward_pass:
+                increment = time.perf_counter()
             y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
 
             labels = torch.tensor(labels, dtype=torch.float32).to(device)
@@ -149,6 +153,10 @@ def main(args, device):
                 _, state_lrs = optimizer.step()
             else:
                 optimizer.step()
+            if args.time_forward_pass:
+                increment = time.perf_counter() - increment
+                logging.info(
+                    f'Time taken to forward pass + backprop = {increment:.2f}s')
 
             n += len(smiles)
             n_mols = batch_num*args.batch_size + epoch*len(train_loader)
@@ -203,7 +211,8 @@ if __name__ == '__main__':
     parser = parsing.add_io_args(parser)
     parser = parsing.add_data_args(parser)
     parser = parsing.add_optim_args(parser)
-
+    parser.add_argument('-time_forward_pass', action='store_true',
+                        help='if True, will log the time taken for a forward pass a batch.')
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO)
