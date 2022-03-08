@@ -17,6 +17,7 @@ from rdkit import Chem
 import torch
 from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.utils.data import DataLoader
 
 from .model import generate_batch, validate
 from .dataloader import load_data
@@ -25,15 +26,33 @@ from .tensorboard_logging import Logger
 from .utils import bash_command, human_len, get_device
 from . import parsing
 
+# Collate Function for Dataloader
+
+
+def collate(sample):
+    graphs, labels = map(list, zip(*sample))
+    batched_graph = dgl.batch(graphs)
+    batched_graph.set_n_initializer(dgl.init.zero_initializer)
+    batched_graph.set_e_initializer(dgl.init.zero_initializer)
+    return batched_graph, torch.tensor(labels)
+
 
 def main(args, device):
 
     # load data (val_loader is None if no args.val and args.val_path is None)
     train_loader, val_loader = load_data(args)
+    X_train, y_train = train_loader.df[args.smiles_col].values, train_loader.df[args.y_col].to_numpy(
+    )
 
     # Initialise featurisers
     atom_featurizer = CanonicalAtomFeaturizer()
     bond_featurizer = CanonicalBondFeaturizer()
+
+    X_train = [smiles_to_bigraph(
+        m, node_featurizer=atom_featurizer, edge_featurizer=bond_featurizer) for m in X_train]
+    train_data = list(zip(X_train, y_train))
+    train_loader = DataLoader(
+        train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=32)
 
     e_feats = bond_featurizer.feat_size('e')
     n_feats = atom_featurizer.feat_size('h')
@@ -85,16 +104,19 @@ def main(args, device):
         start_batch = 0
 
         # start_time = time.perf_counter()
-        for batch_num, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
-                                                initial=start_batch,
-                                                total=len(train_loader),
-                                                miniters=min(10000,
-                                                             int(len(train_loader)/100)),
-                                                unit='batch',
-                                                unit_scale=True):
-
-            bg, atom_feats, bond_feats = generate_batch(
-                smiles, atom_featurizer, bond_featurizer, device)
+        for batch_num, (bg, labels) in tqdm(enumerate(train_loader, start=start_batch),
+                                            initial=start_batch,
+                                            total=len(train_loader),
+                                            miniters=min(10000,
+                                                         int(len(train_loader)/100)),
+                                            unit='batch',
+                                            unit_scale=True):
+            bg = bg.to(device)
+            labels = labels.to(device)
+            atom_feats = bg.ndata.pop('h').to(device)
+            bond_feats = bg.edata.pop('e').to(device)
+            atom_feats, bond_feats, labels = atom_feats.to(
+                device), bond_feats.to(device), labels.to(device)
             if args.time_forward_pass:
                 increment = time.perf_counter()
             y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
@@ -113,12 +135,13 @@ def main(args, device):
                 logging.info(
                     f'Time taken to forward pass + backprop = {increment:.2f}s')
 
-            n += len(smiles)
+            n += len(labels)
             n_mols = (batch_num + epoch*len(train_loader)) * \
                 args.batch_size  # TODO verify correct
 
             if batch_num % args.log_batch == 0 and args.log_dir is not None:
 
+                # TODO fix y_scaler when using dataloader
                 batch_preds = train_loader.y_scaler.inverse_transform(
                     y_pred.cpu().detach().numpy().reshape(-1, 1))
                 batch_labs = train_loader.y_scaler.inverse_transform(
