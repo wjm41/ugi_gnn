@@ -25,6 +25,7 @@ from .tensorboard_logging import Logger
 from .utils import bash_command, human_len, get_device
 from . import parsing
 
+
 def main(args, device):
 
     # load data (val_loader is None if no args.val and args.val_path is None)
@@ -86,9 +87,9 @@ def main(args, device):
         # start_time = time.perf_counter()
         for batch_num, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
                                                 initial=start_batch,
-                                                total=train_loader.n_batches,
-                                                miniters=int(
-                                                    train_loader.n_batches/100),
+                                                total=len(train_loader),
+                                                miniters=min(10000,
+                                                             int(len(train_loader)/100)),
                                                 unit='batch',
                                                 unit_scale=True):
 

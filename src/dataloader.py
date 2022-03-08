@@ -89,7 +89,7 @@ class BigSmilesLoader:
         return df_batch[self.smiles_col].values, df_batch[self.y_col].to_numpy()
 
     def __len__(self):
-        return self.dataset_len
+        return self.n_batches
 
 
 def load_data(args):
@@ -122,12 +122,14 @@ def load_data(args):
         val_loader = None
 
     logging.info(f'Length of dataset: {human_len(len_train)}')
-    logging.info(f'Length of training set: {human_len(train_loader)}')
+    logging.info(
+        f'Length of training set: {human_len(train_loader.dataset_len)}')
 
     logging.info(f'Number of epochs to train: {human_len(args.n_epochs)}')
     logging.info(
         f'Number of batches (size {args.batch_size}) per epoch: {human_len(train_loader.n_batches)}')
 
     if val_loader is not None:
-        logging.info(f'Length of validation set: {human_len(val_loader)}')
+        logging.info(
+            f'Length of validation set: {human_len(val_loader.dataset_len)}')
     return train_loader, val_loader
