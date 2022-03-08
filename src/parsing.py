@@ -3,6 +3,8 @@ def add_io_args(parser):
     group_io = parser.add_argument_group("I/O")
     group_io.add_argument('-p', '--train_path', type=str, required=True,
                           help='Path to the data.csv file.')
+    group_io.add_argument('-smiles_col', type=str, default='smiles',
+                          help='the name of the column with the smiles of the dataset.')
     group_io.add_argument('-y_col', type=str, default='dockscore',
                           help='the name of the column with y values to-be-learned.')
     group_io.add_argument('-log_dir', '--log_dir', type=str, default=None,
