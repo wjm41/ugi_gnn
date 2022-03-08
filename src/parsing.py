@@ -20,14 +20,14 @@ def add_data_args(parser):
     group_data = parser.add_argument_group("Training - data")
     group_data.add_argument('-n_trials', '--n_trials', type=int, default=1,
                             help='int specifying number of random train/test splits to use')
-    group_data.add_argument('-batch_size', '--batch_size', type=int, default=10000,
+    group_data.add_argument('-batch_size', '--batch_size', type=int, default=32,
                             help='int specifying batch_size for training and evaluations')
     group_data.add_argument('-log_batch', '--log_batch', type=int, default=1000,
                             help='int specifying number of steps per validation and tensorboard log')
     group_data.add_argument('-save_batch', '--save_batch', type=int, default=5000,
-                            help='int specifying number of batches per model save')
-    group_data.add_argument('-n_epochs', '--n_epochs', type=int, default=10,
-                            help='int specifying number of random train/test splits to use')
+                            help='int specifying number of batches per model save.')
+    group_data.add_argument('-n_epochs', '--n_epochs', type=int, default=1,
+                            help='int specifying number of random epochs to train for.')
     group_data.add_argument('-ts', '--test_set_size', type=float, default=0.1,
                             help='float in range [0, 1] specifying fraction of dataset to use as test set')
     group_data.add_argument('-val', action='store_true',
