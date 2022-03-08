@@ -23,7 +23,7 @@ from .model import generate_batch, validate
 from .dataloader import load_data
 from .optimizers import load_optimizer
 from .tensorboard_logging import Logger
-from .utils import bash_command, human_len, get_device
+from .utils import bash_command, human_len, get_device, pmap
 from . import parsing
 
 # Collate Function for Dataloader
@@ -34,25 +34,30 @@ def collate(sample):
     batched_graph = dgl.batch(graphs)
     batched_graph.set_n_initializer(dgl.init.zero_initializer)
     batched_graph.set_e_initializer(dgl.init.zero_initializer)
-    return batched_graph, torch.tensor(labels)
+    return batched_graph, torch.tensor(labels, dtype=torch.float32)
 
 
 def main(args, device):
 
     # load data (val_loader is None if no args.val and args.val_path is None)
     train_loader, val_loader = load_data(args)
-    X_train, y_train = train_loader.df[args.smiles_col].values, train_loader.df[args.y_col].to_numpy(
-    )
+    X_train = train_loader.df[args.smiles_col].values
+    y_train = train_loader.df[args.y_col].to_numpy()
 
     # Initialise featurisers
     atom_featurizer = CanonicalAtomFeaturizer()
     bond_featurizer = CanonicalBondFeaturizer()
 
-    X_train = [smiles_to_bigraph(
-        m, node_featurizer=atom_featurizer, edge_featurizer=bond_featurizer) for m in X_train]
+    X_train = pmap(smiles_to_bigraph,
+                   X_train,
+                   node_featurizer=atom_featurizer,
+                   edge_featurizer=bond_featurizer,
+                   n_jobs=4
+                   )
+
     train_data = list(zip(X_train, y_train))
     train_loader = DataLoader(
-        train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=32)
+        train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=4)
 
     e_feats = bond_featurizer.feat_size('e')
     n_feats = atom_featurizer.feat_size('h')
@@ -103,7 +108,6 @@ def main(args, device):
         n = 0
         start_batch = 0
 
-        # start_time = time.perf_counter()
         for batch_num, (bg, labels) in tqdm(enumerate(train_loader, start=start_batch),
                                             initial=start_batch,
                                             total=len(train_loader),

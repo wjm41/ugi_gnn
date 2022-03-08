@@ -7,6 +7,8 @@ from unittest.mock import MagicMock
 from src.parsing import add_io_args, add_data_args, add_optim_args
 from src.train_and_validate import main as featurize_on_the_fly
 from src.train_and_validate_collate import main as pre_featurize
+from src.train_and_validate_pmap import main as pre_featurize_pmap
+from src.train_and_validate_multithread import main as pre_featurize_mutithread
 from src.utils import get_device
 
 
@@ -26,19 +28,26 @@ def test_model_speed(model):
                         help='if True, will log the time taken for a forward pass a batch.')
     args = parser.parse_args(['-p', 'test/test_data/HIV.csv',
                               '-y_col', 'activity',
+                              '-n_epochs', '10',
                               #   '-batch_size', '32',
-                              '-batch_size', '41127',
+                              '-batch_size', '10000',
                               #   '-time_forward_pass'
                               ])
     device = get_device()
     start_time = time.perf_counter()
     model(args, device)
     end_time = time.perf_counter()
-    assert end_time - start_time < 30
+    logging.info(f'Total time taken for 10 epochs: {end_time-start_time:.1f}s')
+    # assert end_time - start_time < 30
 
 
 logging.basicConfig(level=logging.INFO)
-logging.info('Testing pre-featurised model.')
-test_model_speed(pre_featurize)
-# logging.info('Testing featurize-on-the-fly model.')
-# test_model_speed(featurize_on_the_fly)
+# logging.info('Testing pre-featurised multithread model.')
+# test_model_speed(
+#     pre_featurize_mutithread)
+# logging.info('Testing pre-featurised pmap model.')
+# test_model_speed(pre_featurize_pmap)
+# logging.info('Testing pre-featurised model.')
+# test_model_speed(pre_featurize)
+logging.info('Testing featurize-on-the-fly model.')
+test_model_speed(featurize_on_the_fly)
