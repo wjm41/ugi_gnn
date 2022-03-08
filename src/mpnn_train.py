@@ -3,6 +3,7 @@ Property prediction using a Message-Passing Neural Network.
 """
 
 import argparse
+import os
 
 import dgl
 import pandas as pd
