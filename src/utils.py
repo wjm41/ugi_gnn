@@ -24,11 +24,11 @@ def human_len(input, byte=False):
         pass
 
     if byte:
-        units = ['', 'K', 'M', 'G', 'T', 'P']
-        k = 1000.0
-    else:
         units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
         k = 1024.0
+    else:
+        units = ['', 'K', 'M', 'G', 'T', 'P']
+        k = 1000.0
     magnitude = int(floor(log(input, k)))
     length_string = '%.2f%s' % (input / k**magnitude, units[magnitude])
     return length_string
