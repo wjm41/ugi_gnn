@@ -19,6 +19,7 @@ class BigSmilesLoader:
                  file_path: str = None,
                  df: pd.DataFrame = None,
                  inds: np.ndarray = None,
+                 smiles_col: str = 'smiles',
                  y_col: str = None,
                  scale_y: bool = False,
                  y_scaler: StandardScaler = None,
@@ -43,6 +44,7 @@ class BigSmilesLoader:
         self.df = self.df.reset_index(drop=True)
         self.dataset_len = len(self.df)
         self.random_state = random_state
+        self.smiles_col = smiles_col
         self.y_col = y_col
 
         self.batch_size = batch_size
@@ -84,7 +86,7 @@ class BigSmilesLoader:
         df_batch = self.df.iloc[self.i:self.i+self.batch_size]
         self.i += self.batch_size
 
-        return df_batch['smiles'].values, df_batch[self.y_col].to_numpy()
+        return df_batch[self.smiles_col].values, df_batch[self.y_col].to_numpy()
 
     def __len__(self):
         return self.dataset_len
