@@ -21,30 +21,8 @@ from .model import generate_batch, validate
 from .dataloader import load_data
 from .optimizers import load_optimizer
 from .tensorboard_logging import Logger
-from .utils import bash_command, human_len, get_device, pmap
+from .utils import bash_command, human_len, get_device, multi_featurize, collate
 from . import parsing
-
-# Collate Function for Dataloader
-
-
-def collate(sample):
-    graphs, labels = map(list, zip(*sample))
-    batched_graph = dgl.batch(graphs)
-    batched_graph.set_n_initializer(dgl.init.zero_initializer)
-    batched_graph.set_e_initializer(dgl.init.zero_initializer)
-    return batched_graph, torch.tensor(labels, dtype=torch.float32)
-
-
-def multi_featurize(smiles, node_featurizer, edge_featurizer, n_jobs):
-    # turn off logging
-    graphs = pmap(smiles_to_bigraph,
-                  smiles,
-                  node_featurizer=node_featurizer,
-                  edge_featurizer=edge_featurizer,
-                  n_jobs=n_jobs
-                  )
-
-    return graphs
 
 
 def main(args, device):
@@ -127,82 +105,93 @@ def main(args, device):
                     task = pool.submit(
                         multi_featurize, smiles, atom_featurizer, bond_featurizer, 4)
 
+                batch_data = list(zip(graphs, labels))
+                batch_loader = DataLoader(
+                    batch_data, batch_size=args.minibatch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=4)
+                n_mini = 0
+
                 while not task.done():
-                    batch_data = list(zip(graphs, labels))
-                    batch_loader = DataLoader(
-                        batch_data, batch_size=int(args.batch_size)/10, shuffle=True, collate_fn=collate, drop_last=False, num_workers=4)
-                    for minibatch_num, (bg, labels_mini) in enumerate(batch_loader):
-                        bg = bg.to(device)
-                        labels_mini = labels_mini.to(device)
-                        atom_feats = bg.ndata.pop('h').to(device)
-                        bond_feats = bg.edata.pop('e').to(device)
-                        atom_feats, bond_feats, labels_mini = atom_feats.to(
-                            device), bond_feats.to(device), labels_mini.to(device)
-                        if args.time_forward_pass:
-                            increment = time.perf_counter()
-                        y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
+                    # infinite looping
+                    batch_iter = iter(batch_loader)
+                    try:
+                        bg, labels_mini = next(batch_iter)
+                    except StopIteration:
+                        batch_iter = iter(batch_loader)
+                        bg, labels_mini = next(batch_iter)
+                    bg = bg.to(device)
+                    labels_mini = labels_mini.to(device)
+                    atom_feats = bg.ndata.pop('h').to(device)
+                    bond_feats = bg.edata.pop('e').to(device)
+                    atom_feats, bond_feats, labels_mini = atom_feats.to(
+                        device), bond_feats.to(device), labels_mini.to(device)
+                    if args.time_forward_pass:
+                        increment = time.perf_counter()
+                    y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
 
-                        loss = loss_fn(y_pred, labels_mini)
+                    loss = loss_fn(y_pred, labels_mini)
 
-                        optimizer.zero_grad()
-                        loss.backward()
-                        if 'Felix' in args.optimizer:
-                            _, state_lrs = optimizer.step()
-                        else:
-                            optimizer.step()
-                        if args.time_forward_pass:
-                            increment = time.perf_counter() - increment
-                            logging.info(
-                                f'Time taken to forward pass + backprop = {increment:.2f}s')
+                    optimizer.zero_grad()
+                    loss.backward()
+                    if 'Felix' in args.optimizer:
+                        _, state_lrs = optimizer.step()
+                    else:
+                        optimizer.step()
+                    if args.time_forward_pass:
+                        increment = time.perf_counter() - increment
+                        logging.info(
+                            f'Time taken to forward pass + backprop = {increment:.2f}s')
+                    n_mini += 1
+                print(f'Number of minibatches = {n_mini}, \
+                        Number of molecules = {n_mini*args.minibatch_size} \
+                            ({100*n_mini*args.minibatch_size/args.batch_size}%)')
+                n += len(labels)
+                n_mols = (batch_num + epoch*len(train_loader)) * \
+                    args.batch_size  # TODO verify correct
 
-                        n += len(labels)
-                        n_mols = (batch_num + epoch*len(train_loader)) * \
-                            args.batch_size  # TODO verify correct
+                # TODO update batch num with minibatch num
+                if batch_num % args.log_batch == 0 and args.log_dir is not None:
 
-                        # TODO update batch num with minibatch num
-                        if batch_num % args.log_batch == 0 and args.log_dir is not None:
+                    # TODO fix y_scaler when using dataloader
+                    batch_preds = train_loader.y_scaler.inverse_transform(
+                        y_pred.cpu().detach().numpy().reshape(-1, 1))
+                    batch_labs = train_loader.y_scaler.inverse_transform(
+                        labels.cpu().detach().numpy().reshape(-1, 1))
 
-                            # TODO fix y_scaler when using dataloader
-                            batch_preds = train_loader.y_scaler.inverse_transform(
-                                y_pred.cpu().detach().numpy().reshape(-1, 1))
-                            batch_labs = train_loader.y_scaler.inverse_transform(
-                                labels.cpu().detach().numpy().reshape(-1, 1))
+                    # number of mols seen by model
+                    if 'Felix' in args.optimizer:
+                        logger.log(n_mols, loss, batch_preds, batch_labs,
+                                   split='train', state_lrs=state_lrs)
+                    else:
+                        logger.log(n_mols, loss, batch_preds, batch_labs,
+                                   split='train')
 
-                            # number of mols seen by model
-                            if 'Felix' in args.optimizer:
-                                logger.log(n_mols, loss, batch_preds, batch_labs,
-                                           split='train', state_lrs=state_lrs)
-                            else:
-                                logger.log(n_mols, loss, batch_preds, batch_labs,
-                                           split='train')
+                    if val_loader is not None:
 
-                            if val_loader is not None:
+                        val_loss, val_preds, val_labs = validate(val_loader=val_loader,
+                                                                 model=mpnn_net,
+                                                                 atom_featurizer=atom_featurizer,
+                                                                 bond_featurizer=bond_featurizer,
+                                                                 loss_fn=loss_fn,
+                                                                 device=device,
+                                                                 y_scaler=train_loader.y_scaler)
+                        scheduler.step(val_loss)
 
-                                val_loss, val_preds, val_labs = validate(val_loader=val_loader,
-                                                                         model=mpnn_net,
-                                                                         atom_featurizer=atom_featurizer,
-                                                                         bond_featurizer=bond_featurizer,
-                                                                         loss_fn=loss_fn,
-                                                                         device=device,
-                                                                         y_scaler=train_loader.y_scaler)
-                                scheduler.step(val_loss)
+                        logger.log(n_mols, val_loss, val_preds, val_labs,
+                                   split='val', log=True)
 
-                                logger.log(n_mols, val_loss, val_preds, val_labs,
-                                           split='val', log=True)
-
-                    if batch_num % args.save_batch == 0 and args.save_dir is not None:
-                        if not os.path.isdir(args.save_dir):
-                            cmd = 'mkdir ' + args.save_dir
-                            bash_command(cmd)
-                        torch.save({
-                            'epoch': epoch,
-                            'mpnn_state_dict': mpnn_net.state_dict(),
-                            'optimizer_state_dict': optimizer.state_dict(),
-                            'scheduler_state_dict': scheduler.state_dict(),
-                            'loss': loss,
-                            'batch': batch_num,
-                        }, args.save_dir +
-                            f'/model_mol_{n_mols}.ckpt')
+                if batch_num % args.save_batch == 0 and args.save_dir is not None:
+                    if not os.path.isdir(args.save_dir):
+                        cmd = 'mkdir ' + args.save_dir
+                        bash_command(cmd)
+                    torch.save({
+                        'epoch': epoch,
+                        'mpnn_state_dict': mpnn_net.state_dict(),
+                        'optimizer_state_dict': optimizer.state_dict(),
+                        'scheduler_state_dict': scheduler.state_dict(),
+                        'loss': loss,
+                        'batch': batch_num,
+                    }, args.save_dir +
+                        f'/model_mol_{n_mols}.ckpt')
 
 
 if __name__ == '__main__':

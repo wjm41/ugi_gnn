@@ -23,18 +23,8 @@ from .model import generate_batch, validate
 from .dataloader import load_data
 from .optimizers import load_optimizer
 from .tensorboard_logging import Logger
-from .utils import bash_command, human_len, get_device
+from .utils import bash_command, human_len, get_device, collate
 from . import parsing
-
-# Collate Function for Dataloader
-
-
-def collate(sample):
-    graphs, labels = map(list, zip(*sample))
-    batched_graph = dgl.batch(graphs)
-    batched_graph.set_n_initializer(dgl.init.zero_initializer)
-    batched_graph.set_e_initializer(dgl.init.zero_initializer)
-    return batched_graph, torch.tensor(labels)
 
 
 def main(args, device):
@@ -52,7 +42,7 @@ def main(args, device):
         m, node_featurizer=atom_featurizer, edge_featurizer=bond_featurizer) for m in X_train]
     train_data = list(zip(X_train, y_train))
     train_loader = DataLoader(
-        train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=32)
+        train_data, batch_size=args.batch_size, shuffle=True, collate_fn=collate, drop_last=False)
 
     e_feats = bond_featurizer.feat_size('e')
     n_feats = atom_featurizer.feat_size('h')

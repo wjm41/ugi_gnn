@@ -1,6 +1,9 @@
 import logging
 from math import log, floor
 import subprocess
+
+import dgl
+from dgllife.utils import CanonicalAtomFeaturizer, CanonicalBondFeaturizer, smiles_to_bigraph
 from joblib import Parallel, delayed, cpu_count
 
 import torch
@@ -35,12 +38,22 @@ def human_len(input, byte=False):
     return length_string
 
 
-def bash_command(cmd):
+def bash_command(cmd: str):
+    """Utility script for running a bash command from a python file.
+
+    Args:
+        cmd (str): bash command to-be-run.
+    """
     p = subprocess.Popen(cmd, shell=True, executable='/bin/bash')
     p.communicate()
 
 
-def get_device():
+def get_device() -> str:
+    """Detects CUDA availability and returns the appropriate torch device.
+
+    Returns:
+        device (str): device to-be used in torch
+    """
     if torch.cuda.is_available():
         logging.info(f'using GPU: {torch.cuda.get_device_name()}')
         device = 'cuda'
@@ -80,6 +93,27 @@ def pmap(pickleable_fn, data, n_jobs=None, verbose=1, **kwargs):
         delayed(pickleable_fn)(d, **kwargs) for d in data
     )
 
+
+# Collate Function for Dataloader
+def collate(sample):
+    graphs, labels = map(list, zip(*sample))
+    batched_graph = dgl.batch(graphs)
+    batched_graph.set_n_initializer(dgl.init.zero_initializer)
+    batched_graph.set_e_initializer(dgl.init.zero_initializer)
+    return batched_graph, torch.tensor(labels, dtype=torch.float32)
+
+
+def multi_featurize(smiles, node_featurizer, edge_featurizer, n_jobs):
+
+    # turn off logging
+    graphs = pmap(smiles_to_bigraph,
+                  smiles,
+                  node_featurizer=node_featurizer,
+                  edge_featurizer=edge_featurizer,
+                  n_jobs=n_jobs
+                  )
+
+    return graphs
 # class Optimizer(nn.Module):
 #     """Wrapper for optimization
 #     Parameters
