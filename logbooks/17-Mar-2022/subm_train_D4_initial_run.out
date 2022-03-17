@@ -1,0 +1,7 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+Traceback (most recent call last):
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/src/train_and_validate_multithread.py", line 20, in <module>
+    from .model import generate_batch, validate
+ImportError: attempted relative import with no known parent package
