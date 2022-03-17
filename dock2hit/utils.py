@@ -63,7 +63,7 @@ def get_device() -> str:
     return device
 
 
-def pmap(pickleable_fn, data, n_jobs=None, verbose=1, **kwargs):
+def pmap(pickleable_fn, data, n_jobs=None, verbose=0, **kwargs):
     """Parallel map using joblib.
     Parameters
     ----------

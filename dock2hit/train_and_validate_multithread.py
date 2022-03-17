@@ -25,7 +25,7 @@ from .utils import bash_command, human_len, get_device, multi_featurize, collate
 from . import parsing
 
 
-def main(args, device):
+def train_and_validate(args, device):
 
     # load data (val_loader is None if no args.val and args.val_path is None)
     train_loader, val_loader = load_data(args)
@@ -143,8 +143,8 @@ def main(args, device):
                     n_mini += 1
                 print(f'Number of minibatches = {n_mini}, \
                         Number of molecules = {n_mini*args.minibatch_size} \
-                            ({100*n_mini*args.minibatch_size/args.batch_size}%)')
-                n += len(labels)
+                            ({100*n_mini*args.minibatch_size/args.batch_size:.1f}%)')
+                n += n_mini
                 n_mols = (batch_num + epoch*len(train_loader)) * \
                     args.batch_size  # TODO verify correct
 
@@ -192,10 +192,10 @@ def main(args, device):
                         'batch': batch_num,
                     }, args.save_dir +
                         f'/model_mol_{n_mols}.ckpt')
+        print(f'Number of steps taken: {n}')
 
 
-if __name__ == '__main__':
-
+def main():
     parser = argparse.ArgumentParser()
     parser = parsing.add_io_args(parser)
     parser = parsing.add_data_args(parser)
@@ -206,4 +206,8 @@ if __name__ == '__main__':
 
     logging.basicConfig(level=logging.INFO)
     device = get_device()
-    main(args, device)
+    train_and_validate(args, device)
+
+
+if __name__ == '__main__':
+    main()
