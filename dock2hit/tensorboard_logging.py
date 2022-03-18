@@ -24,12 +24,12 @@ class Logger:
         if 'Felix' in args.optimizer:
             self.writer.add_text('hypergrad', str(args.hypergrad), 0)
 
-    def log(self, n_mols, loss, batch_preds, batch_labs, split='train', state_lrs=None):
+    def log(self, n_mols: int, loss: float, batch_preds, batch_labs, split: str = 'train', state_lrs=None):
         p = spearmanr(batch_preds, batch_labs)[0]
         rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
         r2 = r2_score(batch_preds, batch_labs)
 
-        self.writer.add_scalar(f'loss/{split}', loss.detach().item(),
+        self.writer.add_scalar(f'loss/{split}', loss,
                                n_mols)
         self.writer.add_scalar(f'{split}/rmse', rmse, n_mols)
         self.writer.add_scalar(f'{split}/rho', p, n_mols)

@@ -156,10 +156,10 @@ def train_and_validate(args, device):
 
                     # number of mols seen by model
                     if 'Felix' in args.optimizer:
-                        logger.log(n_steps, loss, batch_preds, batch_labs,
+                        logger.log(n_steps, loss.detach().item(), batch_preds, batch_labs,
                                    split='train', state_lrs=state_lrs)
                     else:
-                        logger.log(n_steps, loss, batch_preds, batch_labs,
+                        logger.log(n_steps, loss.detach().item(), batch_preds, batch_labs,
                                    split='train')
 
                     if val_loader is not None:
@@ -174,7 +174,7 @@ def train_and_validate(args, device):
                         scheduler.step(val_loss)
 
                         logger.log(n_steps, val_loss, val_preds, val_labs,
-                                   split='val', log=True)
+                                   split='val')
 
                 if batch_num % args.save_batch == 0 and args.save_dir is not None:
                     if not os.path.isdir(args.save_dir):
