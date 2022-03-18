@@ -2,7 +2,6 @@
 
 Using learnt embeddings from GNNs pretrained on docking scores to predict pIC50 for enrichment. Two cases are considered: Compounds from the Ugi reaction as SARS-CoV-2 Mpro inhibitors, as well as \<insert protein target here.\>
 
-
 ## Backlog
 
 - [x] Write tests for data loading and other utility functions
@@ -13,6 +12,8 @@ Using learnt embeddings from GNNs pretrained on docking scores to predict pIC50 
 - [x] Begin model training
 
 ## Log
+
+11 Mar - Consider downsampling dataset to 10M or even 1M; start training a 100M model in the background in the meantime. Better to see 100M molecules once than 1M 100 times? Not sure - anyhow should focus on Dopamine D4 because beta-lacatmase has a lot of covalent inhibitors so trying to benchmark with ChEMBL compounds will be very messy - should start scraping for D4 and show Alpha some examples so we can start working on filters.
 
 7 Mar - Code mostly decoupled, ran test confirming that my current script is MUCH slower than benchmark (GPU 1min / CPU 4mins per epoch of HIV vs reported 2.5s!) - couldn't get line profiler working but suspect the issue is with on-the-fly featurisation ; should attempt multithread next
 
@@ -79,25 +80,25 @@ The following is the description provided from the Chodera lab about the workflo
 
 ### Manifest
 
-* `total_ugi_library.csv` - the Ugi library (SMILES)
-* `dock-all-chunks.sh` - LSF script to dock chunks of the library
-* `dock-chunk.py` - Python script to dock single chunk
-* `combine-chunks.py` - Python script to combine chunks (don't use this!)
-* `convert-chunk.py` - Python script to convert `.oeb` docked chunk into `.sdf.bz2`
-* `convert-all-chunks.py` - Python script to convert all chunks from `.oeb` in `output/` to `.sdf.bz2` in `docked/`
-* `environment.yml` - Python conda environment
-* `receptors/` - N0050 receptor generated in [fah_prep](https://github.com/choderalab/fah_prep)
-  * `receptors/dimer/Mpro-N0050-protein.pdb` is the reference protein structure used for docking
-  * `receptors/dimer/Mpro-N0050-ligand.mol2` is the reference ligand structure
-* `output/` - docked chunks in `.oeb` format
-* `docked/` - docked chunks in `.sdf.bz2` format
+- `total_ugi_library.csv` - the Ugi library (SMILES)
+- `dock-all-chunks.sh` - LSF script to dock chunks of the library
+- `dock-chunk.py` - Python script to dock single chunk
+- `combine-chunks.py` - Python script to combine chunks (don't use this!)
+- `convert-chunk.py` - Python script to convert `.oeb` docked chunk into `.sdf.bz2`
+- `convert-all-chunks.py` - Python script to convert all chunks from `.oeb` in `output/` to `.sdf.bz2` in `docked/`
+- `environment.yml` - Python conda environment
+- `receptors/` - N0050 receptor generated in [fah_prep](https://github.com/choderalab/fah_prep)
+  - `receptors/dimer/Mpro-N0050-protein.pdb` is the reference protein structure used for docking
+  - `receptors/dimer/Mpro-N0050-ligand.mol2` is the reference ligand structure
+- `output/` - docked chunks in `.oeb` format
+- `docked/` - docked chunks in `.sdf.bz2` format
 
 ### Methodology for Molecular Docking
 
-* The Fragalysis X-ray structure `P0030` was used for protein and ligand reference structure.
-* An OpenEye OEReceptor was generated using the OpenEye SpruceTK (as implemented in the [fah_prep](https://github.com/choderalab/fah_prep) pipeline) to prepare the un-aligned structure for docking, modeling the dimer with neutral catalytic dyad.
-* Next, the OpenEye toolkit was used to expand protonation states and tautomers, and then unspecified stereochemistry.
-* OpenEye Omega was used to expand conformers while holding the region of the virtual compound matching the SMARTS pattern `C(=O)NCC(=O)N` fixed to the reference ligand structure.
-* The resulting conformers were superimposed onto matching atoms of the reference compound in the reference receptor structure, and the top 10% of poses with shape overlap to the reference compound were retained.
-* The top score from the resulting poses, as determined by Chemgauss4 (which accounts for steric and other interactions), was selected as the top-scoring pose for that protonation, tautomeric, and stereoisomer state and written out.
-* The OpenEye Python Toolkit 2020.2.2 was used throughout.
+- The Fragalysis X-ray structure `P0030` was used for protein and ligand reference structure.
+- An OpenEye OEReceptor was generated using the OpenEye SpruceTK (as implemented in the [fah_prep](https://github.com/choderalab/fah_prep) pipeline) to prepare the un-aligned structure for docking, modeling the dimer with neutral catalytic dyad.
+- Next, the OpenEye toolkit was used to expand protonation states and tautomers, and then unspecified stereochemistry.
+- OpenEye Omega was used to expand conformers while holding the region of the virtual compound matching the SMARTS pattern `C(=O)NCC(=O)N` fixed to the reference ligand structure.
+- The resulting conformers were superimposed onto matching atoms of the reference compound in the reference receptor structure, and the top 10% of poses with shape overlap to the reference compound were retained.
+- The top score from the resulting poses, as determined by Chemgauss4 (which accounts for steric and other interactions), was selected as the top-scoring pose for that protonation, tautomeric, and stereoisomer state and written out.
+- The OpenEye Python Toolkit 2020.2.2 was used throughout.

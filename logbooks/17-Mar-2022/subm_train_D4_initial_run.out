@@ -1,7 +1,84 @@
 Loading rhel8/default-amp
   Loading requirement: dot rhel8/slurm singularity/current rhel8/global
     cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
-Traceback (most recent call last):
-  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/src/train_and_validate_multithread.py", line 20, in <module>
-    from .model import generate_batch, validate
-ImportError: attempted relative import with no known parent package
+INFO:root:using GPU: NVIDIA A100-SXM4-80GB
+INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/D4_docked_valid.pkl
+INFO:root:Length of dataset: 116.24M
+INFO:root:Length of training set: 116.24M
+INFO:root:Number of epochs to train: 3.00
+INFO:root:Number of batches (size 32768) per epoch: 3.55K
+INFO:root:Length of validation set: 1.00K
+INFO:root:Number of model parameters: 74529
+INFO:root:Number of node features: 74
+INFO:root:Number of edge features: 12
+INFO:root:beginning training...
+  0%|          | 0.00/3.55k [00:00<?, ?batch/s]  0%|          | 0.00/3.55k [00:20<?, ?batch/s]  0%|          | 1.00/3.55k [00:59<58:44:43, 59.6s/batch]Number of minibatches = 22,                         Number of molecules = 90112                             (275.0%)
+  0%|          | 2.00/3.55k [01:35<45:05:04, 45.8s/batch]Number of minibatches = 25,                         Number of molecules = 102400                             (312.5%)
+  0%|          | 3.00/3.55k [02:12<41:08:54, 41.8s/batch]Number of minibatches = 22,                         Number of molecules = 90112                             (275.0%)
+  0%|          | 4.00/3.55k [02:48<38:49:04, 39.4s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  0%|          | 5.00/3.55k [03:29<39:15:28, 39.9s/batch]Number of minibatches = 22,                         Number of molecules = 90112                             (275.0%)
+  0%|          | 6.00/3.55k [04:09<39:26:03, 40.1s/batch]Number of minibatches = 23,                         Number of molecules = 94208                             (287.5%)
+  0%|          | 7.00/3.55k [04:51<39:49:51, 40.5s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  0%|          | 8.00/3.55k [05:33<40:22:33, 41.1s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  0%|          | 9.00/3.55k [06:14<40:29:01, 41.2s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  0%|          | 10.0/3.55k [06:56<40:42:53, 41.4s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  0%|          | 11.0/3.55k [07:40<41:16:27, 42.0s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  0%|          | 12.0/3.55k [08:24<42:03:37, 42.8s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  0%|          | 13.0/3.55k [09:08<42:15:45, 43.0s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  0%|          | 14.0/3.55k [09:52<42:42:36, 43.5s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  0%|          | 15.0/3.55k [10:41<44:08:59, 45.0s/batch]Number of minibatches = 22,                         Number of molecules = 90112                             (275.0%)
+  0%|          | 16.0/3.55k [11:25<44:01:13, 44.9s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  0%|          | 17.0/3.55k [12:13<44:54:21, 45.8s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 18.0/3.55k [13:03<46:00:58, 46.9s/batch]Number of minibatches = 22,                         Number of molecules = 90112                             (275.0%)
+  1%|          | 19.0/3.55k [13:51<46:16:23, 47.2s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 20.0/3.55k [14:38<46:08:39, 47.1s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 21.0/3.55k [15:25<46:06:22, 47.1s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 22.0/3.55k [16:14<46:49:17, 47.8s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 23.0/3.55k [17:05<47:40:10, 48.7s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 24.0/3.55k [17:53<47:31:33, 48.6s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 25.0/3.55k [18:43<47:58:05, 49.0s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 26.0/3.55k [19:33<48:14:15, 49.3s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 27.0/3.55k [20:21<47:45:45, 48.8s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 28.0/3.55k [21:13<48:46:43, 49.9s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|          | 29.0/3.55k [22:03<48:48:39, 49.9s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 30.0/3.55k [22:55<49:13:23, 50.4s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 31.0/3.55k [23:46<49:31:16, 50.7s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 32.0/3.55k [24:38<49:55:54, 51.1s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 33.0/3.55k [25:29<49:51:03, 51.1s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|          | 34.0/3.55k [26:21<49:55:35, 51.1s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 35.0/3.55k [27:12<49:57:24, 51.2s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 36.0/3.55k [28:04<50:21:11, 51.6s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 37.0/3.55k [28:57<50:28:59, 51.8s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|          | 38.0/3.55k [29:47<50:03:44, 51.3s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|          | 39.0/3.55k [30:40<50:41:51, 52.0s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|          | 40.0/3.55k [31:34<51:00:44, 52.4s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 41.0/3.55k [32:28<51:34:10, 52.9s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|          | 42.0/3.55k [33:20<51:24:13, 52.8s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|          | 43.0/3.55k [34:14<51:30:47, 52.9s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|          | 44.0/3.55k [35:07<51:32:26, 53.0s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  1%|▏         | 45.0/3.55k [36:02<52:21:01, 53.8s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|▏         | 46.0/3.55k [36:59<53:09:32, 54.6s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|▏         | 47.0/3.55k [37:56<53:48:10, 55.3s/batch]Number of minibatches = 21,                         Number of molecules = 86016                             (262.5%)
+  1%|▏         | 48.0/3.55k [38:48<52:56:51, 54.5s/batch]Number of minibatches = 18,                         Number of molecules = 73728                             (225.0%)
+  1%|▏         | 49.0/3.55k [39:45<53:41:24, 55.2s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|▏         | 50.0/3.55k [40:38<53:01:17, 54.6s/batch]Number of minibatches = 18,                         Number of molecules = 73728                             (225.0%)
+  1%|▏         | 51.0/3.55k [41:32<52:49:00, 54.4s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|▏         | 52.0/3.55k [42:28<53:13:46, 54.8s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  1%|▏         | 53.0/3.55k [43:25<53:43:07, 55.3s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 54.0/3.55k [44:19<53:28:30, 55.1s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  2%|▏         | 55.0/3.55k [45:16<53:49:27, 55.5s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 56.0/3.55k [46:12<54:08:40, 55.8s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  2%|▏         | 57.0/3.55k [47:08<54:08:12, 55.8s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  2%|▏         | 58.0/3.55k [48:05<54:22:37, 56.1s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 59.0/3.55k [49:03<55:07:01, 56.9s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 60.0/3.55k [49:56<53:48:20, 55.5s/batch]Number of minibatches = 18,                         Number of molecules = 73728                             (225.0%)
+  2%|▏         | 61.0/3.55k [50:56<55:08:25, 56.9s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 62.0/3.55k [51:52<54:44:24, 56.5s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 63.0/3.55k [52:47<54:23:11, 56.2s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  2%|▏         | 64.0/3.55k [53:43<54:13:36, 56.0s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 65.0/3.55k [54:40<54:33:10, 56.4s/batch]Number of minibatches = 20,                         Number of molecules = 81920                             (250.0%)
+  2%|▏         | 66.0/3.55k [55:37<54:52:26, 56.7s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  2%|▏         | 67.0/3.55k [56:33<54:35:23, 56.5s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+  2%|▏         | 68.0/3.55k [57:30<54:46:39, 56.7s/batch]Number of minibatches = 19,                         Number of molecules = 77824                             (237.5%)
+slurmstepd: error: *** JOB 57166666 ON gpu-q-23 CANCELLED AT 2022-03-17T15:59:28 DUE TO TIME LIMIT ***
+slurmstepd: error: task_p_post_term: rmdir(/dev/cpuset/slurm57166666/slurm57166666.4294967294_0) failed Device or resource busy
