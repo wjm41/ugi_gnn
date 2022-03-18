@@ -152,7 +152,7 @@ def train_and_validate(args, device):
                     batch_preds = train_loader.y_scaler.inverse_transform(
                         y_pred.cpu().detach().numpy().reshape(-1, 1))
                     batch_labs = train_loader.y_scaler.inverse_transform(
-                        labels_mini.reshape(-1, 1))
+                        labels_mini.cpu().detach().reshape(-1, 1))
 
                     # number of mols seen by model
                     if 'Felix' in args.optimizer:
