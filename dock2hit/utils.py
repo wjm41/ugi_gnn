@@ -102,18 +102,6 @@ def collate(sample):
     batched_graph.set_e_initializer(dgl.init.zero_initializer)
     return batched_graph, torch.tensor(labels, dtype=torch.float32)
 
-
-def multi_featurize(smiles, node_featurizer, edge_featurizer, n_jobs):
-
-    # turn off logging
-    graphs = pmap(smiles_to_bigraph,
-                  smiles,
-                  node_featurizer=node_featurizer,
-                  edge_featurizer=edge_featurizer,
-                  n_jobs=n_jobs
-                  )
-
-    return graphs
 # class Optimizer(nn.Module):
 #     """Wrapper for optimization
 #     Parameters

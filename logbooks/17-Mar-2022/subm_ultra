@@ -20,7 +20,7 @@ source activate dgl_life
 python train_ultra.py \
                 -p ${data_path} \
                 -batch_size 32768 \
-                -minibatch_size 4096 \
+                -minibatch_size 8192 \
                 -val \
                 -n_epochs 3 \
                 -save_dir ${model_path} \

@@ -17,11 +17,11 @@ from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data import DataLoader
 
-from .model import generate_batch, validate
+from .model import generate_batch, multi_featurize, multi_validate
 from .dataloader import load_data
 from .optimizers import load_optimizer
 from .tensorboard_logging import Logger
-from .utils import bash_command, human_len, get_device, multi_featurize, collate
+from .utils import bash_command, human_len, get_device, collate
 from . import parsing
 
 
@@ -79,10 +79,10 @@ def train_and_validate(args, device):
     logging.info('beginning training...')
     if args.log_dir is not None:
         logger = Logger(args)
+    n_steps = 0
     for epoch in range(start_epoch, args.n_epochs):
         mpnn_net.train()
 
-        n = 0
         start_batch = 0
 
         # start_time = time.perf_counter()
@@ -90,8 +90,7 @@ def train_and_validate(args, device):
             for batch_num, (smiles, labels) in tqdm(enumerate(train_loader, start=start_batch),
                                                     initial=start_batch,
                                                     total=len(train_loader),
-                                                    miniters=min(10000,
-                                                                 int(len(train_loader)/100)),
+                                                    miniters=20,
                                                     unit='batch',
                                                     unit_scale=True):
 
@@ -141,42 +140,40 @@ def train_and_validate(args, device):
                         logging.info(
                             f'Time taken to forward pass + backprop = {increment:.2f}s')
                     n_mini += 1
-                print(f'Number of minibatches = {n_mini}, \
-                        Number of molecules = {n_mini*args.minibatch_size} \
-                            ({100*n_mini*args.minibatch_size/args.batch_size:.1f}%)')
-                n += n_mini
-                n_mols = (batch_num + epoch*len(train_loader)) * \
-                    args.batch_size  # TODO verify correct
+                # print(f'Number of minibatches = {n_mini}, \
+                #         Number of molecules = {n_mini*args.minibatch_size} \
+                #             ({100*n_mini*args.minibatch_size/args.batch_size:.1f}%)')
+                n_steps += n_mini
 
                 # TODO update batch num with minibatch num
-                if batch_num % args.log_batch == 0 and args.log_dir is not None:
+                if n_steps % args.log_step == 0 and args.log_dir is not None:
 
                     # TODO fix y_scaler when using dataloader
                     batch_preds = train_loader.y_scaler.inverse_transform(
                         y_pred.cpu().detach().numpy().reshape(-1, 1))
                     batch_labs = train_loader.y_scaler.inverse_transform(
-                        labels.cpu().detach().numpy().reshape(-1, 1))
+                        labels_mini.reshape(-1, 1))
 
                     # number of mols seen by model
                     if 'Felix' in args.optimizer:
-                        logger.log(n_mols, loss, batch_preds, batch_labs,
+                        logger.log(n_steps, loss, batch_preds, batch_labs,
                                    split='train', state_lrs=state_lrs)
                     else:
-                        logger.log(n_mols, loss, batch_preds, batch_labs,
+                        logger.log(n_steps, loss, batch_preds, batch_labs,
                                    split='train')
 
                     if val_loader is not None:
 
-                        val_loss, val_preds, val_labs = validate(val_loader=val_loader,
-                                                                 model=mpnn_net,
-                                                                 atom_featurizer=atom_featurizer,
-                                                                 bond_featurizer=bond_featurizer,
-                                                                 loss_fn=loss_fn,
-                                                                 device=device,
-                                                                 y_scaler=train_loader.y_scaler)
+                        val_loss, val_preds, val_labs = multi_validate(val_loader=val_loader,
+                                                                       model=mpnn_net,
+                                                                       atom_featurizer=atom_featurizer,
+                                                                       bond_featurizer=bond_featurizer,
+                                                                       loss_fn=loss_fn,
+                                                                       device=device,
+                                                                       y_scaler=train_loader.y_scaler)
                         scheduler.step(val_loss)
 
-                        logger.log(n_mols, val_loss, val_preds, val_labs,
+                        logger.log(n_steps, val_loss, val_preds, val_labs,
                                    split='val', log=True)
 
                 if batch_num % args.save_batch == 0 and args.save_dir is not None:
@@ -191,8 +188,8 @@ def train_and_validate(args, device):
                         'loss': loss,
                         'batch': batch_num,
                     }, args.save_dir +
-                        f'/model_mol_{n_mols}.ckpt')
-        print(f'Number of steps taken: {n}')
+                        f'/model_step_{n_steps}.ckpt')
+        print(f'Number of steps taken: {n_steps}')
 
 
 def main():

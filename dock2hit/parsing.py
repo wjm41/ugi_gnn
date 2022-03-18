@@ -24,6 +24,8 @@ def add_data_args(parser):
                             help='int specifying batch_size for training and evaluations')
     group_data.add_argument('-minibatch_size', '--minibatch_size', type=int, default=32,
                             help='int specifying minibatch_size for training and evaluations')
+    group_data.add_argument('-log_step', '--log_step', type=int, default=100,
+                            help='int specifying number of steps per validation and tensorboard log')
     group_data.add_argument('-log_batch', '--log_batch', type=int, default=1000,
                             help='int specifying number of steps per validation and tensorboard log')
     group_data.add_argument('-save_batch', '--save_batch', type=int, default=5000,
@@ -34,7 +36,7 @@ def add_data_args(parser):
                             help='float in range [0, 1] specifying fraction of dataset to use as test set')
     group_data.add_argument('-val', action='store_true',
                             help='whether or not to do random train/val split and log val_loss')
-    group_data.add_argument('-val_size', type=int, default=1000,
+    group_data.add_argument('-val_size', type=int, default=100,
                             help='Integer size of training set datapoints to use as random validation set.')
     group_data.add_argument('-val_path', type=str, default=None,
                             help='path to separate validation set ; if not None, overwrites -val options')
