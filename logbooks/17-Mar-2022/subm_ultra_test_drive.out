@@ -1,0 +1,47 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: dock2hit
+  Building wheel for dock2hit (setup.py): started
+  Building wheel for dock2hit (setup.py): finished with status 'done'
+  Created wheel for dock2hit: filename=dock2hit-0.1.0-py3-none-any.whl size=136170 sha256=48ff66f8d602bd79c5c71221b732920f11a16b5c794b26a4a47437f1c9cdaf8e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-bjclfvlm/wheels/e9/46/b3/127c6cd122b7690cfca02e35d86062f3cf7fe58252c07c9b98
+Successfully built dock2hit
+Installing collected packages: dock2hit
+  Attempting uninstall: dock2hit
+    Found existing installation: dock2hit 0.1.0
+    Uninstalling dock2hit-0.1.0:
+      Successfully uninstalled dock2hit-0.1.0
+Successfully installed dock2hit-0.1.0
+INFO:root:using GPU: NVIDIA A100-SXM4-80GB
+INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/D4_docked_valid.pkl
+INFO:root:Length of dataset: 116.24M
+INFO:root:Length of training set: 116.24M
+INFO:root:Number of epochs to train: 3.00
+INFO:root:Number of batches (size 16) per epoch: 7.27M
+INFO:root:Length of validation set: 100.00
+INFO:root:Number of model parameters: 74529
+INFO:root:Number of node features: 74
+INFO:root:Number of edge features: 12
+INFO:root:beginning training...
+  0%|          | 0.00/7.27M [00:00<?, ?batch/s]INFO:root:train RMSE: 7.108, RHO: 0.400, R2: -491800.629
+  0%|          | 0.00/7.27M [00:07<?, ?batch/s]
+Traceback (most recent call last):
+  File "/rds-d2/user/wjm41/hpc-work/datasets/Ugis/logbooks/17-Mar-2022//train_ultra.py", line 4, in <module>
+    main()
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/dock2hit/train_and_validate_multithread.py", line 206, in main
+    train_and_validate(args, device)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/dock2hit/train_and_validate_multithread.py", line 167, in train_and_validate
+    val_loss, val_preds, val_labs = multi_validate(val_loader=val_loader,
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/dock2hit/model.py", line 94, in multi_validate
+    loss = loss_fn(y_pred, labels)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 520, in forward
+    return F.mse_loss(input, target, reduction=self.reduction)
+  File "/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/torch/nn/functional.py", line 3101, in mse_loss
+    if not (target.size() == input.size()):
+TypeError: 'int' object is not callable
