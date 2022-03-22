@@ -43,7 +43,7 @@ class AdamHD(Optimizer):
         hypergrad_lr (float, optional): hypergradient learning rate for the online
         tuning of the learning rate, introduced in the paper
         `Online Learning Rate Adaptation with Hypergradient Descent`_
-    .. _Adam\: A Method for Stochastic Optimization:
+    .. _Adam: A Method for Stochastic Optimization:
         https://arxiv.org/abs/1412.6980
     .. _Online Learning Rate Adaptation with Hypergradient Descent:
         https://openreview.net/forum?id=BkrsAzWAb
@@ -107,7 +107,8 @@ class AdamHD(Optimizer):
 
 
 class FelixHD(Optimizer):
-    """Implements Adam algorithm.
+    """
+    Implements Adam algorithm.
     It has been proposed in `Adam: A Method for Stochastic Optimization`_.
     Arguments:
         params (iterable): iterable of parameters to optimize or dicts defining
@@ -121,7 +122,7 @@ class FelixHD(Optimizer):
         hypergrad_lr (float, optional): hypergradient learning rate for the online
         tuning of the learning rate, introduced in the paper
         `Online Learning Rate Adaptation with Hypergradient Descent`_
-    .. _Adam\: A Method for Stochastic Optimization:
+    .. _Adam: A Method for Stochastic Optimization:
         https://arxiv.org/abs/1412.6980
     .. _Online Learning Rate Adaptation with Hypergradient Descent:
         https://openreview.net/forum?id=BkrsAzWAb
@@ -336,7 +337,7 @@ class FelixExpHD(Optimizer):
         hypergrad_lr (float, optional): hypergradient learning rate for the online
         tuning of the learning rate, introduced in the paper
         `Online Learning Rate Adaptation with Hypergradient Descent`_
-    .. _Adam\: A Method for Stochastic Optimization:
+    .. _Adam: A Method for Stochastic Optimization:
         https://arxiv.org/abs/1412.6980
     .. _Online Learning Rate Adaptation with Hypergradient Descent:
         https://openreview.net/forum?id=BkrsAzWAb
