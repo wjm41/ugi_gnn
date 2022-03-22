@@ -176,9 +176,9 @@ def main(args, device):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser = parsing.add_io_args(parser)
-    parser = parsing.add_data_args(parser)
-    parser = parsing.add_optim_args(parser)
+    parsing.add_io_args(parser)
+    parsing.add_data_args(parser)
+    parsing.add_optim_args(parser)
     parser.add_argument('-time_forward_pass', action='store_true',
                         help='if True, will log the time taken for a forward pass a batch.')
     args = parser.parse_args()

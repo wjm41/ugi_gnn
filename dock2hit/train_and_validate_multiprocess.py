@@ -100,88 +100,89 @@ def main(args, device):
             process.start()
             process.join()
             if batch_num == 0:
-                graphs = multi_featurize(smiles, atom_featurizer, bond_featurizer, 4))
+                graphs = multi_featurize(
+                    smiles, atom_featurizer, bond_featurizer, 4)
 
             else:
-                graphs=task.result()  # grab graphs from previous run/batch
-                task=pool.submit(
+                graphs = task.result()  # grab graphs from previous run/batch
+                task = pool.submit(
                     multi_featurize, smiles, atom_featurizer, bond_featurizer, 4)
 
-            batch_data=list(zip(graphs, labels))
-            batch_loader=DataLoader(
-                batch_data, batch_size = args.minibatch_size, shuffle = True, collate_fn = collate, drop_last = False, num_workers = 4)
+            batch_data = list(zip(graphs, labels))
+            batch_loader = DataLoader(
+                batch_data, batch_size=args.minibatch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=4)
 
             while not task.done():
                 # infinite looping
-                batch_iter=iter(batch_loader)
+                batch_iter = iter(batch_loader)
                 try:
-                    bg, labels_mini=next(batch_iter)
+                    bg, labels_mini = next(batch_iter)
                 except StopIteration:
-                    batch_iter=iter(batch_loader)
-                    bg, labels_mini=next(batch_iter)
-                bg=bg.to(device)
-                labels_mini=labels_mini.to(device)
-                atom_feats=bg.ndata.pop('h').to(device)
-                bond_feats=bg.edata.pop('e').to(device)
-                atom_feats, bond_feats, labels_mini=atom_feats.to(
+                    batch_iter = iter(batch_loader)
+                    bg, labels_mini = next(batch_iter)
+                bg = bg.to(device)
+                labels_mini = labels_mini.to(device)
+                atom_feats = bg.ndata.pop('h').to(device)
+                bond_feats = bg.edata.pop('e').to(device)
+                atom_feats, bond_feats, labels_mini = atom_feats.to(
                     device), bond_feats.to(device), labels_mini.to(device)
                 if args.time_forward_pass:
-                    increment=time.perf_counter()
-                y_pred=mpnn_net(bg, atom_feats, bond_feats).squeeze()
+                    increment = time.perf_counter()
+                y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
 
-                loss=loss_fn(y_pred, labels_mini)
+                loss = loss_fn(y_pred, labels_mini)
 
                 optimizer.zero_grad()
                 loss.backward()
                 if 'Felix' in args.optimizer:
-                    _, state_lrs=optimizer.step()
+                    _, state_lrs = optimizer.step()
                 else:
                     optimizer.step()
                 if args.time_forward_pass:
-                    increment=time.perf_counter() - increment
+                    increment = time.perf_counter() - increment
                     logging.info(
                         f'Time taken to forward pass + backprop = {increment:.2f}s')
 
             n += len(labels)
             # fmt off
-            n_mols=(batch_num + epoch*len(train_loader)) * \
-                    args.batch_size  # TODO verify correct
+            n_mols = (batch_num + epoch*len(train_loader)) * \
+                args.batch_size  # TODO verify correct
             # fmt on
 
             # TODO update batch num with minibatch num
             if batch_num % args.log_batch == 0 and args.log_dir is not None:
 
                 # TODO fix y_scaler when using dataloader
-                batch_preds=train_loader.y_scaler.inverse_transform(
+                batch_preds = train_loader.y_scaler.inverse_transform(
                     y_pred.cpu().detach().numpy().reshape(-1, 1))
-                batch_labs=train_loader.y_scaler.inverse_transform(
+                batch_labs = train_loader.y_scaler.inverse_transform(
                     labels.cpu().detach().numpy().reshape(-1, 1))
 
                 # number of mols seen by model
                 if 'Felix' in args.optimizer:
                     logger.log(n_mols, loss, batch_preds, batch_labs,
-                                split = 'train', state_lrs = state_lrs)
+                               split='train', state_lrs=state_lrs)
                 else:
                     logger.log(n_mols, loss, batch_preds, batch_labs,
-                                split = 'train')
+                               split='train')
 
                 if val_loader is not None:
 
-                    val_loss, val_preds, val_labs=validate(val_loader = val_loader,
-                                                                model = mpnn_net,
-                                                                atom_featurizer = atom_featurizer,
-                                                                bond_featurizer = bond_featurizer,
-                                                                loss_fn = loss_fn,
-                                                                device = device,
-                                                                y_scaler = train_loader.y_scaler)
+                    val_loss, val_preds, val_labs = validate(val_loader=val_loader,
+                                                             model=mpnn_net,
+                                                             atom_featurizer=atom_featurizer,
+                                                             bond_featurizer=bond_featurizer,
+                                                             loss_fn=loss_fn,
+                                                             device=device,
+                                                             y_scaler=train_loader.y_scaler)
                     scheduler.step(val_loss)
 
                     logger.log(n_mols, val_loss, val_preds, val_labs,
-                                split = 'val', log = True)
+                               split='val', log=True)
 
             if batch_num % args.save_batch == 0 and args.save_dir is not None:
                 if not os.path.isdir(args.save_dir):
-                    cmd='mkdir ' + args.save_dir
+                    cmd = 'mkdir ' + args.save_dir
                     bash_command(cmd)
                 torch.save({
                     'epoch': epoch,
@@ -196,14 +197,14 @@ def main(args, device):
 
 if __name__ == '__main__':
 
-    parser=argparse.ArgumentParser()
-    parser=parsing.add_io_args(parser)
-    parser=parsing.add_data_args(parser)
-    parser=parsing.add_optim_args(parser)
-    parser.add_argument('-time_forward_pass', action = 'store_true',
-                        help = 'if True, will log the time taken for a forward pass a batch.')
-    args=parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parsing.add_io_args(parser)
+    parsing.add_data_args(parser)
+    parsing.add_optim_args(parser)
+    parser.add_argument('-time_forward_pass', action='store_true',
+                        help='if True, will log the time taken for a forward pass a batch.')
+    args = parser.parse_args()
 
-    logging.basicConfig(level = logging.INFO)
-    device=get_device()
+    logging.basicConfig(level=logging.INFO)
+    device = get_device()
     main(args, device)
