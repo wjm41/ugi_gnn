@@ -1,9 +1,9 @@
+from __future__ import annotations
+import argparse
+from typing import Literal
 import logging
 from datetime import datetime
 
-import argparse
-from typing import Literal
-from __future__ import annotations
 
 import pandas as pd
 import numpy as np
@@ -35,7 +35,9 @@ class Logger:
             batch_labs: np.ndarray,
             split: Literal['train', 'val'] = 'train',
             state_lrs: np.ndarray = None,
-            xlabel: str = 'Dock Score'):
+            title: str = None,
+            xlabel: str = 'True Values',
+            ylabel: str = 'Predicted Values'):
 
         p = spearmanr(batch_preds, batch_labs)[0]
         rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
@@ -51,14 +53,18 @@ class Logger:
             self.writer.add_histogram(f'{split}/lrT', state_lrs, n_mols)
 
         df = pd.DataFrame(
-            data={'y_true': batch_labs.flatten(), 'y_pred': batch_preds.flatten()})
+            data={xlabel: batch_labs.flatten(), ylabel: batch_preds.flatten()})
         plot = sns.jointplot(
-            data=df, x='y_true', y='y_pred', kind='scatter')
-        dot_line = [np.amin(df['y_true']),
-                    np.amax(df['y_true'])]
+            data=df, x=xlabel, y=ylabel, kind='scatter')
+        dot_line = [np.amin(df[xlabel]),
+                    np.amax(df[xlabel])]
         plot.ax_joint.plot(dot_line, dot_line, 'k:')
-        plt.xlabel(xlabel)
-        plt.ylabel('Model Predictions')
+
+        if title is None:
+            title = f'Model predictions on {split} set'
+
+        plot.fig.suptitle(title)
+        plot.fig.tight_layout()
         self.writer.add_figure(f'{split} minibatch',
                                plot.fig, global_step=n_mols)
         self.writer.flush()
