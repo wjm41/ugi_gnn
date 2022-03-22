@@ -2,6 +2,8 @@ import logging
 from datetime import datetime
 
 import argparse
+from typing import Literal
+from __future__ import annotations
 
 import pandas as pd
 import numpy as np
@@ -31,9 +33,10 @@ class Logger:
             loss: float,
             batch_preds: np.ndarray,
             batch_labs: np.ndarray,
-            split: str = 'train',
+            split: Literal['train', 'val'] = 'train',
             state_lrs: np.ndarray = None,
             xlabel: str = 'Dock Score'):
+
         p = spearmanr(batch_preds, batch_labs)[0]
         rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
         r2 = r2_score(batch_preds, batch_labs)
