@@ -1,6 +1,8 @@
 import logging
 from datetime import datetime
 
+import argparse
+
 import pandas as pd
 import numpy as np
 from scipy.stats import spearmanr
@@ -13,7 +15,7 @@ sns.set(rc={"figure.dpi": 200})
 
 
 class Logger:
-    def __init__(self, args):
+    def __init__(self, args: argparse.Namespace):
 
         current_time = datetime.now().strftime('%b%d_%H-%M-%S')
         self.writer = SummaryWriter(args.log_dir+current_time)
@@ -24,7 +26,14 @@ class Logger:
         if 'Felix' in args.optimizer:
             self.writer.add_text('hypergrad', str(args.hypergrad), 0)
 
-    def log(self, n_mols: int, loss: float, batch_preds: np.ndarray, batch_labs: np.ndarray, split: str = 'train', state_lrs=None):
+    def log(self,
+            n_mols: int,
+            loss: float,
+            batch_preds: np.ndarray,
+            batch_labs: np.ndarray,
+            split: str = 'train',
+            state_lrs: np.ndarray = None,
+            xlabel: str = 'Dock Score'):
         p = spearmanr(batch_preds, batch_labs)[0]
         rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
         r2 = r2_score(batch_preds, batch_labs)
@@ -39,15 +48,16 @@ class Logger:
             self.writer.add_histogram(f'{split}/lrT', state_lrs, n_mols)
 
         df = pd.DataFrame(
-            data={'dock_score': batch_labs.flatten(), 'preds': batch_preds.flatten()})
+            data={'y_true': batch_labs.flatten(), 'y_pred': batch_preds.flatten()})
         plot = sns.jointplot(
-            data=df, x='dock_score', y='preds', kind='scatter')
-        dot_line = [np.amin(df['dock_score']),
-                    np.amax(df['dock_score'])]
+            data=df, x='y_true', y='y_pred', kind='scatter')
+        dot_line = [np.amin(df['y_true']),
+                    np.amax(df['y_true'])]
         plot.ax_joint.plot(dot_line, dot_line, 'k:')
-        plt.xlabel('Dock Scores')
-        plt.ylabel('Predictions')
-        self.writer.add_figure(f'{split} batch', plot.fig, global_step=n_mols)
+        plt.xlabel(xlabel)
+        plt.ylabel('Model Predictions')
+        self.writer.add_figure(f'{split} minibatch',
+                               plot.fig, global_step=n_mols)
         self.writer.flush()
 
         logging.info(
