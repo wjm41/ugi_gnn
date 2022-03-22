@@ -17,11 +17,11 @@ from torch.nn import MSELoss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data import DataLoader
 
-from .model import generate_batch, validate
+from .model import generate_batch, validate, multi_featurize
 from .dataloader import load_data
 from .optimizers import load_optimizer
 from .tensorboard_logging import Logger
-from .utils import bash_command, human_len, get_device, collate, multi_featurize
+from .utils import bash_command, human_len, get_device, collate
 from . import parsing
 
 

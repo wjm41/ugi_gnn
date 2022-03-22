@@ -24,7 +24,7 @@ class Logger:
         if 'Felix' in args.optimizer:
             self.writer.add_text('hypergrad', str(args.hypergrad), 0)
 
-    def log(self, n_mols: int, loss: float, batch_preds, batch_labs, split: str = 'train', state_lrs=None):
+    def log(self, n_mols: int, loss: float, batch_preds: np.ndarray, batch_labs: np.ndarray, split: str = 'train', state_lrs=None):
         p = spearmanr(batch_preds, batch_labs)[0]
         rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
         r2 = r2_score(batch_preds, batch_labs)
@@ -52,3 +52,5 @@ class Logger:
 
         logging.info(
             f'{split} RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
+
+# TODO TESTS! No need for df

@@ -60,3 +60,5 @@ def add_optim_args(parser):
     group_optim.add_argument('-hypergrad_warmup', '--hypergrad_warmup', type=int, default=100,
                              help='Number of steps warming up hypergrad before using for optimisation.')
     return parser
+
+# TODO make these inplace
