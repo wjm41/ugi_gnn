@@ -1,6 +1,6 @@
 import pytest
 
-from src import dataloader
+from dock2hit import dataloader
 
 
 # @pytest.mark.parametrize(

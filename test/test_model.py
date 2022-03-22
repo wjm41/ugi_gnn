@@ -4,12 +4,12 @@ import logging
 import time
 from unittest.mock import MagicMock
 
-from src.parsing import add_io_args, add_data_args, add_optim_args
-from src.train_and_validate import main as featurize_on_the_fly
-from src.train_and_validate_collate import main as pre_featurize
-from src.train_and_validate_pmap import main as pre_featurize_pmap
-from src.train_and_validate_multithread import main as pre_featurize_mutithread
-from src.utils import get_device
+from dock2hit.parsing import add_io_args, add_data_args, add_optim_args
+from dock2hit.train_and_validate import main as featurize_on_the_fly
+from dock2hit.train_and_validate_collate import main as pre_featurize
+from dock2hit.train_and_validate_pmap import main as pre_featurize_pmap
+from dock2hit.train_and_validate_multithread import main as pre_featurize_mutithread
+from dock2hit.utils import get_device
 
 
 # def mock_arguments():
