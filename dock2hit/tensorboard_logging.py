@@ -52,17 +52,15 @@ class Logger:
         if state_lrs is not None:
             self.writer.add_histogram(f'{split}/lrT', state_lrs, n_mols)
 
-        df = pd.DataFrame(
-            data={xlabel: batch_labs.flatten(), ylabel: batch_preds.flatten()})
-        plot = sns.jointplot(
-            data=df, x=xlabel, y=ylabel, kind='scatter')
-        dot_line = [np.amin(df[xlabel]),
-                    np.amax(df[xlabel])]
+        plot = sns.jointplot(x=batch_labs.flatten(),
+                             y=batch_preds.flatten(), kind='scatter')
+        dot_line = [np.amin(batch_labs.flatten()),
+                    np.amax(batch_preds.flatten())]
         plot.ax_joint.plot(dot_line, dot_line, 'k:')
-
         if title is None:
             title = f'Model predictions on {split} set'
 
+        plot.ax_joint.set(xlabel=xlabel, ylabel=ylabel)
         plot.fig.suptitle(title)
         plot.fig.tight_layout()
         self.writer.add_figure(f'{split} minibatch',
