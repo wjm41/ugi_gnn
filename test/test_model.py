@@ -5,10 +5,10 @@ import time
 from unittest.mock import MagicMock
 
 from dock2hit.parsing import add_io_args, add_data_args, add_optim_args
-from dock2hit.train_and_validate import main as featurize_on_the_fly
-from dock2hit.train_and_validate_collate import main as pre_featurize
-from dock2hit.train_and_validate_pmap import main as pre_featurize_pmap
-from dock2hit.train_and_validate_multithread import main as pre_featurize_mutithread
+from dock2hit.train_and_validate.train_and_validate_old import main as featurize_on_the_fly
+from dock2hit.train_and_validate.collate import main as pre_featurize
+from dock2hit.train_and_validate.pmap import main as pre_featurize_pmap
+from dock2hit.train_and_validate.multithread import main as pre_featurize_mutithread
 from dock2hit.utils import get_device
 
 
