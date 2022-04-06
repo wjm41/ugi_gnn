@@ -1,6 +1,6 @@
 import pytest
 
-from dock2hit import dataloader
+from dock2hit import dataloader, parsing
 
 
 # @pytest.mark.parametrize(
@@ -18,3 +18,23 @@ from dock2hit import dataloader
 #     test_loader = dataloader.UltraLoader(test_input)
 #     # TODO test length, n_batches, random_state, inds, y_transform
 #     assert len(test_loader) == expected_output
+
+@pytest.mark.parametrize(
+    "test_csv",
+    ["test_data/HIV.csv",
+     ],
+)
+def test_just_train_set(test_csv):
+    pass
+
+
+def test_random_train_val_split():
+    pass
+
+
+def test_external_val_set():
+    pass
+
+
+def test_integration_with_parsing():
+    pass
