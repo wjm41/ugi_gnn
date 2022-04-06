@@ -127,3 +127,43 @@ def load_data(args):
         logging.info(
             f'Length of validation set: {human_len(val_loader.dataset_len)}')
     return train_loader, val_loader
+
+class SimpleSmilesCSVLoader:
+    """
+    A DataLoader-like object for a set of tensors that can be much faster than
+    TensorDataset + DataLoader because dataloader grabs individual indices of
+    the dataset and calls cat (slow).
+    Source: https://discuss.pytorch.org/t/dataloader-much-slower-than-manual-batching/27014/6
+    """
+    def __init__(self, df, batch_size=32, shuffle=False):
+        
+        self.df = df
+        self.df.reset_index(drop=True,inplace=True)
+        self.dataset_len = len(self.df)
+
+        self.batch_size = batch_size
+        self.shuffle = shuffle
+
+        # Calculate # batches
+        n_batches, remainder = divmod(self.dataset_len, self.batch_size)
+        if remainder > 0:
+            n_batches += 1
+        self.n_batches = n_batches
+
+    def __iter__(self):
+        if self.shuffle:
+            self.df = self.df.sample(frac=1).reset_index(drop=True)
+
+        self.i = 0
+        return self
+
+    def __next__(self):
+        if self.i >= self.dataset_len:
+            raise StopIteration
+        df_batch = self.df.iloc[self.i:self.i+self.batch_size]
+        self.i += self.batch_size
+
+        return df_batch['SMILES'].values
+
+    def __len__(self):
+        return self.n_batches
