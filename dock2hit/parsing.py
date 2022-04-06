@@ -26,7 +26,7 @@ def add_data_args(parser):
                             help='int specifying number of steps per validation and tensorboard log')
     group_data.add_argument('-batches_per_log', type=int, default=1000,
                             help='int specifying number of steps per validation and tensorboard log')
-    group_data.add_argument('-save_batch', type=int, default=5000,
+    group_data.add_argument('-batches_per_save', type=int, default=5000,
                             help='int specifying number of batches per model save.')
     group_data.add_argument('-n_epochs', type=int, default=1,
                             help='int specifying number of random epochs to train for.')

@@ -93,23 +93,23 @@ class BigSmilesLoader:
 
 
 def load_data(args):
-    logging.info(f'Loading dataset: {args.train_path}')
+    logging.info(f'Loading dataset: {args.path_to_train_data}')
 
-    if args.train_path.split('.')[-1] == 'pkl':
-        train_df = pd.read_pickle(args.train_path).reset_index()
-    elif args.train_path.split('.')[-1] == 'csv':
-        train_df = pd.read_csv(args.train_path).reset_index()
+    if args.path_to_train_data.split('.')[-1] == 'pkl':
+        train_df = pd.read_pickle(args.path_to_train_data).reset_index()
+    elif args.path_to_train_data.split('.')[-1] == 'csv':
+        train_df = pd.read_csv(args.path_to_train_data).reset_index()
     len_train = len(train_df)
 
-    if args.val_path is not None:  # external validation set
+    if args.path_to_external_val is not None:  # external validation set
         train_loader = BigSmilesLoader(
             df=train_df, inds=None, batch_size=args.batch_size, shuffle=True, scale_y=True, y_col=args.y_col)
         val_loader = BigSmilesLoader(
-            args.val_path, inds=None, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler, y_col=args.y_col)
+            args.path_to_external_val, inds=None, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler, y_col=args.y_col)
 
-    elif args.val:  # random train/val split
+    elif args.random_train_val_split:  # random train/val split
         val_ind = np.random.choice(
-            np.arange(len_train), args.val_size, replace=False)
+            np.arange(len_train), args.size_of_val_set, replace=False)
         train_ind = np.delete(np.arange(len_train), val_ind)
 
         train_loader = BigSmilesLoader(

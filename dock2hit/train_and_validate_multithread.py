@@ -63,8 +63,9 @@ def train_and_validate(args, device):
 
     scheduler = ReduceLROnPlateau(optimizer, 'min')
 
-    if args.load_name is not None:
-        checkpoint = torch.load(args.load_name, map_location=device)
+    if args.path_to_load_checkpoint is not None:
+        checkpoint = torch.load(
+            args.path_to_load_checkpoint, map_location=device)
         mpnn_net.load_state_dict(checkpoint['mpnn_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
@@ -123,8 +124,7 @@ def train_and_validate(args, device):
                     bond_feats = bg.edata.pop('e').to(device)
                     atom_feats, bond_feats, labels_mini = atom_feats.to(
                         device), bond_feats.to(device), labels_mini.to(device)
-                    if args.time_forward_pass:
-                        increment = time.perf_counter()
+
                     y_pred = mpnn_net(bg, atom_feats, bond_feats).squeeze()
 
                     loss = loss_fn(y_pred, labels_mini)
@@ -135,10 +135,7 @@ def train_and_validate(args, device):
                         _, state_lrs = optimizer.step()
                     else:
                         optimizer.step()
-                    if args.time_forward_pass:
-                        increment = time.perf_counter() - increment
-                        logging.info(
-                            f'Time taken to forward pass + backprop = {increment:.2f}s')
+
                     n_mini += 1
                 # print(f'Number of minibatches = {n_mini}, \
                 #         Number of molecules = {n_mini*args.minibatch_size} \
@@ -146,7 +143,7 @@ def train_and_validate(args, device):
                 n_steps += n_mini
 
                 # TODO update batch num with minibatch num
-                if n_steps % args.log_step == 0 and args.log_dir is not None:
+                if n_steps % args.steps_per_log == 0 and args.log_dir is not None:
 
                     # TODO fix y_scaler when using dataloader
                     batch_preds = train_loader.y_scaler.inverse_transform(
@@ -176,7 +173,7 @@ def train_and_validate(args, device):
                         logger.log(n_steps, val_loss, val_preds, val_labs,
                                    split='val')
 
-                if batch_num % args.save_batch == 0 and args.save_dir is not None:
+                if batch_num % args.batches_per_save == 0 and args.save_dir is not None:
                     if not os.path.isdir(args.save_dir):
                         cmd = 'mkdir ' + args.save_dir
                         bash_command(cmd)
