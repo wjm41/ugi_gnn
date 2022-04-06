@@ -1,9 +1,9 @@
-from .train_and_validate import *
-from .utils import *
-from .optimizers import *
-from .dataloader import *
-from .tensorboard_logging import *
-from .parsing import *
-from .notebook_utils import *
+import dock2hit.train_and_validate
+import dock2hit.utils
+import dock2hit.optimizers
+import dock2hit.dataloader
+import dock2hit.tensorboard_logging
+import dock2hit.parsing
+
 
 __version__ = "0.1.0"

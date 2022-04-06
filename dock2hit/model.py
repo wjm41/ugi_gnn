@@ -1,17 +1,16 @@
-import dgl
+from joblib import Parallel, delayed, cpu_count
+
 import numpy as np
 
+import dgl
 from dgllife.utils import smiles_to_bigraph
 
 import torch
 from torch.utils.data import DataLoader
 
-from .utils import pmap, collate
-
 
 def multi_featurize(smiles, node_featurizer, edge_featurizer, n_jobs=4):
 
-    # turn off logging
     graphs = pmap(smiles_to_bigraph,
                   smiles,
                   node_featurizer=node_featurizer,
@@ -23,7 +22,6 @@ def multi_featurize(smiles, node_featurizer, edge_featurizer, n_jobs=4):
 
 
 def generate_batch(smiles, atom_featurizer, bond_featurizer, device):
-    # TODO multithread graph featurizer
     bg = [smiles_to_bigraph(smi, node_featurizer=atom_featurizer,
                             edge_featurizer=bond_featurizer) for smi in smiles]  # generate and batch graphs
     bg = dgl.batch(bg)
@@ -111,3 +109,43 @@ def multi_validate(val_loader, model, atom_featurizer, bond_featurizer, loss_fn,
     val_labs = np.vstack(val_labs)
     model.train()
     return val_loss, val_preds, val_labs
+
+
+def pmap(pickleable_fn, data, n_jobs=None, verbose=0, **kwargs):
+    """Parallel map using joblib.
+    Parameters
+    ----------
+    pickleable_fn : callable
+        Function to map over data.
+    data : iterable
+        Data over which we want to parallelize the function call.
+    n_jobs : int, optional
+        The maximum number of concurrently running jobs. By default, it is one less than
+        the number of CPUs.
+    verbose: int, optional
+        The verbosity level. If nonzero, the function prints the progress messages.
+        The frequency of the messages increases with the verbosity level. If above 10,
+        it reports all iterations. If above 50, it sends the output to stdout.
+    kwargs
+        Additional arguments for :attr:`pickleable_fn`.
+    Returns
+    -------
+    list
+        The i-th element of the list corresponds to the output of applying
+        :attr:`pickleable_fn` to :attr:`data[i]`.
+    """
+    if n_jobs is None:
+        n_jobs = cpu_count() - 1
+
+    return Parallel(n_jobs=n_jobs, verbose=verbose)(
+        delayed(pickleable_fn)(d, **kwargs) for d in data
+    )
+
+
+# Collate Function for Dataloader
+def collate(sample):
+    graphs, labels = map(list, zip(*sample))
+    batched_graph = dgl.batch(graphs)
+    batched_graph.set_n_initializer(dgl.init.zero_initializer)
+    batched_graph.set_e_initializer(dgl.init.zero_initializer)
+    return batched_graph, torch.tensor(labels, dtype=torch.float32)

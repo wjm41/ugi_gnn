@@ -1,13 +1,10 @@
+from typing import List
 import logging
 from math import log, floor
 import subprocess
 
-import dgl
-from dgllife.utils import CanonicalAtomFeaturizer, CanonicalBondFeaturizer, smiles_to_bigraph
-from joblib import Parallel, delayed, cpu_count
-
-import torch
-# import torch.distributed as dist
+from torch.cuda import is_available as cuda_is_available
+from torch.cuda import get_device_name as cuda_get_device_name
 
 
 def human_len(input, byte=False):
@@ -54,8 +51,8 @@ def get_device() -> str:
     Returns:
         device (str): device to-be used in torch
     """
-    if torch.cuda.is_available():
-        logging.info(f'using GPU: {torch.cuda.get_device_name()}')
+    if cuda_is_available():
+        logging.info(f'using GPU: {cuda_get_device_name()}')
         device = 'cuda'
     else:
         logging.info('No GPU found, using CPU')
@@ -63,168 +60,46 @@ def get_device() -> str:
     return device
 
 
-def pmap(pickleable_fn, data, n_jobs=None, verbose=0, **kwargs):
-    """Parallel map using joblib.
-    Parameters
-    ----------
-    pickleable_fn : callable
-        Function to map over data.
-    data : iterable
-        Data over which we want to parallelize the function call.
-    n_jobs : int, optional
-        The maximum number of concurrently running jobs. By default, it is one less than
-        the number of CPUs.
-    verbose: int, optional
-        The verbosity level. If nonzero, the function prints the progress messages.
-        The frequency of the messages increases with the verbosity level. If above 10,
-        it reports all iterations. If above 50, it sends the output to stdout.
-    kwargs
-        Additional arguments for :attr:`pickleable_fn`.
-    Returns
-    -------
-    list
-        The i-th element of the list corresponds to the output of applying
-        :attr:`pickleable_fn` to :attr:`data[i]`.
-    """
-    if n_jobs is None:
-        n_jobs = cpu_count() - 1
+def write_slurm_script(job_name: str,
+                       run_time: str,
+                       output_name: str,
+                       package_dir: str,
+                       script: str,
+                       args: List,
+                       file_name: str,
+                       email: bool = False):
+    slurm_options = [
+        '#!/bin/bash',
+        f'#SBATCH -J {job_name}',
+        '#SBATCH -A LEE-WJM41-SL2-GPU',
+        '#SBATCH --nodes=1',
+        '#SBATCH --ntasks=1',
+        '#SBATCH --gres=gpu:1',
+        f'#SBATCH --time={run_time}',
+        '#SBATCH --mail-user=wjm41@cam.ac.uk',
+        f'#SBATCH --output={output_name}',
+        '#SBATCH -p ampere',
+    ]
+    if email:
+        slurm_options.append('#SBATCH --mail-type=ALL')
 
-    return Parallel(n_jobs=n_jobs, verbose=verbose)(
-        delayed(pickleable_fn)(d, **kwargs) for d in data
-    )
+    module_options = [
+        '. /etc/profile.d/modules.sh',
+        'module purge',
+        'module load rhel8/default-amp',
+        'module load miniconda/3',
+        'source activate dgl_life',
+    ]
 
+    pre_empt = f'cd {package_dir}; pip install . --use-feature=in-tree-build'
 
-# Collate Function for Dataloader
-def collate(sample):
-    graphs, labels = map(list, zip(*sample))
-    batched_graph = dgl.batch(graphs)
-    batched_graph.set_n_initializer(dgl.init.zero_initializer)
-    batched_graph.set_e_initializer(dgl.init.zero_initializer)
-    return batched_graph, torch.tensor(labels, dtype=torch.float32)
+    slurm_options = '\n'.join(slurm_options)
+    module_options = '\n'.join(module_options)
+    command_to_run = ' '.join([script]+args)
 
-# class Optimizer(nn.Module):
-#     """Wrapper for optimization
-#     Parameters
-#     ----------
-#     model : nn.Module
-#         Model being trained
-#     lr : float
-#         Initial learning rate
-#     optimizer : torch.optim.Optimizer
-#         model optimizer
-#     num_accum_times : int
-#         Number of times for accumulating gradients
-#     max_grad_norm : float or None
-#         If not None, gradient clipping will be performed
-#     """
+    string_to_write = f'{slurm_options}\n{module_options}\n{pre_empt}\n{command_to_run}'
 
-#     def __init__(self, model, lr, optimizer, num_accum_times=1, max_grad_norm=None):
-#         super(Optimizer, self).__init__()
-#         self.model = model
-#         self.lr = lr
-#         self.optimizer = optimizer
-#         self.step_count = 0
-#         self.num_accum_times = num_accum_times
-#         self.max_grad_norm = max_grad_norm
-#         self._reset()
+    with open(file_name, 'w') as f:
+        f.write(string_to_write)
 
-#     def _reset(self):
-#         self.optimizer.zero_grad()
-
-#     def _clip_grad_norm(self):
-#         grad_norm = None
-#         if self.max_grad_norm is not None:
-#             grad_norm = clip_grad_norm_(self.model.parameters(),
-#                                         self.max_grad_norm)
-#         return grad_norm
-
-#     def backward_and_step(self, loss):
-#         """Backward and update model.
-#         Parameters
-#         ----------
-#         loss : torch.tensor consisting of a float only
-#         Returns
-#         -------
-#         grad_norm : float
-#             Gradient norm. If self.max_grad_norm is None, None will be returned.
-#         """
-#         self.step_count += 1
-#         loss.backward()
-#         if self.step_count % self.num_accum_times == 0:
-#             grad_norm = self._clip_grad_norm()
-#             self.optimizer.step()
-#             self._reset()
-
-#             return grad_norm
-#         else:
-#             return 0
-
-#     def decay_lr(self, decay_rate):
-#         """Decay learning rate.
-#         Parameters
-#         ----------
-#         decay_rate : float
-#             Multiply the current learning rate by the decay_rate
-#         """
-#         self.lr *= decay_rate
-#         for param_group in self.optimizer.param_groups:
-#             param_group['lr'] = self.lr
-
-
-# class MultiProcessOptimizer(Optimizer):
-#     """Wrapper for optimization with multiprocess
-#     Parameters
-#     ----------
-#     n_processes : int
-#         Number of processes used
-#     model : nn.Module
-#         Model being trained
-#     lr : float
-#         Initial learning rate
-#     optimizer : torch.optim.Optimizer
-#         model optimizer
-#     max_grad_norm : float or None
-#         If not None, gradient clipping will be performed.
-#     """
-
-#     def __init__(self, n_processes, model, lr, optimizer, max_grad_norm=None):
-#         super(MultiProcessOptimizer, self).__init__(lr=lr, model=model, optimizer=optimizer,
-#                                                     max_grad_norm=max_grad_norm)
-#         self.n_processes = n_processes
-
-#     def _sync_gradient(self):
-#         """Average gradients across all subprocesses."""
-#         for param_group in self.optimizer.param_groups:
-#             for p in param_group['params']:
-#                 if p.requires_grad and p.grad is not None:
-#                     dist.all_reduce(p.grad.data, op=dist.ReduceOp.SUM)
-#                     p.grad.data /= self.n_processes
-
-#     def backward_and_step(self, loss):
-#         """Backward and update model.
-#         Parameters
-#         ----------
-#         loss : torch.tensor consisting of a float only
-#         Returns
-#         -------
-#         grad_norm : float
-#             Gradient norm. If self.max_grad_norm is None, None will be returned.
-#         """
-#         loss.backward()
-#         self._sync_gradient()
-#         grad_norm = self._clip_grad_norm()
-#         self.optimizer.step()
-#         self._reset()
-
-#         return grad_norm
-
-
-# def synchronize(num_gpus):
-#     """Synchronize all processes for multi-gpu training.
-#     Parameters
-#     ----------
-#     num_gpus : int
-#         Number of gpus used
-#     """
-#     if num_gpus > 1:
-#         dist.barrier()
+    return

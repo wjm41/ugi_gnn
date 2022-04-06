@@ -19,7 +19,7 @@ class Logger:
     def __init__(self, args: argparse.Namespace):
 
         current_time = datetime.now().strftime('%b%d_%H-%M-%S')
-        self.writer = SummaryWriter(f'{args.log_dir}-{current_time}')
+        self.writer = SummaryWriter(f'{args.log_dir}/{current_time}')
 
         self.writer.add_text('optimizer', str(args.optimizer), 0)
         self.writer.add_text('batch_size', str(args.batch_size), 0)
@@ -71,5 +71,5 @@ class Logger:
 
         logging.info(
             f'{split} RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
-
+    
 # TODO TESTS! No need for df
