@@ -1,5 +1,4 @@
-import dock2hit.train_and_validate.train_and_validate_old
-import dock2hit.train_and_validate.train_and_validate_collate
-import dock2hit.train_and_validate.train_and_validate_multiprocess
-import dock2hit.train_and_validate.train_and_validate_multithread
-import dock2hit.train_and_validate.train_and_validate_pmap
+from dock2hit.train_and_validate.train_and_validate_old import *
+from dock2hit.train_and_validate.collate import *
+from dock2hit.train_and_validate.multithread import *
+from dock2hit.train_and_validate.pmap import *

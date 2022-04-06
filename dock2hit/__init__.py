@@ -5,5 +5,4 @@ import dock2hit.dataloader
 import dock2hit.tensorboard_logging
 import dock2hit.parsing
 
-
 __version__ = "0.1.0"
