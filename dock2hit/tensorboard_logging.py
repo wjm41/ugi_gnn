@@ -11,7 +11,6 @@ from scipy.stats import spearmanr
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from torch.utils.tensorboard import SummaryWriter
 
-import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(rc={"figure.dpi": 200})
 
@@ -20,7 +19,7 @@ class Logger:
     def __init__(self, args: argparse.Namespace):
 
         current_time = datetime.now().strftime('%b%d_%H-%M-%S')
-        self.writer = SummaryWriter(args.log_dir+current_time)
+        self.writer = SummaryWriter(f'{args.log_dir}-{current_time}')
 
         self.writer.add_text('optimizer', str(args.optimizer), 0)
         self.writer.add_text('batch_size', str(args.batch_size), 0)
@@ -53,7 +52,10 @@ class Logger:
             self.writer.add_histogram(f'{split}/lrT', state_lrs, n_mols)
 
         plot = sns.jointplot(x=batch_labs.flatten(),
-                             y=batch_preds.flatten(), kind='scatter')
+                             y=batch_preds.flatten(),
+                             kind='scatter',
+                             xlim=(-60, 60),
+                             ylim=(-60, 60))
         dot_line = [np.amin(batch_labs.flatten()),
                     np.amax(batch_preds.flatten())]
         plot.ax_joint.plot(dot_line, dot_line, 'k:')
