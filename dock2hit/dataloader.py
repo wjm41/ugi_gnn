@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-from dock2hit.utils import human_len
+from dock2hit.utils import human_len, read_csv_or_pkl
 
 
 class BigSmilesLoader:
@@ -31,10 +31,7 @@ class BigSmilesLoader:
         if df is not None:
             self.df = df
         elif file_path is not None:
-            if file_path.split('.')[-1] == 'pkl':
-                self.df = pd.read_pickle(file_path).reset_index()
-            elif file_path.split('.')[-1] == 'csv':
-                self.df = pd.read_csv(file_path).reset_index()
+            self.df = read_csv_or_pkl(file_path)
         else:
             raise ValueError(
                 'Either df or file_path have to be specified to create a dataloader!')
@@ -95,17 +92,14 @@ class BigSmilesLoader:
 def load_data(args):
     logging.info(f'Loading dataset: {args.path_to_train_data}')
 
-    if args.path_to_train_data.split('.')[-1] == 'pkl':
-        train_df = pd.read_pickle(args.path_to_train_data).reset_index()
-    elif args.path_to_train_data.split('.')[-1] == 'csv':
-        train_df = pd.read_csv(args.path_to_train_data).reset_index()
+    train_df = read_csv_or_pkl(args.path_to_train_data)
     len_train = len(train_df)
 
     if args.path_to_external_val is not None:  # external validation set
         train_loader = BigSmilesLoader(
             df=train_df, inds=None, batch_size=args.batch_size, shuffle=True, scale_y=True, y_col=args.y_col)
         val_loader = BigSmilesLoader(
-            args.path_to_external_val, inds=None, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler, y_col=args.y_col)
+            file_path=args.path_to_external_val, inds=None, batch_size=args.batch_size, shuffle=False, y_scaler=train_loader.y_scaler, y_col=args.y_col)
 
     elif args.random_train_val_split:  # random train/val split
         val_ind = np.random.choice(

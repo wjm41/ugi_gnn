@@ -1,5 +1,7 @@
+from argparse import ArgumentParser
 
-def add_io_args(parser):
+
+def add_io_args(parser: ArgumentParser):
     group_io = parser.add_argument_group("I/O")
     group_io.add_argument('-path_to_train_data', type=str, required=True,
                           help='Path to the data.csv file.')
@@ -16,7 +18,7 @@ def add_io_args(parser):
     return
 
 
-def add_data_args(parser):
+def add_data_args(parser: ArgumentParser):
     group_data = parser.add_argument_group("Training - data")
     group_data.add_argument('-batch_size', type=int, default=32,
                             help='int specifying batch_size for training and evaluations')
@@ -41,7 +43,7 @@ def add_data_args(parser):
     return
 
 
-def add_optim_args(parser):
+def add_optim_args(parser: ArgumentParser):
     group_optim = parser.add_argument_group("Training - optimizer")
     group_optim.add_argument('-optimizer', type=str, default='Adam',
                              choices=['Adam', 'AdamHD', 'SGD',
@@ -58,5 +60,3 @@ def add_optim_args(parser):
     group_optim.add_argument('-hypergrad_warmup', type=int, default=100,
                              help='Number of steps warming up hypergrad before using for optimisation.')
     return
-
-# TODO make these inplace

@@ -3,6 +3,8 @@ import logging
 from math import log, floor
 import subprocess
 
+import pandas as pd
+
 from torch.cuda import is_available as cuda_is_available
 from torch.cuda import get_device_name as cuda_get_device_name
 
@@ -103,3 +105,14 @@ def write_slurm_script(job_name: str,
         f.write(string_to_write)
 
     return
+
+
+def read_csv_or_pkl(file_path):
+
+    if file_path.split('.')[-1] == 'pkl':
+        df = pd.read_pickle(file_path).reset_index()
+    elif file_path.split('.')[-1] == 'csv':
+        df = pd.read_csv(file_path).reset_index()
+    else:
+        raise ValueError('Unrecognised file suffix!')
+    return df
