@@ -1,0 +1,1550 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: dock2hit
+  Building wheel for dock2hit (setup.py): started
+  Building wheel for dock2hit (setup.py): finished with status 'done'
+  Created wheel for dock2hit: filename=dock2hit-0.1.0-py3-none-any.whl size=137489 sha256=29bef24d150bb5b647fdbb138421e3cbd88354d8ecbce027160b0591dd200d9f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-66peonlt/wheels/e9/46/b3/127c6cd122b7690cfca02e35d86062f3cf7fe58252c07c9b98
+Successfully built dock2hit
+Installing collected packages: dock2hit
+  Attempting uninstall: dock2hit
+    Found existing installation: dock2hit 0.1.0
+    Uninstalling dock2hit-0.1.0:
+      Successfully uninstalled dock2hit-0.1.0
+Successfully installed dock2hit-0.1.0
+INFO:root:using GPU: NVIDIA A100-SXM4-80GB
+INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/D4_test.csv
+INFO:root:Length of dataset: 256.00
+INFO:root:Length of training set: 156.00
+INFO:root:Number of epochs to train: 10.00K
+INFO:root:Number of batches (size 256) per epoch: 1.00
+INFO:root:Length of validation set: 100.00
+INFO:root:Number of model parameters: 74529
+INFO:root:Number of node features: 74
+INFO:root:Number of edge features: 12
+INFO:root:beginning training...
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]  0%|          | 0.00/1.00 [00:10<?, ?batch/s]100%|██████████| 1.00/1.00 [00:11<00:00, 11.3s/batch]100%|██████████| 1.00/1.00 [00:11<00:00, 11.3s/batch]
+Number of steps taken: 1
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 2
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 4
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 5
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 6
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 7
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 9
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.17s/batch]
+Number of steps taken: 12
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 13
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.18batch/s]
+Number of steps taken: 15
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 16
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.56batch/s]
+Number of steps taken: 17
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.22batch/s]
+Number of steps taken: 19
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 20
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 21
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 22
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 23
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 24
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 25
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 27
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.29batch/s]
+Number of steps taken: 29
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 30
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.19batch/s]
+Number of steps taken: 32
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 33
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.05batch/s]
+Number of steps taken: 34
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.61batch/s]
+Number of steps taken: 35
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 37
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 38
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.12batch/s]
+Number of steps taken: 40
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.04batch/s]
+Number of steps taken: 41
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.01batch/s]
+Number of steps taken: 42
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 44
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 45
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 46
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.11batch/s]
+Number of steps taken: 48
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.99batch/s]
+Number of steps taken: 49
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 50
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 51
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 52
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.01batch/s]
+Number of steps taken: 54
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 55
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 57
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 58
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 59
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.05s/batch]
+Number of steps taken: 61
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 62
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 63
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 64
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.11batch/s]
+Number of steps taken: 66
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 68
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 69
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.16batch/s]
+Number of steps taken: 71
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 72
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 73
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 74
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 75
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 76
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.56batch/s]
+Number of steps taken: 77
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 78
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.99batch/s]
+Number of steps taken: 79
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.24batch/s]
+Number of steps taken: 81
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 82
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 83
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.06batch/s]
+Number of steps taken: 84
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 85
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 86
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 88
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.19s/batch]
+Number of steps taken: 91
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 92
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 93
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.02batch/s]
+Number of steps taken: 95
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 96
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 97
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 98
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 99
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.864, RHO: 0.493, R2: -1.019
+INFO:root:val RMSE: 8.128, RHO: 0.404, R2: -1.444
+100%|██████████| 1.00/1.00 [00:02<00:00, 2.06s/batch]
+Number of steps taken: 100
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 101
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.19batch/s]
+Number of steps taken: 103
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.00batch/s]
+Number of steps taken: 104
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.08batch/s]
+Number of steps taken: 105
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 106
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 108
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.06batch/s]
+Number of steps taken: 110
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 112
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 113
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 114
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 115
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 116
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 117
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.24batch/s]
+Number of steps taken: 119
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 120
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 121
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 122
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 123
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.22batch/s]
+Number of steps taken: 125
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 126
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 127
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 128
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 129
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 130
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 132
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 133
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 134
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 136
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 137
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 138
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 139
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 140
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 142
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 143
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.03batch/s]
+Number of steps taken: 145
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 146
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 147
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.46batch/s]
+Number of steps taken: 148
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 149
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 151
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 152
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 153
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 154
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.52batch/s]
+Number of steps taken: 155
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 156
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 157
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 158
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 159
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 161
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 162
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.47batch/s]
+Number of steps taken: 163
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 164
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 165
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.00s/batch]
+Number of steps taken: 167
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 168
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 169
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 171
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 172
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 173
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.00batch/s]
+Number of steps taken: 175
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 176
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.62batch/s]
+Number of steps taken: 177
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 179
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.35batch/s]
+Number of steps taken: 180
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 181
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 182
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 183
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 184
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 185
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.60batch/s]
+Number of steps taken: 186
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.49batch/s]
+Number of steps taken: 187
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 188
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 189
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 190
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 191
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 193
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.47batch/s]
+Number of steps taken: 194
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 195
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 196
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.93batch/s]
+Number of steps taken: 197
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.96batch/s]
+Number of steps taken: 198
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 199
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.879, RHO: 0.758, R2: 0.064
+INFO:root:val RMSE: 8.565, RHO: 0.410, R2: -0.340
+100%|██████████| 1.00/1.00 [00:01<00:00, 1.66s/batch]
+Number of steps taken: 200
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.02s/batch]
+Number of steps taken: 202
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 203
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 204
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 205
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.01s/batch]
+Number of steps taken: 207
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.53batch/s]
+Number of steps taken: 208
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 209
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.50batch/s]
+Number of steps taken: 210
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 211
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.07batch/s]
+Number of steps taken: 213
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.02s/batch]
+Number of steps taken: 215
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.61batch/s]
+Number of steps taken: 216
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 217
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.17batch/s]
+Number of steps taken: 219
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 220
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 221
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 222
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.49batch/s]
+Number of steps taken: 223
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 224
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 225
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 227
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.23batch/s]
+Number of steps taken: 229
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 231
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 232
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 233
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 234
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 235
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 236
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 237
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 238
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.06batch/s]
+Number of steps taken: 240
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 241
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 242
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 243
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 244
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 245
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.96batch/s]
+Number of steps taken: 246
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.53batch/s]
+Number of steps taken: 247
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.04batch/s]
+Number of steps taken: 248
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 249
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 250
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.19batch/s]
+Number of steps taken: 252
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.29batch/s]
+Number of steps taken: 254
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 255
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.16batch/s]
+Number of steps taken: 257
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.07batch/s]
+Number of steps taken: 258
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 259
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.93batch/s]
+Number of steps taken: 260
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 261
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 262
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.59batch/s]
+Number of steps taken: 263
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.93batch/s]
+Number of steps taken: 264
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 266
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 267
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 268
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 269
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 270
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 271
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 273
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.11batch/s]
+Number of steps taken: 274
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.99batch/s]
+Number of steps taken: 275
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 276
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 277
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 279
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 280
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 282
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 283
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.60batch/s]
+Number of steps taken: 284
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 286
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.36batch/s]
+Number of steps taken: 287
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 288
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.45batch/s]
+Number of steps taken: 289
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 290
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 291
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 292
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.21batch/s]
+Number of steps taken: 294
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.34batch/s]
+Number of steps taken: 295
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 296
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 297
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 298
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 299
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 6.952, RHO: 0.762, R2: 0.351
+INFO:root:val RMSE: 9.633, RHO: 0.323, R2: -0.195
+100%|██████████| 1.00/1.00 [00:01<00:00, 1.78s/batch]
+Number of steps taken: 300
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.50batch/s]
+Number of steps taken: 301
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 302
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 303
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.18batch/s]
+Number of steps taken: 305
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.40batch/s]
+Number of steps taken: 306
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 307
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 308
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 309
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 310
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 311
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 312
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.47batch/s]
+Number of steps taken: 313
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 315
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.96batch/s]
+Number of steps taken: 316
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 318
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 319
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 320
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.00batch/s]
+Number of steps taken: 322
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 323
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 324
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.42batch/s]
+Number of steps taken: 325
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 326
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.93batch/s]
+Number of steps taken: 327
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 328
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.31batch/s]
+Number of steps taken: 329
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 330
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 331
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 332
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.61batch/s]
+Number of steps taken: 333
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 334
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.41batch/s]
+Number of steps taken: 335
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 336
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 337
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 338
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 339
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 340
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 341
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.55batch/s]
+Number of steps taken: 342
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 343
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.17batch/s]
+Number of steps taken: 345
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 346
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.07batch/s]
+Number of steps taken: 348
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 349
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 350
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.54batch/s]
+Number of steps taken: 351
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 352
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 353
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 354
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 355
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 356
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.41batch/s]
+Number of steps taken: 357
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.02batch/s]
+Number of steps taken: 358
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 360
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 361
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.18batch/s]
+Number of steps taken: 363
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 364
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 365
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.39batch/s]
+Number of steps taken: 366
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 367
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 368
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 369
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.00batch/s]
+Number of steps taken: 370
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.19batch/s]
+Number of steps taken: 372
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.04s/batch]
+Number of steps taken: 374
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 376
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 377
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 378
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 379
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 381
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 382
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 383
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 384
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 385
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 386
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 387
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 388
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.49batch/s]
+Number of steps taken: 389
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 390
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 391
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.07batch/s]
+Number of steps taken: 393
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 394
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 395
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.21s/batch]
+Number of steps taken: 398
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.53batch/s]
+Number of steps taken: 399
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 4.939, RHO: 0.911, R2: 0.774
+INFO:root:val RMSE: 10.720, RHO: 0.262, R2: -0.175
+100%|██████████| 1.00/1.00 [00:01<00:00, 1.63s/batch]
+Number of steps taken: 400
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 401
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.00batch/s]
+Number of steps taken: 402
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 404
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.42batch/s]
+Number of steps taken: 405
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.26batch/s]
+Number of steps taken: 407
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 408
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 409
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 410
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 411
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 412
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 413
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 414
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 415
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 416
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 417
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 418
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 419
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 420
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 421
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 422
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.00batch/s]
+Number of steps taken: 424
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 425
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.45batch/s]
+Number of steps taken: 426
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.03batch/s]
+Number of steps taken: 428
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 429
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 431
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 432
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 433
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 434
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.56batch/s]
+Number of steps taken: 435
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 436
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 437
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 439
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 440
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 441
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.07batch/s]
+Number of steps taken: 443
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 444
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 446
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.01batch/s]
+Number of steps taken: 447
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 448
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 449
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 451
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.39batch/s]
+Number of steps taken: 452
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 453
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 454
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 455
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 456
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 457
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.41batch/s]
+Number of steps taken: 458
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.06batch/s]
+Number of steps taken: 459
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.04batch/s]
+Number of steps taken: 460
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 462
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 463
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 464
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 465
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.59batch/s]
+Number of steps taken: 466
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 467
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 468
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 469
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 471
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 472
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 473
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.06batch/s]
+Number of steps taken: 475
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 476
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 477
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.24batch/s]
+Number of steps taken: 479
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.12batch/s]
+Number of steps taken: 481
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 482
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.31batch/s]
+Number of steps taken: 483
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.28batch/s]
+Number of steps taken: 485
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 486
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 487
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 488
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 489
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 491
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.47batch/s]
+Number of steps taken: 492
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 493
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.11batch/s]
+Number of steps taken: 495
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.05batch/s]
+Number of steps taken: 496
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 497
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 498
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 499
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 5.153, RHO: 0.967, R2: 0.805
+INFO:root:val RMSE: 11.709, RHO: 0.168, R2: -0.199
+100%|██████████| 1.00/1.00 [00:01<00:00, 1.56s/batch]
+Number of steps taken: 500
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 501
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.99batch/s]
+Number of steps taken: 502
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.46batch/s]
+Number of steps taken: 503
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 505
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 506
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 507
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.06batch/s]
+Number of steps taken: 508
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 509
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 510
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 511
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.93batch/s]
+Number of steps taken: 512
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 514
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 515
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 516
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 517
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 518
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.11batch/s]
+Number of steps taken: 520
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 521
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.03batch/s]
+Number of steps taken: 522
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 523
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 524
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 525
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.49batch/s]
+Number of steps taken: 526
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.26batch/s]
+Number of steps taken: 528
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.60batch/s]
+Number of steps taken: 529
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 531
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 532
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 533
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 534
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.28batch/s]
+Number of steps taken: 535
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 536
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 537
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 538
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 539
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 540
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.02s/batch]
+Number of steps taken: 542
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 543
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.25batch/s]
+Number of steps taken: 545
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 546
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 547
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 548
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 549
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.50batch/s]
+Number of steps taken: 550
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 551
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 552
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 553
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 554
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.03batch/s]
+Number of steps taken: 555
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 556
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 557
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.96batch/s]
+Number of steps taken: 558
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 559
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 560
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.17batch/s]
+Number of steps taken: 562
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 563
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.05s/batch]
+Number of steps taken: 565
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.18batch/s]
+Number of steps taken: 567
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 568
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 569
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 571
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 572
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 573
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.44batch/s]
+Number of steps taken: 574
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 575
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 577
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 579
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 580
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 581
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 582
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 583
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 584
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 586
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 587
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.22batch/s]
+Number of steps taken: 589
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 590
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.35batch/s]
+Number of steps taken: 591
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 592
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 593
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.61batch/s]
+Number of steps taken: 594
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 595
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 596
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.43batch/s]
+Number of steps taken: 597
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 598
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 599
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 2.616, RHO: 0.969, R2: 0.929
+INFO:root:val RMSE: 12.313, RHO: 0.139, R2: -0.203
+100%|██████████| 1.00/1.00 [00:01<00:00, 1.55s/batch]
+Number of steps taken: 600
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.44batch/s]
+Number of steps taken: 601
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 602
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 603
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 604
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.93batch/s]
+Number of steps taken: 605
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 606
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 607
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 608
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 609
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.11batch/s]
+Number of steps taken: 611
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 612
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 613
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 614
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.41batch/s]
+Number of steps taken: 615
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 616
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 617
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 619
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 620
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 621
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 622
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 623
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 624
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 625
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 626
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 627
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.54batch/s]
+Number of steps taken: 628
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.58batch/s]
+Number of steps taken: 629
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 630
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 631
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 632
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 634
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 635
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 637
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 638
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 639
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 640
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 641
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 642
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 643
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 644
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 645
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 646
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 647
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 648
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 649
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 650
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.41batch/s]
+Number of steps taken: 651
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 653
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 654
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.54batch/s]
+Number of steps taken: 655
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 657
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.62batch/s]
+Number of steps taken: 658
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 660
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.47batch/s]
+Number of steps taken: 661
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 662
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.01s/batch]
+Number of steps taken: 664
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 665
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 666
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.03batch/s]
+Number of steps taken: 668
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.39batch/s]
+Number of steps taken: 669
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 670
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.03batch/s]
+Number of steps taken: 671
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 672
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 673
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.03batch/s]
+Number of steps taken: 675
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.55batch/s]
+Number of steps taken: 676
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.44batch/s]
+Number of steps taken: 677
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 678
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 679
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.17batch/s]
+Number of steps taken: 681
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 682
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 684
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 685
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 686
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 687
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 688
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 689
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 690
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 691
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.56batch/s]
+Number of steps taken: 692
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 693
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 694
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 696
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.29batch/s]
+Number of steps taken: 698
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 699
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.00batch/s]
+Number of steps taken: 701
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.03batch/s]
+Number of steps taken: 702
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.19batch/s]
+Number of steps taken: 704
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.04batch/s]
+Number of steps taken: 705
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 706
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 707
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 708
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.36batch/s]
+Number of steps taken: 709
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 710
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 711
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 712
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 713
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 714
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.08s/batch]
+Number of steps taken: 716
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 718
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 719
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 720
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 721
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.22batch/s]
+Number of steps taken: 722
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 723
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.53batch/s]
+Number of steps taken: 724
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.90batch/s]
+Number of steps taken: 725
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 726
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.12s/batch]
+Number of steps taken: 729
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 730
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 731
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.17batch/s]
+Number of steps taken: 733
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 734
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 735
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 737
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 738
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.29batch/s]
+Number of steps taken: 740
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 741
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.63batch/s]
+Number of steps taken: 742
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 743
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 744
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.14batch/s]
+Number of steps taken: 746
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 747
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 749
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 750
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.99batch/s]
+Number of steps taken: 751
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.12batch/s]
+Number of steps taken: 753
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.96batch/s]
+Number of steps taken: 754
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 755
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 756
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 757
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 758
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.92batch/s]
+Number of steps taken: 759
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 760
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.02s/batch]
+Number of steps taken: 762
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.73batch/s]
+Number of steps taken: 763
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 764
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 766
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 767
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 768
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 769
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 770
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 771
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 772
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.66batch/s]
+Number of steps taken: 773
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 774
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 775
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.77batch/s]
+Number of steps taken: 776
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 777
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 778
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.91batch/s]
+Number of steps taken: 779
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.34batch/s]
+Number of steps taken: 780
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 781
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 782
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.07batch/s]
+Number of steps taken: 784
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 785
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.74batch/s]
+Number of steps taken: 786
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.62batch/s]
+Number of steps taken: 787
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 788
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.71batch/s]
+Number of steps taken: 789
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 790
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 791
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 792
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 793
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.46batch/s]
+Number of steps taken: 794
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.86batch/s]
+Number of steps taken: 795
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.17batch/s]
+Number of steps taken: 797
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 798
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 799
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.555, RHO: 0.997, R2: 0.997
+INFO:root:val RMSE: 13.033, RHO: 0.129, R2: -0.165
+100%|██████████| 1.00/1.00 [00:01<00:00, 1.68s/batch]
+Number of steps taken: 800
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.88batch/s]
+Number of steps taken: 801
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 803
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 804
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.15batch/s]
+Number of steps taken: 806
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:14<00:00, 14.4s/batch]
+Number of steps taken: 809
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 811
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.65batch/s]
+Number of steps taken: 812
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.10batch/s]
+Number of steps taken: 814
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 815
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 816
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.78batch/s]
+Number of steps taken: 817
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 818
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 819
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 820
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 821
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 822
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 824
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.07s/batch]
+Number of steps taken: 826
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 827
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 829
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.02batch/s]
+Number of steps taken: 831
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.08batch/s]
+Number of steps taken: 833
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 834
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.67batch/s]
+Number of steps taken: 835
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 836
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.64batch/s]
+Number of steps taken: 837
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.13batch/s]
+Number of steps taken: 839
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.82batch/s]
+Number of steps taken: 840
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.85batch/s]
+Number of steps taken: 841
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.62batch/s]
+Number of steps taken: 842
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.05batch/s]
+Number of steps taken: 844
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.59batch/s]
+Number of steps taken: 845
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.61batch/s]
+Number of steps taken: 846
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 847
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.68batch/s]
+Number of steps taken: 848
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 849
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 850
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.50batch/s]
+Number of steps taken: 851
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 852
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 853
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 855
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.18batch/s]
+Number of steps taken: 857
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.83batch/s]
+Number of steps taken: 858
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.04batch/s]
+Number of steps taken: 860
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.04batch/s]
+Number of steps taken: 861
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.84batch/s]
+Number of steps taken: 862
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.97batch/s]
+Number of steps taken: 863
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 864
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.06batch/s]
+Number of steps taken: 865
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 866
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 867
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.95batch/s]
+Number of steps taken: 868
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.12batch/s]
+Number of steps taken: 870
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.51batch/s]
+Number of steps taken: 871
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.81batch/s]
+Number of steps taken: 872
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.94batch/s]
+Number of steps taken: 873
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.76batch/s]
+Number of steps taken: 874
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.47batch/s]
+Number of steps taken: 875
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 876
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.89batch/s]
+Number of steps taken: 877
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 878
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.72batch/s]
+Number of steps taken: 879
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.80batch/s]
+Number of steps taken: 880
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.70batch/s]
+Number of steps taken: 881
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.28batch/s]
+Number of steps taken: 883
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.57batch/s]
+Number of steps taken: 884
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.05batch/s]
+Number of steps taken: 885
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.11batch/s]
+Number of steps taken: 886
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.87batch/s]
+Number of steps taken: 887
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.98batch/s]
+Number of steps taken: 888
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.60batch/s]
+Number of steps taken: 889
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.56batch/s]
+Number of steps taken: 890
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.96batch/s]
+Number of steps taken: 891
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.20batch/s]
+Number of steps taken: 893
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 894
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 2.02batch/s]
+Number of steps taken: 895
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.69batch/s]
+Number of steps taken: 896
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.75batch/s]
+Number of steps taken: 897
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.79batch/s]
+Number of steps taken: 898
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.354, RHO: 0.999, R2: 0.999
+INFO:root:val RMSE: 13.216, RHO: 0.126, R2: -0.143
+100%|██████████| 1.00/1.00 [00:02<00:00, 2.16s/batch]
+Number of steps taken: 900
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]slurmstepd: error: *** JOB 58477641 ON gpu-q-31 CANCELLED AT 2022-04-06T09:39:06 DUE TO TIME LIMIT ***
+slurmstepd: error: task_p_post_term: rmdir(/dev/cpuset/slurm58477641/slurm58477641.4294967294_0) failed Device or resource busy
+100%|██████████| 1.00/1.00 [00:00<00:00, 1.31batch/s]
+Number of steps taken: 901
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.78s/batch]
+Number of steps taken: 903
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.16batch/s]
+Number of steps taken: 904
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:00<00:00, 1.09batch/s]
+Number of steps taken: 905
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.27s/batch]
+Number of steps taken: 906
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.07s/batch]
+Number of steps taken: 907
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]100%|██████████| 1.00/1.00 [00:01<00:00, 1.06s/batch]
+Number of steps taken: 908
+  0%|          | 0.00/1.00 [00:00<?, ?batch/s]

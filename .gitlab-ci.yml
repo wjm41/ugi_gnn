@@ -1,0 +1,28 @@
+image: python:3.9
+
+stages:
+  - test
+  - pages
+
+before_script:
+  - export PYTHONPATH=dock2hit
+  - conda env create -f environment_cpu.yml
+  - conda init bash
+  - source ~/.bashrc    # <- !!!
+  - conda activate dgl_cpu
+
+test:
+  stage: test
+  script:
+    - pytest --cov=dock2hit test/
+    
+# pages:
+#   stage: pages
+#   script:
+#   - mkdocs build
+#   - mv site public
+#   artifacts:
+#     paths:
+#     - public
+#   only:
+#   - main

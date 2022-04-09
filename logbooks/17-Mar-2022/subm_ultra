@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -J ultra_training
+#SBATCH -A LEE-WJM41-SL2-GPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=24:00:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --mail-type=ALL
+#SBATCH -p ampere
+
+. /etc/profile.d/modules.sh
+module purge
+
+module load rhel8/default-amp
+module load miniconda/3
+
+source activate dgl_life
+
+python train_ultra.py \
+                -p ${data_path} \
+                -batch_size 32768 \
+                -minibatch_size 8192 \
+                -val \
+                -n_epochs 3 \
+                -save_dir ${model_path} \
+                -log_dir ${log_dir}

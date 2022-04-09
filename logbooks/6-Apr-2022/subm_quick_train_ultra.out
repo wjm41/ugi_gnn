@@ -1,0 +1,31 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: dock2hit
+  Building wheel for dock2hit (setup.py): started
+  Building wheel for dock2hit (setup.py): finished with status 'done'
+  Created wheel for dock2hit: filename=dock2hit-0.1.0-py3-none-any.whl size=137515 sha256=021c72a9741f6a4d526473c42e61e027c366aa78c6ccb23c5e9fccfc253980f1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-t9nh206r/wheels/e9/46/b3/127c6cd122b7690cfca02e35d86062f3cf7fe58252c07c9b98
+Successfully built dock2hit
+Installing collected packages: dock2hit
+  Attempting uninstall: dock2hit
+    Found existing installation: dock2hit 0.1.0
+    Uninstalling dock2hit-0.1.0:
+      Successfully uninstalled dock2hit-0.1.0
+Successfully installed dock2hit-0.1.0
+INFO:root:using GPU: NVIDIA A100-SXM4-80GB
+INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/D4_docked_valid.pkl
+INFO:root:Length of dataset: 116.24M
+INFO:root:Length of training set: 116.24M
+INFO:root:Number of epochs to train: 10.00K
+INFO:root:Number of batches (size 32768) per epoch: 3.55K
+INFO:root:Number of model parameters: 74529
+INFO:root:Number of node features: 74
+INFO:root:Number of edge features: 12
+INFO:root:beginning training...
+  0%|          | 0.00/3.55k [00:00<?, ?batch/s]  0%|          | 0.00/3.55k [00:19<?, ?batch/s]  0%|          | 1.00/3.55k [00:58<58:06:36, 59.0s/batch]  0%|          | 2.00/3.55k [01:35<44:51:01, 45.5s/batch]  0%|          | 3.00/3.55k [02:10<40:09:53, 40.8s/batch]  0%|          | 4.00/3.55k [02:48<39:01:10, 39.6s/batch]  0%|          | 5.00/3.55k [03:28<39:26:06, 40.1s/batch]  0%|          | 6.00/3.55k [04:07<39:03:24, 39.7s/batch]  0%|          | 7.00/3.55k [04:47<38:56:38, 39.6s/batch]  0%|          | 8.00/3.55k [05:27<39:07:23, 39.8s/batch]  0%|          | 9.00/3.55k [06:05<38:26:42, 39.1s/batch]  0%|          | 10.0/3.55k [06:44<38:35:39, 39.3s/batch]  0%|          | 11.0/3.55k [07:22<38:06:35, 38.8s/batch]  0%|          | 12.0/3.55k [08:04<38:58:16, 39.7s/batch]  0%|          | 13.0/3.55k [08:43<38:56:06, 39.7s/batch]  0%|          | 14.0/3.55k [09:27<39:59:39, 40.7s/batch]  0%|          | 15.0/3.55k [10:06<39:44:27, 40.5s/batch]  0%|          | 16.0/3.55k [10:47<39:47:54, 40.6s/batch]  0%|          | 17.0/3.55k [11:29<40:02:04, 40.8s/batch]  1%|          | 18.0/3.55k [12:12<40:56:08, 41.7s/batch]slurmstepd: error: *** JOB 58478554 ON gpu-q-50 CANCELLED AT 2022-04-06T10:49:08 DUE TO TIME LIMIT ***
+slurmstepd: error: task_p_post_term: rmdir(/dev/cpuset/slurm58478554/slurm58478554.4294967294_0) failed Device or resource busy
+  1%|          | 19.0/3.55k [12:57<41:41:05, 42.5s/batch]

@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -J D4_train_ultra
+#SBATCH -A LEE-WJM41-SL2-GPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=24:00:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --output=/rds-d2/user/wjm41/hpc-work/datasets/Ugis/logbooks/18-Mar-2022/subm_train_ultra.out
+#SBATCH -p ampere
+#SBATCH --mail-type=ALL
+. /etc/profile.d/modules.sh
+module purge
+module load rhel8/default-amp
+module load miniconda/3
+source activate dgl_life
+cd /rds-d2/user/wjm41/hpc-work/datasets/Ugis/; pip install .
+python /rds-d2/user/wjm41/hpc-work/datasets/Ugis/logbooks/17-Mar-2022//train_ultra.py -p /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/D4_docked_valid.pkl -batch_size 32768 -minibatch_size 8192 -val -n_epochs 3 -save_dir /rds-d2/user/wjm41/hpc-work/models/dock2hit/D4/train_ultra -log_dir /rds-d2/user/wjm41/hpc-work/datasets/Ugis/runs/ultra-large/D4/ -log_step 100

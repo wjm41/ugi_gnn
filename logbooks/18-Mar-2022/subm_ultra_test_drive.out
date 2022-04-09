@@ -1,0 +1,53 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: dock2hit
+  Building wheel for dock2hit (setup.py): started
+  Building wheel for dock2hit (setup.py): finished with status 'done'
+  Created wheel for dock2hit: filename=dock2hit-0.1.0-py3-none-any.whl size=136461 sha256=9a26a63398ffa6becdcf030c67dbc559ecaf0d17983955853c187939c1c33590
+  Stored in directory: /tmp/pip-ephem-wheel-cache-lh8hczw_/wheels/e9/46/b3/127c6cd122b7690cfca02e35d86062f3cf7fe58252c07c9b98
+Successfully built dock2hit
+Installing collected packages: dock2hit
+  Attempting uninstall: dock2hit
+    Found existing installation: dock2hit 0.1.0
+    Uninstalling dock2hit-0.1.0:
+      Successfully uninstalled dock2hit-0.1.0
+Successfully installed dock2hit-0.1.0
+INFO:root:using GPU: NVIDIA A100-SXM4-80GB
+INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/D4_test.csv
+INFO:root:Length of dataset: 256.00
+INFO:root:Length of training set: 156.00
+INFO:root:Number of epochs to train: 3.00
+INFO:root:Number of batches (size 64) per epoch: 3.00
+INFO:root:Length of validation set: 100.00
+INFO:root:Number of model parameters: 74529
+INFO:root:Number of node features: 74
+INFO:root:Number of edge features: 12
+INFO:root:beginning training...
+  0%|          | 0.00/3.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.443, RHO: 0.082, R2: -2298194.871
+INFO:root:val RMSE: 11.319, RHO: 0.296, R2: -145999.851
+INFO:root:train RMSE: 7.213, RHO: -0.291, R2: -91914.180
+INFO:root:val RMSE: 11.327, RHO: 0.109, R2: -492018.865
+INFO:root:train RMSE: 8.201, RHO: 0.032, R2: -371399.492
+INFO:root:val RMSE: 11.326, RHO: 0.179, R2: -507094.242
+100%|██████████| 3.00/3.00 [00:08<00:00, 2.98s/batch]
+Number of steps taken: 3
+  0%|          | 0.00/3.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.140, RHO: 0.294, R2: -359273.458
+INFO:root:val RMSE: 11.327, RHO: 0.133, R2: -349710.495
+INFO:root:train RMSE: 10.854, RHO: 0.021, R2: -236053.474
+INFO:root:val RMSE: 11.330, RHO: 0.062, R2: -247692.518
+INFO:root:train RMSE: 7.273, RHO: -0.035, R2: -162644.092
+INFO:root:val RMSE: 11.334, RHO: 0.004, R2: -183958.089
+100%|██████████| 3.00/3.00 [00:05<00:00, 2.00s/batch]
+Number of steps taken: 6
+  0%|          | 0.00/3.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.792, RHO: -0.065, R2: -218868.371
+INFO:root:val RMSE: 11.338, RHO: -0.023, R2: -154038.383
+INFO:root:train RMSE: 6.615, RHO: -0.193, R2: -110571.776
+INFO:root:val RMSE: 11.342, RHO: -0.097, R2: -151508.488
+INFO:root:train RMSE: 9.732, RHO: -0.144, R2: -108052.748
+INFO:root:val RMSE: 11.346, RHO: -0.091, R2: -120065.196
+100%|██████████| 3.00/3.00 [00:06<00:00, 2.04s/batch]
+Number of steps taken: 9
