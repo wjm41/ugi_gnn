@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF, WhiteKernel, Kernel, RationalQuadratic, DotProduct, NormalizedKernelMixin, Hyperparameter, Matern
 
-from dock2hit.uncertain_forest import UncertainRandomForestRegressor
+from dock2hit.fine_tuning.uncertain_forest import UncertainRandomForestRegressor
 
 
 def fit_forest(X, y, uncertain=False):
