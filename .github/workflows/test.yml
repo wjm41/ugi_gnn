@@ -23,9 +23,8 @@ jobs:
 
       - name: Install dock2hit + dependencies
         run: |
-          conda env update --file environment_cpu.yml --prune
+          $CONDA/bin/conda env update --file environment_cpu.yml --prune
           pip install .
-          conda activate dgl_cpu
 
       - name: Run tests
-        run: pytest --cov dock2hit
+        run: $CONDA/bin/pytest --cov dock2hit
