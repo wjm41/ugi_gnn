@@ -1,10 +1,6 @@
 name: Tests
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push, pull_request]
 
 jobs:
   pytest:
@@ -25,9 +21,9 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: Install molplotly + dependencies
+      - name: Install dock2hit + dependencies
         run: |
-          conda env update --file local.yml --prune
+          conda env update --file environment_cpu.yml --prune
 
       - name: Run tests
         run: pytest --cov dock2hit
