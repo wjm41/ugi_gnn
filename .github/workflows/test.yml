@@ -25,6 +25,7 @@ jobs:
         run: |
           conda env update --file environment_cpu.yml --prune
           pip install .
+          conda activate dgl_cpu
 
       - name: Run tests
         run: pytest --cov dock2hit
