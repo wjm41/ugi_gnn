@@ -19,12 +19,13 @@ jobs:
 
       - uses: conda-incubator/setup-miniconda@v2
         with:
+          activate-environment: dock2hit
+          environment-file: environment_cpu.yml
           python-version: 3.9
 
       - name: Install dock2hit + dependencies
         run: |
-          $CONDA/bin/conda env update --file environment_cpu.yml --prune
           pip install .
 
       - name: Run tests
-        run: $CONDA/bin/pytest --cov dock2hit
+        run: pytest test/ --cov dock2hit
