@@ -4,5 +4,9 @@ import dock2hit.optimizers
 import dock2hit.dataloader
 import dock2hit.tensorboard_logging
 import dock2hit.parsing
+import dock2hit.generate_mpnn_fps
+import dock2hit.model_fitting
+import dock2hit.uncertain_forest
+
 
 __version__ = "0.1.0"
