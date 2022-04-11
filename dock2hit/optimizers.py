@@ -1,5 +1,6 @@
 import math
 from torch.optim.optimizer import Optimizer, required
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 from functools import reduce
 import torch
 
@@ -25,7 +26,9 @@ def load_optimizer(args, model):
     else:
         print(args.optimizer)
         raise Exception('scrub')
-    return optimizer
+
+    scheduler = ReduceLROnPlateau(optimizer, 'min')
+    return optimizer, scheduler
 
 
 class AdamHD(Optimizer):
