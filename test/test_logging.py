@@ -36,3 +36,7 @@ def test_logging():
                title=mock_title,
                xlabel=mock_xlabel,
                ylabel=mock_ylabel)
+
+
+def test_log_minibatch():
+    pass
