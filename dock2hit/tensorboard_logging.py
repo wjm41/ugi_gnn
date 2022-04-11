@@ -71,5 +71,3 @@ class Logger:
 
         logging.info(
             f'{split} RMSE: {rmse:.3f}, RHO: {p:.3f}, R2: {r2:.3f}')
-    
-# TODO TESTS! No need for df
