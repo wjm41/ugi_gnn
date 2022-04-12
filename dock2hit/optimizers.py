@@ -25,7 +25,7 @@ def load_optimizer(args, model):
                                hypergrad_lr=args.hypergrad_lr)
     else:
         print(args.optimizer)
-        raise Exception('scrub')
+        raise Exception('Unsupported optimizer type specified.')
 
     scheduler = ReduceLROnPlateau(optimizer, 'min')
     return optimizer, scheduler
