@@ -15,4 +15,4 @@ module load rhel8/default-amp
 module load miniconda/3
 source activate dgl_life
 cd /rds-d2/user/wjm41/hpc-work/datasets/Ugis/; pip install . --use-feature=in-tree-build
-python -c "from dock2hit.train_and_validate.multithread import main; main()" -path_to_train_data /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/ultra_large/D4_negative.pkl -batch_size 256 -minibatch_size 64 -n_epochs 10000 -save_dir /rds-d2/user/wjm41/hpc-work/models/dock2hit/D4/quick_train_ultra_negative -log_dir /rds-d2/user/wjm41/hpc-work/datasets/Ugis/runs/ultra-large/D4-debug -steps_per_log 10
+python -c "from dock2hit.train_and_validate.multithread import main; main()" -path_to_train_data /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/ultra_large/D4_negative.pkl -batch_size 256 -minibatch_size 64 -lr 1e-5 -n_epochs 10000 -save_dir /rds-d2/user/wjm41/hpc-work/models/dock2hit/D4/quick_train_ultra_negative -log_dir /rds-d2/user/wjm41/hpc-work/datasets/Ugis/runs/ultra-large/D4-debug -steps_per_log 10
