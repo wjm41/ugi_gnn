@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -J subm_quick_train_ultra_bigger
+#SBATCH -A LEE-WJM41-SL2-GPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=0:20:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --output=/rds-d2/user/wjm41/hpc-work/datasets/Ugis/logbooks/12-Apr-2022/subm_quick_train_ultra_bigger.out
+#SBATCH -p ampere
+#SBATCH --mail-type=ALL
+. /etc/profile.d/modules.sh
+module purge
+module load rhel8/default-amp
+module load miniconda/3
+source activate dgl_life
+cd /rds-d2/user/wjm41/hpc-work/datasets/Ugis/; pip install . --use-feature=in-tree-build
+python -c "from dock2hit.train_and_validate.multithread import main; main()" -path_to_train_data /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/ultra_large/D4_bigger_test.csv -batch_size 1024 -minibatch_size 64 -optimizer Adam -lr 1e-3 -n_epochs 10000 -save_dir /rds-d2/user/wjm41/hpc-work/models/dock2hit/D4/quick_train_ultra_bigger -log_dir /rds-d2/user/wjm41/hpc-work/datasets/Ugis/runs/ultra-large/D4-debug -steps_per_log 50
