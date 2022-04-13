@@ -6,18 +6,32 @@ import numpy as np
 
 from dock2hit.tensorboard_logging import Logger
 from dock2hit.parsing import add_io_args, add_data_args, add_optim_args
+from dock2hit.train_and_validate.multithread import ModelConfig
 
 
-def test_logging():
-
+@pytest.fixture()
+def mock_args():
     mock_args = MagicMock()
-    mock_args.path_to_train_data = 'test/test_data/HIV.csv',
-    mock_args.log_dir = 'test/test_runs/test_logger/'
-    mock_args.y_col = 'activity'
-    mock_args.n_epochs = 10
+    mock_args.batch_size = 32
+    mock_args.n_epochs = 1
     mock_args.lr = 1e-3
     mock_args.optimizer = 'Adam'
-    mock_args.batch_size = 32
+    mock_args.path_to_train_data = 'test/test_data/HIV.csv'
+    mock_args.log_dir = 'test/test_runs/test_logger/'
+    mock_args.path_to_external_val = None
+    mock_args.random_train_val_split = False
+    mock_args.path_to_load_checkpoint = None
+    mock_args.y_col = 'activity'
+    return mock_args
+
+
+@pytest.fixture()
+def model_configs(mock_args):
+    model_configs = ModelConfig(mock_args)
+    return model_configs
+
+
+def test_logging(mock_args):
 
     logger = Logger(mock_args)
     mock_mols = 0
@@ -28,7 +42,7 @@ def test_logging():
     mock_title = 'Testing tensorboard logger on random numbers'
     mock_xlabel = 'np.arange'
     mock_ylabel = 'np.arange + np.normal()'
-    logger.log(n_mols=mock_mols,
+    logger.log(step=mock_mols,
                loss=mock_loss,
                batch_preds=mock_preds,
                batch_labs=mock_labs,
@@ -40,3 +54,8 @@ def test_logging():
 
 def test_log_minibatch():
     pass
+
+
+def test_log_weights(mock_args, model_configs):
+    logger = Logger(mock_args)
+    logger.log_weights(step=0, model_config=model_configs)

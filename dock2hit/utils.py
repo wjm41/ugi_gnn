@@ -112,7 +112,7 @@ def read_csv_or_pkl(file_path):
     if file_path.split('.')[-1] == 'pkl':
         df = pd.read_pickle(file_path).reset_index()
     elif file_path.split('.')[-1] == 'csv':
-        df = pd.read_csv(file_path).reset_index()
+        df = pd.read_csv(file_path).reset_index(drop=True)
     else:
         raise ValueError('Unrecognised file suffix!')
     return df

@@ -24,6 +24,8 @@ def model_configs():
 
 
 def test_load_model_weights(model_configs):
+    print(f'model_config network = {id(model_configs.model)}')
+    
     pass
 
 

@@ -33,12 +33,23 @@ class IsDataclass(Protocol):
     __dataclass_fields__: Dict
 
 
-def log_training_minibatch(logger: Logger, n_steps: int, model_config: IsDataclass, y_pred, y_true, loss, lr_histograms=None):
+def log_training_minibatch(logger: Logger,
+                           n_steps: int,
+                           model_config: IsDataclass,
+                           y_pred,
+                           y_true,
+                           loss,
+                           rescale=False,
+                           lr_histograms=None):
 
-    batch_preds = model_config.y_scaler.inverse_transform(
-        y_pred.cpu().detach().numpy().reshape(-1, 1))
-    batch_labs = model_config.y_scaler.inverse_transform(
-        y_true.cpu().detach().reshape(-1, 1))
+    if rescale:
+        batch_preds = model_config.y_scaler.inverse_transform(
+            y_pred.cpu().detach().numpy().reshape(-1, 1))
+        batch_labs = model_config.y_scaler.inverse_transform(
+            y_true.cpu().detach().reshape(-1, 1))
+    else:
+        batch_preds = y_pred.cpu().detach().numpy().reshape(-1, 1)
+        batch_labs = y_true.cpu().detach().numpy().reshape(-1, 1)
 
     # number of mols seen by model
     if lr_histograms is not None:
@@ -46,7 +57,7 @@ def log_training_minibatch(logger: Logger, n_steps: int, model_config: IsDatacla
                    split='train', state_lrs=lr_histograms)
     else:
         logger.log(n_steps, loss.detach().item(), batch_preds, batch_labs,
-                   split='train')
+                   split='train', rescale=False)
     return
 
 
@@ -66,45 +77,48 @@ def validate_and_log(logger: Logger, n_steps: int, model_config: IsDataclass, va
     return
 
 
-def run_minibatches(args: Namespace, batch_dataloader: DataLoader, model_config: IsDataclass, logger: Logger, n_steps: int):
-    # infinite looping
-    batch_iter = iter(batch_dataloader)
-    try:
-        bg, labels_mini = next(batch_iter)
-    except StopIteration:
-        batch_iter = iter(batch_dataloader)
-        bg, labels_mini = next(batch_iter)
-    bg = bg.to(model_config.device)
-    labels_mini = labels_mini.to(model_config.device)
-    atom_feats = bg.ndata.pop('h').to(model_config.device)
-    bond_feats = bg.edata.pop('e').to(model_config.device)
-    atom_feats, bond_feats, labels_mini = atom_feats.to(
-        model_config.device), bond_feats.to(model_config.device), labels_mini.to(model_config.device)
+def run_minibatch(args: Namespace, batched_graphs, y_true, model_config: IsDataclass, logger: Logger, n_steps: int):
+    model = model_config.model
+    optimizer = model_config.optimizer
+    device = model_config.device
+    loss_fn = model_config.loss_fn
 
-    y_pred = model_config.model(
-        bg, atom_feats, bond_feats).squeeze()
+    batched_graphs = batched_graphs.to(device)
+    y_true = y_true.to(device)
+    atom_feats = batched_graphs.ndata.pop('h').to(device)
+    bond_feats = batched_graphs.edata.pop('e').to(device)
+    atom_feats, bond_feats, y_true = atom_feats.to(
+        device), bond_feats.to(device), y_true.to(device)
 
-    loss = model_config.loss_fn(y_pred, labels_mini)
+    y_pred = model(
+        batched_graphs, atom_feats, bond_feats).squeeze()
 
-    model_config.optimizer.zero_grad()
+    loss = loss_fn(y_pred, y_true)
+
+    optimizer.zero_grad()
     loss.backward()
     if 'Felix' in args.optimizer:
-        _, state_lrs = model_config.optimizer.step()
+        _, state_lrs = optimizer.step()
     else:
-        model_config.optimizer.step()
+        optimizer.step()
 
-    n_steps += 1
+    model_config.model = model
+    model_config.optimizer = optimizer
+
     if n_steps % args.steps_per_log == 0 and args.log_dir is not None:
         if 'Felix' in args.optimizer:
             log_training_minibatch(
-                logger, n_steps, model_config, y_pred, labels_mini, loss, state_lrs)
+                logger, n_steps, model_config, y_pred, y_true, loss, state_lrs)
         else:
             log_training_minibatch(
-                logger, n_steps, model_config, y_pred, labels_mini, loss)
+                logger, n_steps, model_config, y_pred, y_true, loss)
+        # logger.log_gradients(n_steps, model_config)
+        # logger.log_weights(n_steps, model_config)
 
         if model_config.val_loader is not None:
             validate_and_log(
                 logger, n_steps, model_config, multi_featurize)
+    return
 
 
 @dataclass
@@ -129,6 +143,7 @@ class ModelConfig():
                                  num_layer_set2set=3)
 
         mpnn_net.to(device)
+        print(f'mpnn_net id: {id(mpnn_net)}')
 
         optimizer, scheduler = load_optimizer(args, mpnn_net)
 
@@ -167,7 +182,7 @@ class ModelConfig():
     def load_checkpoint(self, path_to_checkpoint: str):
         checkpoint = torch.load(
             path_to_checkpoint, map_location=self.device)
-        self.mpnn_net.load_state_dict(checkpoint['mpnn_state_dict'])
+        self.model.load_state_dict(checkpoint['mpnn_state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         self.scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
         self.start_epoch = checkpoint['epoch']
@@ -196,7 +211,6 @@ def train_and_validate(args: Namespace):
     logging.info('Beginning training...')
     if args.log_dir is not None:
         logger = Logger(args)
-
     n_steps = 0
     for epoch in range(model_config.start_epoch, args.n_epochs):
         model_config.model.train()
@@ -226,14 +240,23 @@ def train_and_validate(args: Namespace):
                 batch_loader = DataLoader(
                     batch_data, batch_size=args.minibatch_size, shuffle=True, collate_fn=collate, drop_last=False, num_workers=4)
 
+                # infinite looping
+                batch_iter = iter(batch_loader)
+
                 while not task.done():
-                    run_minibatches(args, batch_loader,
-                                    model_config, logger, n_steps)
+                    try:
+                        batched_graphs, labels_mini = next(batch_iter)
+                    except StopIteration:
+                        batch_iter = iter(batch_loader)
+                        batched_graphs, labels_mini = next(batch_iter)
+                    run_minibatch(args, batched_graphs, labels_mini,
+                                  model_config, logger, n_steps)
+                    n_steps += 1
 
                 if batch_num % args.batches_per_save == 0 and args.save_dir is not None:
                     save_checkpoint(args.save_dir, epoch,
                                     n_steps, model_config, batch_num)
-        print(f'Model training complete! Number of steps taken: {n_steps}')
+    print(f'Model training complete! Number of steps taken: {n_steps}')
 
 
 def main():
