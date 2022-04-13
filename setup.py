@@ -26,7 +26,7 @@ setup(
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/wjm41/ugi_gnn",
-    python_requires='~=3.9, <=3.10',
+    python_requires='==3.9.7',
     packages=find_packages(),
     author="W. McCorkindale",
     license="MIT License",
