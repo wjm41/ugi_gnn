@@ -55,9 +55,13 @@ def log_training_minibatch(logger: Logger,
     if lr_histograms is not None:
         logger.log(n_steps, loss.detach().item(), batch_preds, batch_labs,
                    split='train', state_lrs=lr_histograms)
+        logger.plot_predictions(n_steps, batch_preds,
+                                batch_labs, split='train', rescale=rescale)
     else:
         logger.log(n_steps, loss.detach().item(), batch_preds, batch_labs,
                    split='train', rescale=False)
+        logger.plot_predictions(n_steps, batch_preds,
+                                batch_labs, split='train', rescale=rescale)
     return
 
 
@@ -74,6 +78,8 @@ def validate_and_log(logger: Logger, n_steps: int, model_config: IsDataclass, va
 
     logger.log(n_steps, val_loss, val_preds, val_labs,
                split='val')
+    logger.plot_predictions(n_steps, val_preds,
+                            val_labs, split='val', rescale=True)
     return
 
 

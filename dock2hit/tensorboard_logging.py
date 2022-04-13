@@ -31,15 +31,14 @@ class Logger:
     def log(self,
             step: int,
             loss: float,
-            batch_preds: np.ndarray,
-            batch_labs: np.ndarray,
+            y_pred: np.ndarray,
+            y_true: np.ndarray,
             split: Literal['train', 'val'] = 'train',
-            rescale=False,
             state_lrs: np.ndarray = None,):
 
-        p = spearmanr(batch_preds, batch_labs)[0]
-        rmse = np.sqrt(mean_squared_error(batch_preds, batch_labs))
-        r2 = r2_score(batch_preds, batch_labs)
+        p = spearmanr(y_pred, y_true)[0]
+        rmse = np.sqrt(mean_squared_error(y_pred, y_true))
+        r2 = r2_score(y_pred, y_true)
 
         self.writer.add_scalar(f'loss/{split}', loss,
                                step)
@@ -50,8 +49,6 @@ class Logger:
         if state_lrs is not None:
             self.writer.add_histogram(f'{split}/lrT', state_lrs, step)
 
-        self.plot_predictions(
-            step, batch_preds, batch_labs, split, rescale=rescale)
         self.writer.flush()
 
         logging.info(
@@ -59,8 +56,8 @@ class Logger:
 
     def plot_predictions(self,
                          step: float,
-                         y_pred,
-                         y_true,
+                         y_pred: np.ndarray,
+                         y_true: np.ndarray,
                          split: Literal['train', 'val'] = 'train',
                          title: str = None,
                          xlabel: str = 'True Values',

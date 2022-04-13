@@ -39,17 +39,33 @@ def test_logging(mock_args):
     mock_preds = np.arange(100) + np.random.normal(size=100)
     mock_labs = np.arange(100)
     mock_split = 'train'
+
+    logger.log(step=mock_mols,
+               loss=mock_loss,
+               y_pred=mock_preds,
+               y_true=mock_labs,
+               split=mock_split,
+               )
+
+
+def test_plot_prediction(mock_args):
+    logger = Logger(mock_args)
+    mock_split = 'train'
+    mock_mols = 0
+    mock_loss = 1.5
+    mock_preds = np.arange(100) + np.random.normal(size=100)
+    mock_labs = np.arange(100)
+    mock_split = 'train'
     mock_title = 'Testing tensorboard logger on random numbers'
     mock_xlabel = 'np.arange'
     mock_ylabel = 'np.arange + np.normal()'
-    logger.log(step=mock_mols,
-               loss=mock_loss,
-               batch_preds=mock_preds,
-               batch_labs=mock_labs,
-               split=mock_split,
-               title=mock_title,
-               xlabel=mock_xlabel,
-               ylabel=mock_ylabel)
+    logger.plot_predictions(step=mock_mols,
+                            y_pred=mock_preds,
+                            y_true=mock_labs,
+                            split=mock_split,
+                            title=mock_title,
+                            xlabel=mock_xlabel,
+                            ylabel=mock_ylabel)
 
 
 def test_log_minibatch():
