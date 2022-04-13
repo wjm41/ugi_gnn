@@ -1,481 +1,0 @@
-Loading rhel8/default-amp
-  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
-    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-DEPRECATION: In-tree builds are now the default. pip 22.1 will enforce this behaviour change. A possible replacement is to remove the --use-feature=in-tree-build flag.
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
-  Preparing metadata (setup.py): started
-  Preparing metadata (setup.py): finished with status 'done'
-Building wheels for collected packages: dock2hit
-  Building wheel for dock2hit (setup.py): started
-  Building wheel for dock2hit (setup.py): finished with status 'done'
-  Created wheel for dock2hit: filename=dock2hit-0.1.0-py3-none-any.whl size=33739 sha256=cdfc6c0de39793f62ec8400e8bb73db35efefd75cbc3f5d4c14a7ecaedb089bb
-  Stored in directory: /tmp/pip-ephem-wheel-cache-p299spo_/wheels/e9/46/b3/127c6cd122b7690cfca02e35d86062f3cf7fe58252c07c9b98
-Successfully built dock2hit
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-Installing collected packages: dock2hit
-  Attempting uninstall: dock2hit
-    WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-    Found existing installation: dock2hit 0.1.0
-    Uninstalling dock2hit-0.1.0:
-      Successfully uninstalled dock2hit-0.1.0
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-Successfully installed dock2hit-0.1.0
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
-INFO:root:using GPU: NVIDIA A100-SXM4-80GB
-mpnn_net id: 22741464561120
-INFO:root:Number of model parameters: 74529
-INFO:root:Number of node features: 74
-INFO:root:Number of edge features: 12
-INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/ultra_large/D4_negative.pkl
-INFO:root:Length of dataset: 113.70M
-INFO:root:Length of training set: 113.70M
-INFO:root:Number of epochs to train: 10.00K
-INFO:root:Number of batches (size 256) per epoch: 444.13K
-INFO:root:Beginning training...
-  0%|          | 0.00/444k [00:00<?, ?batch/s]INFO:root:train RMSE: 8.315, RHO: 0.000, R2: -330677.513
-INFO:root:train RMSE: 23.431, RHO: -0.235, R2: -18634.804
-INFO:root:train RMSE: 11.307, RHO: 0.206, R2: -83675.656
-  0%|          | 0.00/444k [00:10<?, ?batch/s]INFO:root:train RMSE: 21.866, RHO: 0.172, R2: -6915.132
-  0%|          | 4.00/444k [00:10<324:01:27, 2.63s/batch]INFO:root:train RMSE: 21.430, RHO: -0.014, R2: -62910.109
-  0%|          | 5.00/444k [00:11<285:47:54, 2.32s/batch]INFO:root:train RMSE: 12.637, RHO: 0.014, R2: -98047.568
-  0%|          | 6.00/444k [00:13<261:23:31, 2.12s/batch]INFO:root:train RMSE: 7.871, RHO: 0.077, R2: -148779.002
-  0%|          | 7.00/444k [00:14<229:37:01, 1.86s/batch]INFO:root:train RMSE: 10.957, RHO: 0.018, R2: -25155.382
-  0%|          | 8.00/444k [00:15<206:04:20, 1.67s/batch]INFO:root:train RMSE: 7.482, RHO: 0.085, R2: -8108.518
-  0%|          | 9.00/444k [00:17<189:50:42, 1.54s/batch]INFO:root:train RMSE: 9.276, RHO: 0.036, R2: -36573.803
-  0%|          | 10.0/444k [00:18<182:56:09, 1.48s/batch]INFO:root:train RMSE: 8.734, RHO: -0.063, R2: -47897.166
-  0%|          | 11.0/444k [00:19<171:59:55, 1.39s/batch]INFO:root:train RMSE: 7.511, RHO: 0.083, R2: -87835.623
-  0%|          | 12.0/444k [00:21<174:28:00, 1.41s/batch]INFO:root:train RMSE: 7.412, RHO: 0.259, R2: -2958905.429
-  0%|          | 13.0/444k [00:22<171:00:05, 1.39s/batch]INFO:root:train RMSE: 8.606, RHO: 0.062, R2: -5744316.767
-  0%|          | 14.0/444k [00:23<167:56:44, 1.36s/batch]INFO:root:train RMSE: 8.204, RHO: 0.174, R2: -7767487.229
-  0%|          | 15.0/444k [00:25<169:15:10, 1.37s/batch]INFO:root:train RMSE: 8.663, RHO: 0.078, R2: -37282700.165
-  0%|          | 16.0/444k [00:26<184:22:14, 1.49s/batch]INFO:root:train RMSE: 9.547, RHO: -0.076, R2: -2262938.241
-  0%|          | 17.0/444k [00:28<186:58:12, 1.52s/batch]INFO:root:train RMSE: 9.071, RHO: -0.004, R2: -494846284.490
-  0%|          | 18.0/444k [00:29<185:18:05, 1.50s/batch]INFO:root:train RMSE: 9.354, RHO: -0.095, R2: -44347862.483
-  0%|          | 19.0/444k [00:31<185:40:52, 1.51s/batch]INFO:root:train RMSE: 8.928, RHO: 0.060, R2: -10153282.851
-  0%|          | 20.0/444k [00:32<180:14:26, 1.46s/batch]INFO:root:train RMSE: 10.187, RHO: -0.169, R2: -7260722.837
-  0%|          | 21.0/444k [00:34<173:40:27, 1.41s/batch]INFO:root:train RMSE: 9.099, RHO: -0.047, R2: -6080598.293
-  0%|          | 22.0/444k [00:35<168:30:28, 1.37s/batch]INFO:root:train RMSE: 8.803, RHO: -0.005, R2: -20886070.879
-  0%|          | 23.0/444k [00:36<173:41:10, 1.41s/batch]INFO:root:train RMSE: 9.609, RHO: -0.064, R2: -17503072.663
-  0%|          | 24.0/444k [00:38<191:57:23, 1.56s/batch]INFO:root:train RMSE: 7.000, RHO: 0.051, R2: -11865943.265
-  0%|          | 25.0/444k [00:39<177:51:13, 1.44s/batch]INFO:root:train RMSE: 8.037, RHO: 0.092, R2: -16908646.213
-  0%|          | 26.0/444k [00:41<167:48:12, 1.36s/batch]INFO:root:train RMSE: 9.388, RHO: 0.247, R2: -16655556.727
-  0%|          | 27.0/444k [00:42<168:19:25, 1.36s/batch]INFO:root:train RMSE: 9.215, RHO: 0.053, R2: -18707388.049
-  0%|          | 28.0/444k [00:43<168:53:52, 1.37s/batch]INFO:root:train RMSE: 8.867, RHO: -0.120, R2: -22227001.111
-  0%|          | 29.0/444k [00:45<169:27:47, 1.37s/batch]INFO:root:train RMSE: 7.735, RHO: -0.102, R2: -11930723.664
-  0%|          | 30.0/444k [00:46<170:05:47, 1.38s/batch]INFO:root:train RMSE: 9.798, RHO: -0.078, R2: -13182246.849
-  0%|          | 31.0/444k [00:48<175:24:15, 1.42s/batch]INFO:root:train RMSE: 10.259, RHO: -0.120, R2: -14927260.188
-  0%|          | 32.0/444k [00:49<185:52:06, 1.51s/batch]INFO:root:train RMSE: 8.522, RHO: 0.028, R2: -8683375.721
-  0%|          | 33.0/444k [00:51<179:07:29, 1.45s/batch]INFO:root:train RMSE: 9.852, RHO: -0.093, R2: -13122258.932
-  0%|          | 34.0/444k [00:52<171:13:43, 1.39s/batch]INFO:root:train RMSE: 7.125, RHO: 0.152, R2: -8856171.597
-  0%|          | 35.0/444k [00:53<169:24:57, 1.37s/batch]INFO:root:train RMSE: 8.836, RHO: 0.017, R2: -11343369.693
-  0%|          | 36.0/444k [00:54<161:21:31, 1.31s/batch]INFO:root:train RMSE: 9.617, RHO: 0.228, R2: -18955972.944
-  0%|          | 37.0/444k [00:56<160:52:01, 1.30s/batch]INFO:root:train RMSE: 9.436, RHO: 0.086, R2: -27223296.940
-  0%|          | 38.0/444k [00:58<181:46:36, 1.47s/batch]INFO:root:train RMSE: 8.405, RHO: 0.039, R2: -127138369.461
-  0%|          | 39.0/444k [00:59<182:22:19, 1.48s/batch]INFO:root:train RMSE: 9.033, RHO: -0.059, R2: -3617906464.762
-  0%|          | 40.0/444k [01:00<168:25:18, 1.37s/batch]INFO:root:train RMSE: 8.729, RHO: -0.025, R2: -880261410.412
-  0%|          | 41.0/444k [01:01<163:49:35, 1.33s/batch]INFO:root:train RMSE: 7.694, RHO: -0.150, R2: -2044647324.728
-  0%|          | 42.0/444k [01:03<174:28:53, 1.41s/batch]INFO:root:train RMSE: 8.933, RHO: -0.053, R2: -3725300711.773
-  0%|          | 43.0/444k [01:04<164:39:33, 1.33s/batch]INFO:root:train RMSE: 8.865, RHO: -0.007, R2: -20492260776.707
-  0%|          | 44.0/444k [01:06<166:52:39, 1.35s/batch]INFO:root:train RMSE: 10.798, RHO: -0.063, R2: -9283984003.627
-  0%|          | 45.0/444k [01:07<172:44:07, 1.40s/batch]INFO:root:train RMSE: 8.181, RHO: -0.131, R2: -25906964127.457
-  0%|          | 46.0/444k [01:08<162:19:22, 1.32s/batch]INFO:root:train RMSE: 8.490, RHO: -0.047, R2: -1457770540.378
-  0%|          | 47.0/444k [01:10<162:11:37, 1.31s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.861, RHO: nan, R2: -5396094893661.758
-  0%|          | 48.0/444k [01:11<159:40:59, 1.29s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 11.237, RHO: nan, R2: -34708292942675.902
-  0%|          | 49.0/444k [01:13<182:30:07, 1.48s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.384, RHO: nan, R2: -6051537009686.807
-  0%|          | 50.0/444k [01:14<178:42:13, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.927, RHO: nan, R2: -21904240692652.344
-  0%|          | 51.0/444k [01:15<170:59:04, 1.39s/batch]INFO:root:train RMSE: 7.634, RHO: 0.001, R2: -997771918.206
-  0%|          | 52.0/444k [01:17<172:32:50, 1.40s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.630, RHO: nan, R2: -25493586644233.500
-  0%|          | 53.0/444k [01:18<175:58:23, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.031, RHO: nan, R2: 0.000
-  0%|          | 54.0/444k [01:19<167:46:59, 1.36s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.636, RHO: nan, R2: 0.000
-  0%|          | 55.0/444k [01:21<176:58:39, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.338, RHO: nan, R2: -23969216046235.445
-  0%|          | 56.0/444k [01:23<177:10:12, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.437, RHO: nan, R2: -29942943878469.137
-  0%|          | 57.0/444k [01:24<181:08:03, 1.47s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.448, RHO: nan, R2: -6134110818073.129
-  0%|          | 58.0/444k [01:26<188:53:26, 1.53s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.687, RHO: nan, R2: -20745057228108.742
-  0%|          | 59.0/444k [01:27<181:40:20, 1.47s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.959, RHO: nan, R2: -22064522536768.547
-  0%|          | 60.0/444k [01:29<181:31:01, 1.47s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.985, RHO: nan, R2: -22191697122370.398
-  0%|          | 61.0/444k [01:30<174:46:16, 1.42s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.380, RHO: nan, R2: -19303946191142.773
-  0%|          | 62.0/444k [01:31<166:14:33, 1.35s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.775, RHO: nan, R2: -4153752445140.408
-  0%|          | 63.0/444k [01:32<161:16:30, 1.31s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.545, RHO: nan, R2: -6260438915800.008
-  0%|          | 64.0/444k [01:34<169:02:54, 1.37s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.399, RHO: nan, R2: -19391826481891.266
-  0%|          | 65.0/444k [01:35<157:10:56, 1.27s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.294, RHO: nan, R2: 0.000
-  0%|          | 66.0/444k [01:37<174:41:26, 1.42s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.524, RHO: nan, R2: -24935566389362.582
-  0%|          | 67.0/444k [01:38<187:26:00, 1.52s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.959, RHO: nan, R2: 0.000
-  0%|          | 68.0/444k [01:40<197:50:07, 1.60s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.825, RHO: nan, R2: -21407490592225.973
-  0%|          | 69.0/444k [01:41<184:55:38, 1.50s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 11.643, RHO: nan, R2: 0.000
-  0%|          | 70.0/444k [01:43<178:21:57, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.974, RHO: nan, R2: 0.000
-  0%|          | 71.0/444k [01:44<176:19:00, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.040, RHO: nan, R2: -22461299502035.688
-  0%|          | 72.0/444k [01:46<185:13:53, 1.50s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.250, RHO: nan, R2: -28882008253006.750
-  0%|          | 73.0/444k [01:47<177:32:40, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.864, RHO: nan, R2: 0.000
-  0%|          | 74.0/444k [01:48<174:45:24, 1.42s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.564, RHO: nan, R2: -15728435985841.217
-  0%|          | 75.0/444k [01:50<179:13:41, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.204, RHO: nan, R2: 0.000
-  0%|          | 76.0/444k [01:51<179:37:15, 1.46s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.736, RHO: nan, R2: -5244059414029.023
-  0%|          | 77.0/444k [01:53<190:42:19, 1.55s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.073, RHO: nan, R2: 0.000
-  0%|          | 78.0/444k [01:55<186:28:45, 1.51s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.187, RHO: nan, R2: 0.000
-  0%|          | 79.0/444k [01:56<182:34:01, 1.48s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.602, RHO: nan, R2: -30896891033093.676
-  0%|          | 80.0/444k [01:58<190:27:03, 1.54s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.654, RHO: nan, R2: 0.000
-  0%|          | 81.0/444k [01:59<190:44:39, 1.55s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.217, RHO: nan, R2: -4640217397385.139
-  0%|          | 82.0/444k [02:01<190:42:08, 1.55s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.486, RHO: nan, R2: -24732563706643.789
-  0%|          | 83.0/444k [02:02<183:40:52, 1.49s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 6.830, RHO: nan, R2: 0.000
-  0%|          | 84.0/444k [02:04<178:56:24, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.958, RHO: nan, R2: -22058461416200.055
-  0%|          | 85.0/444k [02:05<186:02:26, 1.51s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 6.320, RHO: nan, R2: -10978426990503.203
-  0%|          | 86.0/444k [02:07<189:03:13, 1.53s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.577, RHO: nan, R2: -15778922538098.861
-  0%|          | 87.0/444k [02:08<184:21:44, 1.49s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.288, RHO: nan, R2: -7273565330459.010
-  0%|          | 88.0/444k [02:10<184:02:34, 1.49s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.943, RHO: nan, R2: -27176828339515.484
-  0%|          | 89.0/444k [02:12<205:57:03, 1.67s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.966, RHO: nan, R2: 0.000
-  0%|          | 90.0/444k [02:13<189:34:47, 1.54s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.055, RHO: nan, R2: -17836991878115.527
-  0%|          | 91.0/444k [02:14<182:31:24, 1.48s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.928, RHO: nan, R2: 0.000
-  0%|          | 92.0/444k [02:16<179:17:47, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.593, RHO: nan, R2: 0.000
-  0%|          | 93.0/444k [02:17<178:17:26, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.776, RHO: nan, R2: 0.000
-  0%|          | 94.0/444k [02:19<183:46:45, 1.49s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.444, RHO: nan, R2: 0.000
-  0%|          | 95.0/444k [02:20<181:18:00, 1.47s/batch]INFO:root:train RMSE: 9.180, RHO: -0.102, R2: -15771572843021.994
-  0%|          | 96.0/444k [02:22<186:15:30, 1.51s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.507, RHO: nan, R2: 0.000
-  0%|          | 97.0/444k [02:23<186:18:59, 1.51s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.041, RHO: nan, R2: 0.000
-  0%|          | 98.0/444k [02:25<190:20:03, 1.54s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.794, RHO: nan, R2: -6591805558057.415
-  0%|          | 99.0/444k [02:27<205:51:25, 1.67s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.559, RHO: nan, R2: 0.000
-  0%|          | 100/444k [02:28<201:49:17, 1.64s/batch] /rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.433, RHO: nan, R2: 0.000
-  0%|          | 101/444k [02:30<194:19:35, 1.58s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.894, RHO: nan, R2: -21742246181131.078
-  0%|          | 102/444k [02:31<187:26:06, 1.52s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.861, RHO: nan, R2: -16985663869038.016
-  0%|          | 103/444k [02:32<178:05:09, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.393, RHO: nan, R2: -24254554650035.219
-  0%|          | 104/444k [02:34<177:45:11, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.834, RHO: nan, R2: -21451227444351.500
-  0%|          | 105/444k [02:35<168:19:54, 1.36s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.172, RHO: nan, R2: 0.000
-  0%|          | 106/444k [02:37<180:23:23, 1.46s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.044, RHO: nan, R2: 0.000
-  0%|          | 107/444k [02:38<184:38:03, 1.50s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.155, RHO: nan, R2: -28348610556530.285
-  0%|          | 108/444k [02:40<198:14:44, 1.61s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.091, RHO: nan, R2: -27989362232020.355
-  0%|          | 109/444k [02:42<192:54:47, 1.56s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.915, RHO: nan, R2: -21847227221724.852
-  0%|          | 110/444k [02:43<191:05:57, 1.55s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.932, RHO: nan, R2: 0.000
-  0%|          | 111/444k [02:45<188:14:48, 1.53s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.176, RHO: nan, R2: 0.000
-  0%|          | 112/444k [02:46<173:48:18, 1.41s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.693, RHO: nan, R2: 0.000
-  0%|          | 113/444k [02:47<181:47:16, 1.47s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.380, RHO: nan, R2: -4825564033153.475
-  0%|          | 114/444k [02:49<182:38:37, 1.48s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 11.883, RHO: nan, R2: -38811818170795.109
-  0%|          | 115/444k [02:50<182:45:06, 1.48s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.497, RHO: nan, R2: 0.000
-  0%|          | 116/444k [02:52<178:45:46, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.203, RHO: nan, R2: 0.000
-  0%|          | 117/444k [02:53<176:09:18, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.620, RHO: nan, R2: -20426314687400.820
-  0%|          | 118/444k [02:55<174:36:47, 1.42s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.273, RHO: nan, R2: 0.000
-  0%|          | 119/444k [02:56<171:38:19, 1.39s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.186, RHO: nan, R2: 0.000
-  0%|          | 120/444k [02:57<168:32:04, 1.37s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.733, RHO: nan, R2: -6509351094168.384
-  0%|          | 121/444k [02:59<171:43:37, 1.39s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.623, RHO: nan, R2: 0.000
-  0%|          | 122/444k [03:00<168:52:11, 1.37s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.731, RHO: nan, R2: -31655013745097.836
-  0%|          | 123/444k [03:01<161:17:02, 1.31s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.762, RHO: nan, R2: -26195737500524.195
-  0%|          | 124/444k [03:03<179:17:10, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.537, RHO: nan, R2: 0.000
-  0%|          | 125/444k [03:04<179:27:22, 1.46s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.705, RHO: nan, R2: -20827198346329.387
-  0%|          | 126/444k [03:06<175:12:59, 1.42s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.120, RHO: nan, R2: -22863868987931.859
-  0%|          | 127/444k [03:07<174:09:35, 1.41s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.284, RHO: nan, R2: -5923287743705.607
-  0%|          | 128/444k [03:09<181:32:23, 1.47s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.716, RHO: nan, R2: 0.000
-  0%|          | 129/444k [03:10<187:12:27, 1.52s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.539, RHO: nan, R2: -5010717163741.535
-  0%|          | 130/444k [03:12<179:58:56, 1.46s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.021, RHO: nan, R2: -6900323734599.213
-  0%|          | 131/444k [03:13<169:48:37, 1.38s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.271, RHO: nan, R2: -18803452968032.344
-  0%|          | 132/444k [03:14<166:52:09, 1.35s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.965, RHO: nan, R2: 0.000
-  0%|          | 133/444k [03:16<168:40:58, 1.37s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.315, RHO: nan, R2: -5962341192970.979
-  0%|          | 134/444k [03:17<169:35:57, 1.38s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.179, RHO: nan, R2: 0.000
-  0%|          | 135/444k [03:19<176:12:51, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.761, RHO: nan, R2: -4138869660228.194
-  0%|          | 136/444k [03:20<172:19:24, 1.40s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.351, RHO: nan, R2: -24037595243464.195
-  0%|          | 137/444k [03:21<174:29:00, 1.41s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.097, RHO: nan, R2: -22746014486163.297
-  0%|          | 138/444k [03:23<167:42:14, 1.36s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.316, RHO: nan, R2: 0.000
-  0%|          | 139/444k [03:24<172:00:22, 1.39s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.258, RHO: nan, R2: -23558996909873.648
-  0%|          | 140/444k [03:26<176:59:13, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.409, RHO: nan, R2: -15088775723051.031
-  0%|          | 141/444k [03:27<183:20:03, 1.49s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.673, RHO: nan, R2: 0.000
-  0%|          | 142/444k [03:29<182:10:17, 1.48s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.212, RHO: nan, R2: -28666799414698.754
-  0%|          | 143/444k [03:30<176:30:36, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.130, RHO: nan, R2: -28205470787058.555
-  0%|          | 144/444k [03:31<175:55:35, 1.43s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.024, RHO: nan, R2: -22382790286358.453
-  0%|          | 145/444k [03:33<177:42:39, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.687, RHO: nan, R2: -25794412401104.992
-  0%|          | 146/444k [03:34<178:32:10, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.720, RHO: nan, R2: -25972635727602.344
-  0%|          | 147/444k [03:35<168:29:24, 1.37s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.669, RHO: nan, R2: -5164418591445.752
-  0%|          | 148/444k [03:37<178:08:52, 1.44s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.621, RHO: nan, R2: -5107823247139.535
-  0%|          | 149/444k [03:39<185:24:21, 1.50s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.613, RHO: nan, R2: -6349914588188.794
-  0%|          | 150/444k [03:40<179:23:50, 1.45s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.763, RHO: nan, R2: -21105935968080.719
-  0%|          | 151/444k [03:41<173:41:18, 1.41s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.863, RHO: nan, R2: -16992795000525.641
-  0%|          | 152/444k [03:43<167:20:32, 1.36s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.770, RHO: nan, R2: 0.000
-  0%|          | 153/444k [03:44<173:17:31, 1.41s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.020, RHO: nan, R2: -17678804897284.336
-  0%|          | 154/444k [03:45<170:02:49, 1.38s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.414, RHO: nan, R2: -19459847272885.094
-  0%|          | 155/444k [03:47<166:16:52, 1.35s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.195, RHO: nan, R2: 0.000
-  0%|          | 156/444k [03:48<164:01:53, 1.33s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-slurmstepd: error: *** JOB 58770898 ON gpu-q-23 CANCELLED AT 2022-04-12T15:45:17 DUE TO TIME LIMIT ***
-slurmstepd: error: task_p_post_term: rmdir(/dev/cpuset/slurm58770898/slurm58770898.4294967294_0) failed Device or resource busy
-INFO:root:train RMSE: 10.482, RHO: nan, R2: 0.000
-  0%|          | 157/444k [03:49<160:31:21, 1.30s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.107, RHO: nan, R2: 0.000
-  0%|          | 158/444k [03:51<166:41:09, 1.35s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.387, RHO: nan, R2: -29659093769684.371
-  0%|          | 159/444k [03:52<169:09:24, 1.37s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.277, RHO: nan, R2: 0.000
-  0%|          | 160/444k [03:54<179:59:10, 1.46s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.979, RHO: nan, R2: -17499669651195.258
-  0%|          | 161/444k [03:56<213:08:35, 1.73s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 7.464, RHO: nan, R2: -15315463590597.320
-  0%|          | 162/444k [03:58<204:15:24, 1.66s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.254, RHO: nan, R2: 0.000
-  0%|          | 163/444k [03:59<206:06:59, 1.67s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.760, RHO: nan, R2: 0.000
-  0%|          | 164/444k [04:01<213:35:12, 1.73s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 11.200, RHO: nan, R2: -34478101958596.109
-  0%|          | 165/444k [04:03<215:33:58, 1.75s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.094, RHO: nan, R2: -28006892502680.086
-  0%|          | 166/444k [04:05<209:44:31, 1.70s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.558, RHO: nan, R2: -30643773021662.734
-  0%|          | 167/444k [04:06<209:38:04, 1.70s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.553, RHO: nan, R2: -25084621979232.512
-  0%|          | 168/444k [04:08<220:29:10, 1.79s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.642, RHO: nan, R2: -25552815772162.238
-  0%|          | 169/444k [04:10<227:53:38, 1.85s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.962, RHO: nan, R2: -27281504654468.148
-  0%|          | 170/444k [04:12<228:13:44, 1.85s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.587, RHO: nan, R2: -25262383206413.266
-  0%|          | 171/444k [04:14<224:16:21, 1.82s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 10.023, RHO: nan, R2: -27615187498866.676
-  0%|          | 172/444k [04:16<227:55:21, 1.85s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.496, RHO: nan, R2: -6196267892541.545
-  0%|          | 173/444k [04:18<232:14:20, 1.88s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.724, RHO: nan, R2: 0.000
-  0%|          | 174/444k [04:20<238:08:05, 1.93s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.394, RHO: nan, R2: -24257371813960.258
-  0%|          | 175/444k [04:22<244:08:00, 1.98s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.002, RHO: nan, R2: -5569254472993.301
-/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 8.706, RHO: nan, R2: 0.000
-  0%|          | 176/444k [04:26<328:14:22, 2.66s/batch]/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.173, RHO: nan, R2: -23128573706159.609
-/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
-INFO:root:train RMSE: 9.297, RHO: nan, R2: -23758957487126.859
-/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages/scipy/stats/stats.py:4484: SpearmanRConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
-  warnings.warn(SpearmanRConstantInputWarning())
