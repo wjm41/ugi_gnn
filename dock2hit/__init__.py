@@ -4,6 +4,7 @@ import dock2hit.optimizers
 import dock2hit.dataloader
 import dock2hit.tensorboard_logging
 import dock2hit.parsing
+import dock2hit.custom_gnn
 import dock2hit.generate_mpnn_fps
 import dock2hit.fine_tuning
 
