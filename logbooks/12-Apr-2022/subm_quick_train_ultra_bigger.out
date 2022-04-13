@@ -1,0 +1,1273 @@
+INFO:root:train RMSE: 8.625, RHO: 0.003, R2: -297.069
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+INFO:root:train RMSE: 8.156, RHO: 0.038, R2: -342.068
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.777, RHO: 0.084, R2: -326.757
+WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
+DEPRECATION: In-tree builds are now the default. pip 22.1 will enforce this behaviour change. A possible replacement is to remove the --use-feature=in-tree-build flag.
+WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
+Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
+  Preparing metadata (setup.py): started
+INFO:root:train RMSE: 8.607, RHO: -0.079, R2: -159.317
+  Preparing metadata (setup.py): finished with status 'done'
+ERROR: Package 'dock2hit' requires a different Python: 3.9.9 not in '==3.9.7'
+WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
+WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
+WARNING: Ignoring invalid distribution - (/rds-d2/user/wjm41/hpc-work/conda/envs/dgl_life/lib/python3.9/site-packages)
+INFO:root:train RMSE: 8.473, RHO: -0.092, R2: -219.238
+INFO:root:train RMSE: 8.590, RHO: 0.101, R2: -237.971
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.237, RHO: 0.427, R2: -250.751
+INFO:root:train RMSE: 9.179, RHO: -0.026, R2: -371.810
+INFO:root:train RMSE: 8.677, RHO: -0.023, R2: -202.550
+INFO:root:train RMSE: 8.368, RHO: -0.152, R2: -271.293
+INFO:root:train RMSE: 8.350, RHO: 0.072, R2: -266.218
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.817, RHO: 0.526, R2: -253.579
+INFO:root:train RMSE: 8.580, RHO: -0.053, R2: -162.001
+INFO:root:train RMSE: 8.825, RHO: -0.142, R2: -275.846
+INFO:root:train RMSE: 8.165, RHO: -0.083, R2: -177.546
+INFO:root:using GPU: NVIDIA A100-SXM4-80GB
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]INFO:root:train RMSE: 9.075, RHO: -0.084, R2: -396.319
+ 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.64s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.742, RHO: 0.446, R2: -245.679
+mpnn_net id: 23230420614640
+INFO:root:Number of model parameters: 74529
+INFO:root:Number of node features: 74
+INFO:root:Number of edge features: 12
+INFO:root:Loading dataset: /rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/ultra_large/D4_bigger_test.csv
+INFO:root:Length of dataset: 8.19K
+INFO:root:Length of training set: 8.19K
+INFO:root:Number of epochs to train: 10.00K
+INFO:root:Number of batches (size 1024) per epoch: 8.00
+INFO:root:Beginning training...
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.837, RHO: -0.047, R2: -270.750
+INFO:root:train RMSE: 8.235, RHO: 0.011, R2: -248.501
+INFO:root:train RMSE: 0.987, RHO: -0.391, R2: -506084.044
+INFO:root:train RMSE: 7.881, RHO: 0.057, R2: -226.787
+INFO:root:train RMSE: 8.768, RHO: 0.079, R2: -231.443
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.969, RHO: 0.143, R2: -11035589.315
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s] 75%|███████▌  | 6.00/8.00 [00:10<00:03, 1.83s/batch]INFO:root:train RMSE: 7.996, RHO: 0.017, R2: -228.282
+ 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.73s/batch]INFO:root:train RMSE: 1.016, RHO: -0.043, R2: -12122857.530
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.62s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.69s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.632, RHO: 0.071, R2: -281.069
+INFO:root:train RMSE: 9.010, RHO: -0.041, R2: -230.421
+INFO:root:train RMSE: 9.019, RHO: 0.083, R2: -195.095
+INFO:root:train RMSE: 1.129, RHO: -0.061, R2: -3915251.334
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.47s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.509, RHO: 0.524, R2: -291.804
+INFO:root:train RMSE: 0.784, RHO: 0.009, R2: -589904.234
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.19s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.294, RHO: -0.005, R2: -189.119
+INFO:root:train RMSE: 7.833, RHO: 0.104, R2: -209.364
+INFO:root:train RMSE: 1.109, RHO: -0.037, R2: -4313321.310
+INFO:root:train RMSE: 8.888, RHO: 0.004, R2: -290.154
+INFO:root:train RMSE: 7.709, RHO: -0.104, R2: -184.558
+INFO:root:train RMSE: 0.939, RHO: -0.019, R2: -751517.499
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.50s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:10<00:00, 1.26s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.106, RHO: 0.533, R2: -265.333
+INFO:root:train RMSE: 1.057, RHO: -0.141, R2: -135183.503
+INFO:root:train RMSE: 8.527, RHO: 0.063, R2: -223.731
+INFO:root:train RMSE: 9.067, RHO: -0.079, R2: -270.704
+INFO:root:train RMSE: 1.096, RHO: 0.042, R2: -42278.469
+INFO:root:train RMSE: 8.335, RHO: -0.116, R2: -207.482
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]100%|██████████| 8.00/8.00 [00:09<00:00, 1.23s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.686, RHO: 0.081, R2: -438.268
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.007, RHO: 0.325, R2: -297423.979
+INFO:root:train RMSE: 8.813, RHO: -0.044, R2: -308.669
+INFO:root:train RMSE: 8.585, RHO: 0.018, R2: -191.146
+INFO:root:train RMSE: 1.087, RHO: 0.120, R2: -15359106.525
+INFO:root:train RMSE: 7.797, RHO: -0.063, R2: -198.777
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.26s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.849, RHO: -0.027, R2: -183.059
+INFO:root:train RMSE: 1.155, RHO: 0.085, R2: -5418619.322
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.009, RHO: 0.525, R2: -219.483
+INFO:root:train RMSE: 0.972, RHO: 0.032, R2: -1459882.358
+INFO:root:train RMSE: 8.791, RHO: 0.046, R2: -185.215
+INFO:root:train RMSE: 8.185, RHO: -0.062, R2: -196.445
+INFO:root:train RMSE: 0.949, RHO: 0.001, R2: -1887923.266
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.27s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.285, RHO: -0.051, R2: -178.212
+INFO:root:train RMSE: 8.251, RHO: 0.044, R2: -244.505
+INFO:root:train RMSE: 0.857, RHO: -0.336, R2: -110224.157
+INFO:root:train RMSE: 8.023, RHO: -0.033, R2: -274.052
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.017, RHO: -0.226, R2: -3936702.259
+INFO:root:train RMSE: 9.273, RHO: 0.032, R2: -195.406
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.24s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.041, RHO: -0.040, R2: -129.388
+INFO:root:train RMSE: 1.004, RHO: 0.048, R2: -571473.522
+INFO:root:train RMSE: 8.221, RHO: 0.033, R2: -122.563
+INFO:root:train RMSE: 9.267, RHO: -0.045, R2: -206.627
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.141, RHO: 0.097, R2: -1096802.997
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.27s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.745, RHO: 0.436, R2: -269.641
+INFO:root:train RMSE: 9.028, RHO: 0.092, R2: -192.881
+INFO:root:train RMSE: 0.966, RHO: -0.010, R2: -232634.273
+INFO:root:train RMSE: 7.665, RHO: -0.050, R2: -153.203
+INFO:root:train RMSE: 9.143, RHO: -0.053, R2: -310.546
+INFO:root:train RMSE: 1.184, RHO: 0.074, R2: -116760.112
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 9.174, RHO: -0.017, R2: -204.721
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:10<00:00, 1.28s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.031, RHO: 0.026, R2: -21471.305
+INFO:root:train RMSE: 8.905, RHO: -0.066, R2: -187.605
+INFO:root:train RMSE: 8.390, RHO: -0.063, R2: -91.453
+INFO:root:train RMSE: 1.059, RHO: -0.057, R2: -3385727.659
+INFO:root:train RMSE: 8.167, RHO: 0.089, R2: -98.300
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.17s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.971, RHO: 0.052, R2: -145.958
+INFO:root:train RMSE: 1.121, RHO: -0.132, R2: -69974.855
+INFO:root:train RMSE: 8.691, RHO: 0.022, R2: -172.441
+100%|██████████| 8.00/8.00 [00:14<00:00, 1.81s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.833, RHO: -0.125, R2: -98881.145
+INFO:root:train RMSE: 8.106, RHO: 0.530, R2: -143.493
+INFO:root:train RMSE: 8.409, RHO: 0.066, R2: -156.490
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.23s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.898, RHO: 0.368, R2: -156892.691
+INFO:root:train RMSE: 8.890, RHO: -0.086, R2: -153.964
+INFO:root:train RMSE: 7.820, RHO: 0.191, R2: -192.161
+INFO:root:train RMSE: 1.248, RHO: 0.208, R2: -497341.267
+INFO:root:train RMSE: 8.218, RHO: -0.062, R2: -201.294
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.958, RHO: -0.074, R2: -524359.005
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.21s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.945, RHO: 0.533, R2: -128.283
+INFO:root:train RMSE: 8.541, RHO: -0.012, R2: -105.549
+INFO:root:train RMSE: 1.231, RHO: 0.031, R2: -22286.831
+INFO:root:train RMSE: 8.832, RHO: -0.035, R2: -141.544
+INFO:root:train RMSE: 8.062, RHO: -0.062, R2: -174.165
+INFO:root:train RMSE: 0.863, RHO: 0.162, R2: -13588.479
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.25s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.363, RHO: -0.031, R2: -205.467
+  0%|          | 0.00/8.00 [00:13<?, ?batch/s]100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.930, RHO: 0.083, R2: -35613.930
+INFO:root:train RMSE: 7.962, RHO: 0.045, R2: -268.950
+INFO:root:train RMSE: 7.816, RHO: -0.016, R2: -131.828
+INFO:root:train RMSE: 1.038, RHO: -0.286, R2: -22482.713
+INFO:root:train RMSE: 9.328, RHO: 0.020, R2: -184.465
+INFO:root:train RMSE: 8.470, RHO: -0.039, R2: -162.434
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.30s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.006, RHO: 0.381, R2: -3349.567
+INFO:root:train RMSE: 8.353, RHO: -0.036, R2: -219.283
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.784, RHO: 0.525, R2: -215.710
+INFO:root:train RMSE: 0.936, RHO: 0.084, R2: -22378.268
+INFO:root:train RMSE: 9.582, RHO: -0.016, R2: -192.980
+INFO:root:train RMSE: 0.965, RHO: -0.157, R2: -74950.042
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.940, RHO: 0.057, R2: -208.237
+INFO:root:train RMSE: 8.848, RHO: 0.041, R2: -255.568
+INFO:root:train RMSE: 8.161, RHO: -0.006, R2: -250.374
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.893, RHO: 0.160, R2: -11452.743
+INFO:root:train RMSE: 0.856, RHO: -0.121, R2: -50591.360
+INFO:root:train RMSE: 8.762, RHO: -0.009, R2: -150.573
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.23s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.052, RHO: -0.060, R2: -90.370
+INFO:root:train RMSE: 1.017, RHO: 0.142, R2: -20773.903
+INFO:root:train RMSE: 9.226, RHO: 0.058, R2: -130.199
+INFO:root:train RMSE: 7.524, RHO: -0.009, R2: -125.689
+INFO:root:train RMSE: 0.854, RHO: -0.120, R2: -6365.140
+INFO:root:train RMSE: 8.236, RHO: 0.015, R2: -202.553
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.64s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:09<00:00, 1.16s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.770, RHO: 0.036, R2: -134.567
+INFO:root:train RMSE: 0.923, RHO: 0.015, R2: -912.990
+INFO:root:train RMSE: 8.830, RHO: 0.033, R2: -106.078
+INFO:root:train RMSE: 1.132, RHO: 0.049, R2: -13477.283
+INFO:root:train RMSE: 9.195, RHO: -0.045, R2: -108.108
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.211, RHO: -0.003, R2: -119.099
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.76s/batch]INFO:root:train RMSE: 1.191, RHO: -0.055, R2: -109371.767
+INFO:root:train RMSE: 7.679, RHO: 0.012, R2: -121.980
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.68s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.730, RHO: -0.022, R2: -101.567
+INFO:root:train RMSE: 1.003, RHO: -0.158, R2: -92214.936
+INFO:root:train RMSE: 8.265, RHO: 0.098, R2: -123.907
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.29s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.240, RHO: 0.002, R2: -197.700
+INFO:root:train RMSE: 1.058, RHO: 0.211, R2: -34055.742
+INFO:root:train RMSE: 7.862, RHO: 0.004, R2: -154.783
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.48s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.330, RHO: 0.551, R2: -179.341
+INFO:root:train RMSE: 0.995, RHO: -0.220, R2: -9201.570
+INFO:root:train RMSE: 8.916, RHO: -0.002, R2: -233.138
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.27s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.962, RHO: 0.033, R2: -129.567
+INFO:root:train RMSE: 0.907, RHO: 0.150, R2: -381040.195
+INFO:root:train RMSE: 9.064, RHO: -0.024, R2: -245.518
+INFO:root:train RMSE: 0.941, RHO: 0.017, R2: -187295.174
+INFO:root:train RMSE: 8.944, RHO: 0.047, R2: -252.850
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.525, RHO: 0.519, R2: -229.450
+INFO:root:train RMSE: 0.977, RHO: -0.040, R2: -171942.030
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.29s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.412, RHO: -0.043, R2: -191.175
+INFO:root:train RMSE: 7.978, RHO: -0.032, R2: -170.831
+INFO:root:train RMSE: 1.144, RHO: -0.121, R2: -13926.155
+INFO:root:train RMSE: 7.708, RHO: -0.011, R2: -150.065
+INFO:root:train RMSE: 1.047, RHO: -0.023, R2: -40289.414
+INFO:root:train RMSE: 8.814, RHO: 0.052, R2: -217.367
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.18s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.868, RHO: 0.510, R2: -257.632
+INFO:root:train RMSE: 1.144, RHO: -0.134, R2: -6714.552
+INFO:root:train RMSE: 8.643, RHO: 0.076, R2: -219.111
+INFO:root:train RMSE: 8.311, RHO: -0.092, R2: -183.473
+INFO:root:train RMSE: 0.826, RHO: 0.154, R2: -66078.007
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.19s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.327, RHO: 0.058, R2: -272.287
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]INFO:root:train RMSE: 1.083, RHO: 0.083, R2: -7286.860
+INFO:root:train RMSE: 8.223, RHO: 0.004, R2: -238.341
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.56s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.56s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.457, RHO: -0.025, R2: -186.394
+INFO:root:train RMSE: 0.955, RHO: -0.051, R2: -5348.109
+INFO:root:train RMSE: 8.716, RHO: -0.004, R2: -207.616
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.23s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.561, RHO: -0.110, R2: -153.710
+INFO:root:train RMSE: 1.073, RHO: 0.183, R2: -2455.184
+INFO:root:train RMSE: 8.825, RHO: -0.001, R2: -190.206
+INFO:root:train RMSE: 8.850, RHO: 0.055, R2: -336.305
+INFO:root:train RMSE: 1.139, RHO: 0.118, R2: -6620.838
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.538, RHO: 0.506, R2: -181.117
+INFO:root:train RMSE: 0.871, RHO: -0.092, R2: -10587.428
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.33s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.321, RHO: -0.066, R2: -147.587
+INFO:root:train RMSE: 9.207, RHO: 0.023, R2: -240.212
+INFO:root:train RMSE: 1.067, RHO: 0.045, R2: -7166.450
+INFO:root:train RMSE: 9.193, RHO: 0.026, R2: -278.381
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.018, RHO: -0.166, R2: -12915.032
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.24s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.379, RHO: 0.520, R2: -236.844
+INFO:root:train RMSE: 8.354, RHO: 0.053, R2: -163.950
+INFO:root:train RMSE: 1.043, RHO: 0.111, R2: -27359.614
+INFO:root:train RMSE: 8.848, RHO: 0.013, R2: -211.357
+INFO:root:train RMSE: 9.364, RHO: -0.016, R2: -194.229
+INFO:root:train RMSE: 0.987, RHO: -0.195, R2: -8628.747
+INFO:root:train RMSE: 8.282, RHO: 0.096, R2: -194.250
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.28s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.544, RHO: 0.493, R2: -215.850
+INFO:root:train RMSE: 0.915, RHO: -0.021, R2: -1525.137
+INFO:root:train RMSE: 8.461, RHO: -0.056, R2: -158.794
+INFO:root:train RMSE: 8.827, RHO: -0.025, R2: -209.683
+INFO:root:train RMSE: 0.994, RHO: -0.214, R2: -11558.840
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.21s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.762, RHO: 0.001, R2: -147.612
+INFO:root:train RMSE: 8.469, RHO: 0.060, R2: -153.395
+INFO:root:train RMSE: 0.992, RHO: -0.100, R2: -420.851
+INFO:root:train RMSE: 9.107, RHO: 0.071, R2: -211.387
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.854, RHO: 0.139, R2: -5277.639
+INFO:root:train RMSE: 8.591, RHO: -0.050, R2: -87.966
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.20s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.292, RHO: 0.126, R2: -65.062
+INFO:root:train RMSE: 1.106, RHO: 0.369, R2: -4516.738
+INFO:root:train RMSE: 8.724, RHO: 0.075, R2: -95.287
+INFO:root:train RMSE: 8.047, RHO: -0.010, R2: -173.144
+INFO:root:train RMSE: 1.018, RHO: -0.096, R2: -14188.800
+INFO:root:train RMSE: 7.746, RHO: 0.014, R2: -255.775
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.64s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:10<00:00, 1.26s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.635, RHO: 0.103, R2: -124.911
+INFO:root:train RMSE: 0.961, RHO: 0.324, R2: -9205.148
+INFO:root:train RMSE: 7.902, RHO: 0.091, R2: -190.886
+INFO:root:train RMSE: 0.962, RHO: 0.248, R2: -4984.899
+INFO:root:train RMSE: 8.505, RHO: 0.059, R2: -194.980
+INFO:root:train RMSE: 8.399, RHO: 0.075, R2: -254.868
+INFO:root:train RMSE: 1.070, RHO: 0.043, R2: -10527.427
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.455, RHO: 0.005, R2: -244.049
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.025, RHO: -0.291, R2: -6946.447
+INFO:root:train RMSE: 8.892, RHO: 0.047, R2: -186.257
+INFO:root:train RMSE: 9.270, RHO: 0.025, R2: -179.156
+INFO:root:train RMSE: 1.164, RHO: -0.086, R2: -14202.847
+INFO:root:train RMSE: 9.674, RHO: -0.021, R2: -226.338
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.26s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.272, RHO: -0.003, R2: -239.002
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]INFO:root:train RMSE: 1.195, RHO: 0.047, R2: -2694.615
+ 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.65s/batch]INFO:root:train RMSE: 7.989, RHO: -0.014, R2: -191.979
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.019, RHO: -0.065, R2: -2377.155
+INFO:root:train RMSE: 8.808, RHO: 0.011, R2: -212.936
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.417, RHO: 0.119, R2: -234.729
+INFO:root:train RMSE: 0.824, RHO: 0.388, R2: -1551.850
+INFO:root:train RMSE: 7.601, RHO: -0.068, R2: -110.119
+INFO:root:train RMSE: 9.336, RHO: -0.044, R2: -256.069
+INFO:root:train RMSE: 0.969, RHO: -0.018, R2: -3388.757
+INFO:root:train RMSE: 9.084, RHO: -0.067, R2: -251.358
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:09<00:00, 1.13s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.768, RHO: 0.484, R2: -132.938
+INFO:root:train RMSE: 0.844, RHO: 0.411, R2: -4674.651
+INFO:root:train RMSE: 9.036, RHO: -0.023, R2: -211.776
+INFO:root:train RMSE: 9.259, RHO: 0.044, R2: -141.501
+INFO:root:train RMSE: 0.895, RHO: 0.021, R2: -3999.278
+INFO:root:train RMSE: 8.391, RHO: -0.025, R2: -213.251
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.14s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.094, RHO: 0.439, R2: -1315.871
+INFO:root:train RMSE: 8.762, RHO: -0.041, R2: -210.101
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.235, RHO: 0.543, R2: -188.220
+INFO:root:train RMSE: 0.949, RHO: 0.096, R2: -1671.118
+INFO:root:train RMSE: 9.200, RHO: -0.080, R2: -147.769
+INFO:root:train RMSE: 0.950, RHO: -0.131, R2: -5596.707
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.567, RHO: 0.002, R2: -203.339
+INFO:root:train RMSE: 8.704, RHO: -0.012, R2: -187.027
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.887, RHO: 0.188, R2: -856.753
+INFO:root:train RMSE: 7.526, RHO: 0.549, R2: -147.445
+INFO:root:train RMSE: 8.803, RHO: -0.032, R2: -143.909
+INFO:root:train RMSE: 0.891, RHO: -0.226, R2: -1207.468
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.24s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.650, RHO: -0.100, R2: -158.502
+INFO:root:train RMSE: 8.195, RHO: 0.032, R2: -200.030
+INFO:root:train RMSE: 1.074, RHO: -0.024, R2: -126895.381
+INFO:root:train RMSE: 8.881, RHO: 0.051, R2: -275.739
+INFO:root:train RMSE: 8.594, RHO: -0.120, R2: -413.608
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.094, RHO: -0.026, R2: -55781.347
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.178, RHO: 0.524, R2: -144.238
+INFO:root:train RMSE: 7.937, RHO: 0.057, R2: -143.248
+INFO:root:train RMSE: 0.945, RHO: 0.124, R2: -28273.931
+INFO:root:train RMSE: 9.081, RHO: -0.040, R2: -92.648
+INFO:root:train RMSE: 7.466, RHO: -0.001, R2: -113.902
+INFO:root:train RMSE: 1.140, RHO: -0.072, R2: -230539.675
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.27s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.704, RHO: -0.037, R2: -176.172
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.63s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.947, RHO: -0.106, R2: -4238.727
+INFO:root:train RMSE: 8.506, RHO: -0.026, R2: -109.681
+INFO:root:train RMSE: 8.672, RHO: -0.009, R2: -114.019
+INFO:root:train RMSE: 0.831, RHO: -0.065, R2: -137010.840
+INFO:root:train RMSE: 8.667, RHO: 0.066, R2: -126.026
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.30s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.006, RHO: -0.038, R2: -157.683
+INFO:root:train RMSE: 1.181, RHO: -0.027, R2: -232587.598
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.754, RHO: 0.521, R2: -141.834
+INFO:root:train RMSE: 1.111, RHO: -0.122, R2: -94354.379
+INFO:root:train RMSE: 9.134, RHO: -0.015, R2: -122.365
+INFO:root:train RMSE: 9.466, RHO: 0.032, R2: -162.674
+INFO:root:train RMSE: 0.912, RHO: -0.036, R2: -58805.958
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.27s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.086, RHO: 0.081, R2: -230.526
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:10<00:01, 1.57s/batch]INFO:root:train RMSE: 0.947, RHO: 0.054, R2: -10073.044
+INFO:root:train RMSE: 8.729, RHO: 0.028, R2: -192.013
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.50s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.296, RHO: 0.018, R2: -127.094
+INFO:root:train RMSE: 1.040, RHO: -0.086, R2: -41750.046
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.26s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.695, RHO: 0.054, R2: -84.795
+INFO:root:train RMSE: 8.091, RHO: 0.041, R2: -76.969
+INFO:root:train RMSE: 0.959, RHO: 0.142, R2: -6495.392
+INFO:root:train RMSE: 9.717, RHO: 0.029, R2: -175.781
+INFO:root:train RMSE: 8.930, RHO: -0.052, R2: -193.461
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.102, RHO: -0.123, R2: -36630.668
+INFO:root:train RMSE: 8.278, RHO: 0.530, R2: -139.233
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.26s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.914, RHO: -0.044, R2: -137.397
+INFO:root:train RMSE: 1.287, RHO: -0.014, R2: -15420.312
+INFO:root:train RMSE: 8.467, RHO: 0.026, R2: -126.297
+INFO:root:train RMSE: 0.850, RHO: 0.052, R2: -29656.771
+INFO:root:train RMSE: 8.699, RHO: -0.034, R2: -187.133
+INFO:root:train RMSE: 8.132, RHO: 0.021, R2: -284.341
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.22s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.965, RHO: 0.278, R2: -103348.238
+INFO:root:train RMSE: 8.542, RHO: 0.061, R2: -250.419
+100%|██████████| 8.00/8.00 [00:14<00:00, 1.78s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.210, RHO: 0.014, R2: -242.339
+INFO:root:train RMSE: 1.053, RHO: 0.002, R2: -13856.266
+INFO:root:train RMSE: 8.709, RHO: 0.060, R2: -159.997
+INFO:root:train RMSE: 8.612, RHO: -0.041, R2: -170.655
+INFO:root:train RMSE: 0.846, RHO: 0.013, R2: -14006.702
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.24s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.668, RHO: -0.036, R2: -194.534
+INFO:root:train RMSE: 8.545, RHO: -0.037, R2: -223.409
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 1.064, RHO: -0.149, R2: -14753.929
+INFO:root:train RMSE: 9.318, RHO: 0.600, R2: -169.856
+INFO:root:train RMSE: 0.836, RHO: -0.081, R2: -11887.054
+100%|██████████| 8.00/8.00 [00:09<00:00, 1.14s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.976, RHO: -0.148, R2: -141.532
+INFO:root:train RMSE: 8.144, RHO: 0.068, R2: -122.086
+INFO:root:train RMSE: 1.187, RHO: -0.173, R2: -17696.319
+INFO:root:train RMSE: 8.341, RHO: 0.116, R2: -136.078
+INFO:root:train RMSE: 1.087, RHO: 0.058, R2: -1209.836
+INFO:root:train RMSE: 8.016, RHO: -0.028, R2: -158.611
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.68s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]100%|██████████| 8.00/8.00 [00:09<00:00, 1.23s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.390, RHO: 0.533, R2: -172.161
+INFO:root:train RMSE: 1.309, RHO: 0.219, R2: -3126.023
+INFO:root:train RMSE: 8.827, RHO: -0.015, R2: -153.219
+INFO:root:train RMSE: 8.219, RHO: 0.118, R2: -148.460
+INFO:root:train RMSE: 1.161, RHO: 0.075, R2: -82262.973
+INFO:root:train RMSE: 8.355, RHO: 0.048, R2: -240.003
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.27s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 0.919, RHO: 0.271, R2: -125914.400
+INFO:root:train RMSE: 9.114, RHO: -0.022, R2: -283.898
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.75s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.877, RHO: 0.489, R2: -162.513
+INFO:root:train RMSE: 1.148, RHO: -0.134, R2: -187217.388
+INFO:root:train RMSE: 8.734, RHO: 0.096, R2: -156.220
+slurmstepd: error: *** JOB 58776455 ON gpu-q-20 CANCELLED AT 2022-04-12T17:10:36 ***
+slurmstepd: error: task_p_post_term: rmdir(/dev/cpuset/slurm58776455/slurm58776455.4294967294_0) failed Device or resource busy
+INFO:root:train RMSE: 8.355, RHO: -0.076, R2: -129.339
+INFO:root:train RMSE: 7.866, RHO: -0.054, R2: -120.528
+  0%|          | 0.00/8.00 [00:13<?, ?batch/s]INFO:root:train RMSE: 1.004, RHO: -0.157, R2: -188198.953
+INFO:root:train RMSE: 10.453, RHO: 0.034, R2: -378.091
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.695, RHO: 0.550, R2: -173.997
+INFO:root:train RMSE: 9.638, RHO: -0.029, R2: -276.249
+INFO:root:train RMSE: 8.375, RHO: -0.075, R2: -196.613
+INFO:root:train RMSE: 8.300, RHO: 0.005, R2: -187.640
+INFO:root:train RMSE: 8.658, RHO: 0.023, R2: -204.836
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.437, RHO: 0.472, R2: -229.044
+INFO:root:train RMSE: 8.218, RHO: -0.028, R2: -242.192
+INFO:root:train RMSE: 8.078, RHO: 0.019, R2: -138.868
+INFO:root:train RMSE: 8.192, RHO: -0.124, R2: -188.605
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.972, RHO: 0.502, R2: -181.225
+INFO:root:train RMSE: 9.291, RHO: 0.125, R2: -221.842
+INFO:root:train RMSE: 8.356, RHO: 0.072, R2: -157.098
+INFO:root:train RMSE: 7.816, RHO: -0.021, R2: -219.847
+INFO:root:train RMSE: 9.075, RHO: 0.036, R2: -217.447
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.261, RHO: 0.047, R2: -153.690
+INFO:root:train RMSE: 8.526, RHO: -0.002, R2: -162.293
+INFO:root:train RMSE: 9.096, RHO: -0.058, R2: -181.564
+INFO:root:train RMSE: 8.752, RHO: -0.063, R2: -191.196
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.61s/batch]INFO:root:train RMSE: 8.799, RHO: -0.037, R2: -284.005
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.64s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.63s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.750, RHO: 0.059, R2: -232.897
+INFO:root:train RMSE: 9.356, RHO: 0.015, R2: -200.516
+INFO:root:train RMSE: 8.754, RHO: -0.011, R2: -233.321
+INFO:root:train RMSE: 7.763, RHO: 0.078, R2: -177.150
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.014, RHO: 0.496, R2: -454.713
+INFO:root:train RMSE: 8.963, RHO: -0.002, R2: -217.393
+INFO:root:train RMSE: 8.677, RHO: 0.129, R2: -224.036
+INFO:root:train RMSE: 8.813, RHO: -0.034, R2: -170.883
+INFO:root:train RMSE: 8.929, RHO: 0.021, R2: -185.096
+INFO:root:train RMSE: 9.299, RHO: 0.115, R2: -287.381
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.73s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.713, RHO: 0.531, R2: -218.038
+INFO:root:train RMSE: 8.566, RHO: 0.074, R2: -148.233
+INFO:root:train RMSE: 8.098, RHO: 0.005, R2: -133.882
+INFO:root:train RMSE: 8.951, RHO: -0.017, R2: -146.367
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.782, RHO: 0.075, R2: -150.600
+ 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.74s/batch]100%|██████████| 8.00/8.00 [00:14<00:00, 1.76s/batch]100%|██████████| 8.00/8.00 [00:14<00:00, 1.75s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.808, RHO: 0.474, R2: -169.080
+INFO:root:train RMSE: 9.155, RHO: -0.072, R2: -261.978
+INFO:root:train RMSE: 7.959, RHO: -0.046, R2: -121.854
+INFO:root:train RMSE: 9.036, RHO: -0.033, R2: -228.598
+INFO:root:train RMSE: 7.913, RHO: -0.038, R2: -165.536
+INFO:root:train RMSE: 8.987, RHO: -0.013, R2: -337.532
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.609, RHO: -0.030, R2: -226.496
+INFO:root:train RMSE: 7.662, RHO: 0.010, R2: -157.629
+INFO:root:train RMSE: 7.670, RHO: -0.011, R2: -189.333
+INFO:root:train RMSE: 7.946, RHO: 0.046, R2: -170.393
+INFO:root:train RMSE: 8.659, RHO: -0.034, R2: -337.982
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.768, RHO: -0.031, R2: -212.235
+INFO:root:train RMSE: 8.864, RHO: -0.109, R2: -202.191
+INFO:root:train RMSE: 8.109, RHO: 0.036, R2: -128.572
+INFO:root:train RMSE: 7.737, RHO: -0.040, R2: -167.696
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.615, RHO: -0.031, R2: -263.601
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.372, RHO: -0.066, R2: -230.255
+INFO:root:train RMSE: 8.505, RHO: 0.080, R2: -113.041
+INFO:root:train RMSE: 8.050, RHO: 0.084, R2: -152.013
+INFO:root:train RMSE: 8.680, RHO: 0.002, R2: -178.254
+INFO:root:train RMSE: 8.761, RHO: -0.114, R2: -168.040
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.999, RHO: -0.102, R2: -96.285
+INFO:root:train RMSE: 9.268, RHO: -0.037, R2: -155.730
+INFO:root:train RMSE: 9.467, RHO: 0.012, R2: -182.544
+INFO:root:train RMSE: 9.044, RHO: -0.022, R2: -157.450
+INFO:root:train RMSE: 8.329, RHO: -0.029, R2: -209.465
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.032, RHO: 0.554, R2: -134.681
+INFO:root:train RMSE: 8.402, RHO: 0.046, R2: -155.060
+INFO:root:train RMSE: 8.694, RHO: 0.005, R2: -197.857
+INFO:root:train RMSE: 8.438, RHO: 0.002, R2: -121.084
+INFO:root:train RMSE: 8.201, RHO: 0.052, R2: -141.977
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.962, RHO: -0.012, R2: -152.974
+INFO:root:train RMSE: 8.838, RHO: 0.065, R2: -134.468
+INFO:root:train RMSE: 8.530, RHO: -0.035, R2: -134.598
+INFO:root:train RMSE: 7.378, RHO: 0.039, R2: -76.520
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.451, RHO: 0.520, R2: -117.188
+INFO:root:train RMSE: 9.145, RHO: -0.090, R2: -120.032
+INFO:root:train RMSE: 8.393, RHO: -0.079, R2: -195.545
+INFO:root:train RMSE: 8.861, RHO: 0.094, R2: -116.143
+INFO:root:train RMSE: 7.685, RHO: 0.088, R2: -119.568
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.220, RHO: -0.085, R2: -118.522
+INFO:root:train RMSE: 8.529, RHO: -0.089, R2: -107.666
+INFO:root:train RMSE: 8.635, RHO: -0.204, R2: -170.622
+INFO:root:train RMSE: 8.540, RHO: -0.073, R2: -150.073
+INFO:root:train RMSE: 8.988, RHO: 0.044, R2: -183.299
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.613, RHO: 0.012, R2: -165.579
+INFO:root:train RMSE: 8.152, RHO: 0.071, R2: -134.293
+INFO:root:train RMSE: 8.480, RHO: -0.014, R2: -147.027
+INFO:root:train RMSE: 8.591, RHO: -0.056, R2: -182.218
+INFO:root:train RMSE: 9.531, RHO: 0.115, R2: -219.964
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.73s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.910, RHO: 0.060, R2: -181.984
+INFO:root:train RMSE: 8.771, RHO: -0.004, R2: -144.707
+INFO:root:train RMSE: 8.342, RHO: 0.025, R2: -192.027
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.969, RHO: -0.029, R2: -211.639
+ 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.66s/batch]INFO:root:train RMSE: 8.234, RHO: -0.008, R2: -209.932
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.560, RHO: -0.037, R2: -137.341
+INFO:root:train RMSE: 9.208, RHO: 0.095, R2: -185.114
+INFO:root:train RMSE: 8.359, RHO: 0.041, R2: -133.840
+INFO:root:train RMSE: 8.226, RHO: 0.049, R2: -124.813
+INFO:root:train RMSE: 8.797, RHO: 0.020, R2: -231.150
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.217, RHO: -0.017, R2: -202.003
+INFO:root:train RMSE: 8.659, RHO: 0.007, R2: -153.616
+INFO:root:train RMSE: 9.479, RHO: -0.025, R2: -183.016
+INFO:root:train RMSE: 8.304, RHO: 0.114, R2: -142.183
+INFO:root:train RMSE: 8.610, RHO: -0.105, R2: -156.991
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.859, RHO: 0.020, R2: -173.638
+INFO:root:train RMSE: 8.915, RHO: -0.074, R2: -124.388
+INFO:root:train RMSE: 7.670, RHO: -0.085, R2: -90.156
+INFO:root:train RMSE: 9.216, RHO: -0.021, R2: -179.313
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.475, RHO: 0.496, R2: -171.502
+INFO:root:train RMSE: 8.773, RHO: 0.029, R2: -155.092
+INFO:root:train RMSE: 8.815, RHO: 0.054, R2: -162.557
+INFO:root:train RMSE: 7.440, RHO: 0.135, R2: -119.709
+INFO:root:train RMSE: 8.399, RHO: -0.038, R2: -175.633
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.708, RHO: 0.607, R2: -136.059
+INFO:root:train RMSE: 8.678, RHO: 0.007, R2: -206.124
+INFO:root:train RMSE: 9.208, RHO: 0.029, R2: -258.954
+INFO:root:train RMSE: 9.345, RHO: 0.023, R2: -211.366
+INFO:root:train RMSE: 8.021, RHO: 0.042, R2: -207.900
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.143, RHO: 0.038, R2: -117.754
+INFO:root:train RMSE: 8.898, RHO: 0.010, R2: -143.988
+INFO:root:train RMSE: 8.239, RHO: -0.005, R2: -113.763
+INFO:root:train RMSE: 8.684, RHO: 0.050, R2: -129.356
+INFO:root:train RMSE: 8.273, RHO: 0.133, R2: -158.030
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.783, RHO: 0.089, R2: -192.690
+INFO:root:train RMSE: 8.701, RHO: 0.013, R2: -103.444
+INFO:root:train RMSE: 8.956, RHO: 0.058, R2: -163.773
+INFO:root:train RMSE: 9.053, RHO: -0.051, R2: -139.573
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]INFO:root:train RMSE: 8.607, RHO: 0.058, R2: -469.079
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.635, RHO: 0.087, R2: -111.730
+INFO:root:train RMSE: 8.659, RHO: 0.020, R2: -124.466
+INFO:root:train RMSE: 9.919, RHO: 0.046, R2: -204.845
+INFO:root:train RMSE: 8.681, RHO: 0.035, R2: -162.410
+INFO:root:train RMSE: 9.201, RHO: 0.058, R2: -274.978
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.029, RHO: -0.037, R2: -145.611
+INFO:root:train RMSE: 8.997, RHO: 0.127, R2: -119.935
+INFO:root:train RMSE: 8.788, RHO: -0.014, R2: -82.911
+INFO:root:train RMSE: 7.652, RHO: -0.035, R2: -102.150
+INFO:root:train RMSE: 9.442, RHO: -0.050, R2: -234.584
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.903, RHO: -0.014, R2: -107.704
+INFO:root:train RMSE: 8.931, RHO: -0.064, R2: -123.293
+INFO:root:train RMSE: 8.565, RHO: 0.041, R2: -76.633
+INFO:root:train RMSE: 9.027, RHO: -0.136, R2: -127.513
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.810, RHO: 0.557, R2: -112.980
+INFO:root:train RMSE: 8.761, RHO: 0.014, R2: -104.519
+INFO:root:train RMSE: 9.462, RHO: -0.046, R2: -149.220
+INFO:root:train RMSE: 8.168, RHO: 0.032, R2: -122.067
+INFO:root:train RMSE: 8.474, RHO: -0.075, R2: -137.594
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.826, RHO: 0.001, R2: -104.777
+INFO:root:train RMSE: 9.326, RHO: -0.007, R2: -145.546
+INFO:root:train RMSE: 9.104, RHO: -0.011, R2: -137.333
+INFO:root:train RMSE: 8.671, RHO: -0.091, R2: -141.948
+INFO:root:train RMSE: 9.376, RHO: -0.047, R2: -211.913
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.866, RHO: -0.071, R2: -141.247
+INFO:root:train RMSE: 8.277, RHO: -0.028, R2: -99.028
+INFO:root:train RMSE: 9.092, RHO: 0.075, R2: -134.607
+INFO:root:train RMSE: 8.892, RHO: 0.007, R2: -128.171
+INFO:root:train RMSE: 8.862, RHO: -0.091, R2: -192.012
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.895, RHO: 0.564, R2: -135.666
+INFO:root:train RMSE: 8.493, RHO: 0.076, R2: -108.071
+INFO:root:train RMSE: 8.353, RHO: -0.027, R2: -142.119
+INFO:root:train RMSE: 8.717, RHO: -0.106, R2: -159.729
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.031, RHO: -0.000, R2: -145.991
+ 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.78s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.74s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.75s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.952, RHO: 0.529, R2: -142.308
+INFO:root:train RMSE: 8.261, RHO: -0.010, R2: -171.499
+INFO:root:train RMSE: 8.569, RHO: 0.034, R2: -157.158
+INFO:root:train RMSE: 8.982, RHO: 0.062, R2: -202.953
+INFO:root:train RMSE: 9.479, RHO: -0.071, R2: -258.547
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.459, RHO: 0.548, R2: -137.186
+INFO:root:train RMSE: 9.591, RHO: -0.141, R2: -170.230
+INFO:root:train RMSE: 8.851, RHO: 0.009, R2: -145.453
+INFO:root:train RMSE: 8.993, RHO: 0.003, R2: -205.011
+INFO:root:train RMSE: 7.994, RHO: 0.093, R2: -154.541
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.877, RHO: 0.518, R2: -158.611
+INFO:root:train RMSE: 7.935, RHO: -0.045, R2: -86.772
+INFO:root:train RMSE: 8.560, RHO: -0.037, R2: -160.471
+INFO:root:train RMSE: 8.143, RHO: 0.150, R2: -206.227
+INFO:root:train RMSE: 8.800, RHO: -0.182, R2: -187.508
+  0%|          | 0.00/8.00 [00:13<?, ?batch/s]100%|██████████| 8.00/8.00 [00:13<00:00, 1.71s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.71s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.529, RHO: 0.502, R2: -214.601
+INFO:root:train RMSE: 8.082, RHO: -0.066, R2: -149.911
+INFO:root:train RMSE: 8.847, RHO: -0.004, R2: -195.215
+INFO:root:train RMSE: 7.557, RHO: 0.059, R2: -140.948
+INFO:root:train RMSE: 8.472, RHO: -0.026, R2: -195.870
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.780, RHO: -0.082, R2: -155.507
+INFO:root:train RMSE: 8.743, RHO: 0.022, R2: -209.059
+INFO:root:train RMSE: 7.493, RHO: 0.086, R2: -143.096
+INFO:root:train RMSE: 8.633, RHO: 0.011, R2: -250.318
+INFO:root:train RMSE: 8.595, RHO: -0.102, R2: -227.970
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.869, RHO: 0.607, R2: -135.729
+INFO:root:train RMSE: 8.108, RHO: -0.002, R2: -129.728
+INFO:root:train RMSE: 8.893, RHO: 0.037, R2: -177.313
+INFO:root:train RMSE: 8.663, RHO: 0.024, R2: -174.561
+INFO:root:train RMSE: 7.777, RHO: -0.031, R2: -127.425
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.63s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.016, RHO: 0.503, R2: -153.162
+INFO:root:train RMSE: 8.846, RHO: 0.035, R2: -117.772
+INFO:root:train RMSE: 8.183, RHO: -0.005, R2: -86.976
+INFO:root:train RMSE: 8.752, RHO: 0.018, R2: -179.585
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 9.475, RHO: -0.001, R2: -217.433
+ 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.75s/batch]100%|██████████| 8.00/8.00 [00:14<00:00, 1.79s/batch]100%|██████████| 8.00/8.00 [00:14<00:00, 1.78s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.038, RHO: 0.507, R2: -202.890
+INFO:root:train RMSE: 8.856, RHO: 0.038, R2: -181.597
+INFO:root:train RMSE: 8.809, RHO: 0.031, R2: -130.124
+INFO:root:train RMSE: 7.477, RHO: 0.064, R2: -128.025
+INFO:root:train RMSE: 9.310, RHO: -0.024, R2: -202.834
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.971, RHO: 0.508, R2: -176.233
+INFO:root:train RMSE: 8.416, RHO: -0.002, R2: -293.310
+INFO:root:train RMSE: 8.509, RHO: 0.038, R2: -194.015
+INFO:root:train RMSE: 8.522, RHO: -0.003, R2: -395.420
+INFO:root:train RMSE: 8.894, RHO: 0.138, R2: -292.322
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.585, RHO: -0.079, R2: -310.695
+INFO:root:train RMSE: 7.771, RHO: -0.050, R2: -156.786
+INFO:root:train RMSE: 9.453, RHO: -0.090, R2: -234.082
+INFO:root:train RMSE: 8.124, RHO: -0.011, R2: -184.934
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.60s/batch]INFO:root:train RMSE: 9.841, RHO: -0.012, R2: -318.927
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.003, RHO: 0.593, R2: -194.222
+INFO:root:train RMSE: 8.127, RHO: 0.084, R2: -170.809
+INFO:root:train RMSE: 8.154, RHO: -0.016, R2: -134.367
+INFO:root:train RMSE: 8.535, RHO: 0.064, R2: -188.964
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.73s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.220, RHO: 0.501, R2: -186.340
+INFO:root:train RMSE: 8.550, RHO: -0.067, R2: -190.155
+INFO:root:train RMSE: 8.636, RHO: 0.031, R2: -240.745
+INFO:root:train RMSE: 9.485, RHO: -0.069, R2: -311.747
+INFO:root:train RMSE: 9.116, RHO: 0.033, R2: -207.591
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.736, RHO: 0.587, R2: -212.145
+INFO:root:train RMSE: 8.737, RHO: -0.015, R2: -175.553
+INFO:root:train RMSE: 8.359, RHO: -0.003, R2: -165.622
+INFO:root:train RMSE: 8.714, RHO: 0.027, R2: -198.703
+INFO:root:train RMSE: 8.270, RHO: 0.004, R2: -221.199
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:13<00:00, 1.72s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.72s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.759, RHO: 0.501, R2: -228.272
+INFO:root:train RMSE: 8.086, RHO: 0.034, R2: -190.090
+INFO:root:train RMSE: 9.506, RHO: 0.056, R2: -203.795
+INFO:root:train RMSE: 8.962, RHO: -0.035, R2: -299.797
+INFO:root:train RMSE: 8.501, RHO: 0.154, R2: -356.954
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.515, RHO: 0.502, R2: -275.058
+INFO:root:train RMSE: 7.588, RHO: 0.021, R2: -215.477
+INFO:root:train RMSE: 8.747, RHO: -0.051, R2: -187.207
+INFO:root:train RMSE: 8.522, RHO: -0.019, R2: -258.687
+INFO:root:train RMSE: 7.973, RHO: -0.038, R2: -222.111
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.321, RHO: 0.574, R2: -188.204
+INFO:root:train RMSE: 8.251, RHO: 0.000, R2: -180.317
+INFO:root:train RMSE: 9.623, RHO: 0.049, R2: -221.794
+INFO:root:train RMSE: 8.800, RHO: 0.028, R2: -225.046
+INFO:root:train RMSE: 8.193, RHO: -0.054, R2: -202.506
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.329, RHO: 0.501, R2: -288.396
+INFO:root:train RMSE: 8.136, RHO: -0.050, R2: -189.292
+INFO:root:train RMSE: 8.335, RHO: -0.002, R2: -185.914
+INFO:root:train RMSE: 8.351, RHO: 0.005, R2: -250.412
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.947, RHO: -0.050, R2: -262.575
+ 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.76s/batch]100%|██████████| 8.00/8.00 [00:14<00:00, 1.75s/batch]100%|██████████| 8.00/8.00 [00:14<00:00, 1.75s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.455, RHO: 0.514, R2: -292.753
+INFO:root:train RMSE: 9.446, RHO: -0.061, R2: -225.509
+INFO:root:train RMSE: 7.922, RHO: 0.041, R2: -135.215
+INFO:root:train RMSE: 7.462, RHO: -0.010, R2: -220.915
+INFO:root:train RMSE: 9.026, RHO: 0.028, R2: -261.725
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.65s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.432, RHO: 0.533, R2: -276.210
+INFO:root:train RMSE: 7.638, RHO: 0.009, R2: -157.721
+INFO:root:train RMSE: 8.469, RHO: 0.003, R2: -253.891
+INFO:root:train RMSE: 8.892, RHO: 0.063, R2: -237.611
+INFO:root:train RMSE: 8.411, RHO: -0.017, R2: -292.028
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.48s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.905, RHO: 0.056, R2: -280.650
+INFO:root:train RMSE: 7.912, RHO: -0.063, R2: -156.761
+INFO:root:train RMSE: 8.564, RHO: 0.006, R2: -264.321
+INFO:root:train RMSE: 9.195, RHO: 0.041, R2: -290.380
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.435, RHO: 0.554, R2: -311.685
+INFO:root:train RMSE: 8.414, RHO: 0.093, R2: -240.327
+INFO:root:train RMSE: 8.482, RHO: -0.081, R2: -303.939
+INFO:root:train RMSE: 9.084, RHO: 0.048, R2: -270.820
+INFO:root:train RMSE: 8.312, RHO: 0.030, R2: -249.746
+INFO:root:train RMSE: 8.913, RHO: 0.054, R2: -272.230
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.64s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.954, RHO: 0.005, R2: -183.929
+INFO:root:train RMSE: 8.357, RHO: 0.028, R2: -173.654
+INFO:root:train RMSE: 8.656, RHO: -0.037, R2: -180.403
+INFO:root:train RMSE: 8.674, RHO: -0.079, R2: -173.503
+INFO:root:train RMSE: 8.272, RHO: -0.057, R2: -161.058
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.63s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.709, RHO: 0.584, R2: -156.123
+INFO:root:train RMSE: 7.757, RHO: 0.097, R2: -142.726
+INFO:root:train RMSE: 9.637, RHO: -0.032, R2: -176.914
+INFO:root:train RMSE: 9.046, RHO: 0.011, R2: -132.067
+INFO:root:train RMSE: 8.860, RHO: -0.012, R2: -185.312
+  0%|          | 0.00/8.00 [00:13<?, ?batch/s]100%|██████████| 8.00/8.00 [00:13<00:00, 1.69s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.058, RHO: 0.567, R2: -151.063
+INFO:root:train RMSE: 8.686, RHO: 0.016, R2: -163.863
+INFO:root:train RMSE: 7.706, RHO: 0.034, R2: -110.060
+INFO:root:train RMSE: 8.910, RHO: -0.131, R2: -131.356
+INFO:root:train RMSE: 10.092, RHO: -0.027, R2: -297.335
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.215, RHO: 0.547, R2: -178.156
+INFO:root:train RMSE: 9.211, RHO: -0.086, R2: -195.760
+INFO:root:train RMSE: 9.396, RHO: -0.028, R2: -160.006
+INFO:root:train RMSE: 8.715, RHO: -0.014, R2: -217.593
+INFO:root:train RMSE: 8.136, RHO: 0.045, R2: -186.960
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.68s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.963, RHO: 0.088, R2: -279.988
+INFO:root:train RMSE: 7.990, RHO: 0.056, R2: -118.552
+INFO:root:train RMSE: 8.059, RHO: -0.113, R2: -129.231
+INFO:root:train RMSE: 9.023, RHO: 0.081, R2: -188.549
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]INFO:root:train RMSE: 8.088, RHO: 0.009, R2: -192.302
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.72s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.72s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.837, RHO: 0.489, R2: -242.070
+INFO:root:train RMSE: 8.980, RHO: -0.144, R2: -158.258
+INFO:root:train RMSE: 8.393, RHO: -0.042, R2: -147.719
+INFO:root:train RMSE: 8.488, RHO: 0.002, R2: -205.309
+INFO:root:train RMSE: 8.974, RHO: 0.028, R2: -194.018
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.210, RHO: 0.559, R2: -202.754
+INFO:root:train RMSE: 8.985, RHO: 0.016, R2: -177.111
+INFO:root:train RMSE: 8.008, RHO: 0.008, R2: -160.324
+INFO:root:train RMSE: 8.585, RHO: 0.059, R2: -163.938
+INFO:root:train RMSE: 8.058, RHO: -0.039, R2: -117.796
+INFO:root:train RMSE: 7.709, RHO: -0.065, R2: -125.607
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.166, RHO: 0.008, R2: -98.082
+INFO:root:train RMSE: 8.947, RHO: 0.084, R2: -85.107
+INFO:root:train RMSE: 8.744, RHO: -0.029, R2: -128.072
+INFO:root:train RMSE: 8.523, RHO: -0.080, R2: -179.963
+INFO:root:train RMSE: 8.641, RHO: -0.033, R2: -147.325
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.125, RHO: 0.006, R2: -194.193
+INFO:root:train RMSE: 9.429, RHO: 0.044, R2: -128.993
+INFO:root:train RMSE: 8.144, RHO: 0.098, R2: -98.224
+INFO:root:train RMSE: 7.805, RHO: 0.126, R2: -93.528
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.336, RHO: 0.606, R2: -121.319
+INFO:root:train RMSE: 7.616, RHO: 0.017, R2: -100.425
+INFO:root:train RMSE: 8.099, RHO: 0.023, R2: -154.131
+INFO:root:train RMSE: 8.799, RHO: -0.048, R2: -228.670
+INFO:root:train RMSE: 8.275, RHO: 0.104, R2: -214.628
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.644, RHO: 0.084, R2: -139.774
+INFO:root:train RMSE: 9.006, RHO: -0.009, R2: -127.994
+INFO:root:train RMSE: 8.336, RHO: -0.014, R2: -116.856
+INFO:root:train RMSE: 8.567, RHO: -0.037, R2: -172.534
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.521, RHO: 0.513, R2: -200.844
+INFO:root:train RMSE: 8.542, RHO: -0.076, R2: -139.049
+INFO:root:train RMSE: 8.955, RHO: -0.016, R2: -170.929
+INFO:root:train RMSE: 8.582, RHO: -0.026, R2: -187.884
+INFO:root:train RMSE: 8.138, RHO: -0.030, R2: -187.549
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.43s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.980, RHO: 0.522, R2: -214.415
+INFO:root:train RMSE: 8.685, RHO: 0.016, R2: -203.669
+INFO:root:train RMSE: 9.012, RHO: 0.069, R2: -181.961
+INFO:root:train RMSE: 8.593, RHO: 0.152, R2: -161.603
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]INFO:root:train RMSE: 8.512, RHO: 0.040, R2: -165.324
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.222, RHO: 0.069, R2: -188.134
+INFO:root:train RMSE: 8.289, RHO: -0.085, R2: -170.218
+INFO:root:train RMSE: 8.150, RHO: -0.029, R2: -175.455
+INFO:root:train RMSE: 8.842, RHO: -0.124, R2: -149.159
+INFO:root:train RMSE: 8.840, RHO: 0.046, R2: -154.589
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.673, RHO: 0.074, R2: -87.887
+INFO:root:train RMSE: 8.565, RHO: 0.011, R2: -78.596
+INFO:root:train RMSE: 8.580, RHO: -0.055, R2: -97.023
+INFO:root:train RMSE: 8.154, RHO: -0.102, R2: -114.191
+INFO:root:train RMSE: 7.873, RHO: 0.074, R2: -157.113
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.653, RHO: -0.026, R2: -151.115
+INFO:root:train RMSE: 7.888, RHO: 0.012, R2: -96.653
+INFO:root:train RMSE: 8.847, RHO: 0.023, R2: -97.442
+INFO:root:train RMSE: 9.047, RHO: -0.055, R2: -135.878
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.41s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.786, RHO: -0.018, R2: -132.021
+INFO:root:train RMSE: 8.617, RHO: 0.039, R2: -72.844
+INFO:root:train RMSE: 9.330, RHO: -0.000, R2: -120.429
+INFO:root:train RMSE: 8.958, RHO: 0.019, R2: -142.883
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.43s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.542, RHO: 0.589, R2: -94.882
+INFO:root:train RMSE: 9.646, RHO: 0.016, R2: -145.790
+INFO:root:train RMSE: 9.877, RHO: 0.060, R2: -129.733
+INFO:root:train RMSE: 8.512, RHO: -0.128, R2: -122.554
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.170, RHO: 0.562, R2: -160.601
+INFO:root:train RMSE: 7.818, RHO: -0.073, R2: -108.564
+INFO:root:train RMSE: 8.885, RHO: 0.057, R2: -115.653
+INFO:root:train RMSE: 9.229, RHO: -0.036, R2: -110.210
+INFO:root:train RMSE: 8.646, RHO: -0.025, R2: -181.182
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.045, RHO: 0.591, R2: -131.910
+INFO:root:train RMSE: 8.682, RHO: -0.058, R2: -82.697
+INFO:root:train RMSE: 9.400, RHO: 0.076, R2: -150.973
+INFO:root:train RMSE: 8.338, RHO: -0.015, R2: -131.472
+INFO:root:train RMSE: 8.437, RHO: 0.025, R2: -153.667
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.336, RHO: 0.532, R2: -131.022
+INFO:root:train RMSE: 9.585, RHO: -0.019, R2: -225.693
+INFO:root:train RMSE: 8.888, RHO: 0.013, R2: -167.789
+INFO:root:train RMSE: 9.241, RHO: -0.095, R2: -191.298
+INFO:root:train RMSE: 8.202, RHO: 0.008, R2: -131.062
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:13<00:00, 1.64s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.64s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.594, RHO: 0.488, R2: -191.887
+INFO:root:train RMSE: 8.571, RHO: 0.016, R2: -244.305
+INFO:root:train RMSE: 8.379, RHO: -0.002, R2: -177.528
+INFO:root:train RMSE: 7.953, RHO: 0.020, R2: -257.931
+INFO:root:train RMSE: 9.517, RHO: 0.052, R2: -215.730
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.450, RHO: 0.455, R2: -168.149
+INFO:root:train RMSE: 9.169, RHO: 0.056, R2: -228.871
+INFO:root:train RMSE: 8.445, RHO: 0.063, R2: -186.285
+INFO:root:train RMSE: 8.075, RHO: 0.091, R2: -183.399
+INFO:root:train RMSE: 8.411, RHO: 0.060, R2: -241.407
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.702, RHO: 0.100, R2: -137.486
+INFO:root:train RMSE: 9.131, RHO: 0.086, R2: -170.188
+INFO:root:train RMSE: 7.965, RHO: 0.031, R2: -161.762
+INFO:root:train RMSE: 8.109, RHO: 0.038, R2: -159.931
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.40s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.536, RHO: 0.103, R2: -122.435
+INFO:root:train RMSE: 8.848, RHO: -0.065, R2: -181.767
+INFO:root:train RMSE: 8.276, RHO: 0.067, R2: -129.686
+INFO:root:train RMSE: 8.604, RHO: 0.048, R2: -149.336
+INFO:root:train RMSE: 9.321, RHO: 0.006, R2: -194.349
+  0%|          | 0.00/8.00 [00:13<?, ?batch/s]100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.141, RHO: 0.565, R2: -172.499
+INFO:root:train RMSE: 8.602, RHO: -0.022, R2: -141.061
+INFO:root:train RMSE: 8.905, RHO: 0.026, R2: -96.503
+INFO:root:train RMSE: 8.165, RHO: -0.008, R2: -95.181
+INFO:root:train RMSE: 8.404, RHO: 0.131, R2: -128.023
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.884, RHO: 0.505, R2: -189.516
+INFO:root:train RMSE: 8.146, RHO: -0.007, R2: -92.398
+INFO:root:train RMSE: 8.948, RHO: 0.001, R2: -127.569
+INFO:root:train RMSE: 8.976, RHO: -0.016, R2: -120.227
+INFO:root:train RMSE: 8.517, RHO: 0.015, R2: -123.951
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.703, RHO: 0.049, R2: -104.968
+INFO:root:train RMSE: 8.132, RHO: 0.012, R2: -125.344
+INFO:root:train RMSE: 8.372, RHO: -0.023, R2: -101.839
+INFO:root:train RMSE: 8.573, RHO: -0.041, R2: -118.560
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.606, RHO: 0.467, R2: -125.833
+INFO:root:train RMSE: 8.873, RHO: 0.050, R2: -180.635
+INFO:root:train RMSE: 8.077, RHO: 0.011, R2: -99.387
+INFO:root:train RMSE: 7.589, RHO: -0.055, R2: -87.542
+INFO:root:train RMSE: 8.694, RHO: -0.070, R2: -147.313
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.44s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.612, RHO: 0.586, R2: -111.683
+INFO:root:train RMSE: 8.622, RHO: 0.021, R2: -91.202
+INFO:root:train RMSE: 7.984, RHO: 0.079, R2: -88.322
+INFO:root:train RMSE: 8.645, RHO: -0.025, R2: -123.018
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.72s/batch]INFO:root:train RMSE: 7.853, RHO: -0.021, R2: -129.166
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.222, RHO: 0.521, R2: -112.215
+INFO:root:train RMSE: 8.572, RHO: 0.005, R2: -137.052
+INFO:root:train RMSE: 8.532, RHO: 0.016, R2: -184.849
+INFO:root:train RMSE: 8.877, RHO: 0.011, R2: -141.115
+INFO:root:train RMSE: 8.385, RHO: -0.063, R2: -158.253
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.886, RHO: 0.017, R2: -124.993
+INFO:root:train RMSE: 8.745, RHO: -0.131, R2: -197.869
+INFO:root:train RMSE: 8.911, RHO: 0.024, R2: -127.551
+INFO:root:train RMSE: 8.849, RHO: -0.215, R2: -204.794
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.855, RHO: -0.053, R2: -161.997
+INFO:root:train RMSE: 8.779, RHO: 0.041, R2: -106.079
+INFO:root:train RMSE: 8.848, RHO: 0.071, R2: -114.524
+INFO:root:train RMSE: 8.654, RHO: -0.104, R2: -158.334
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.231, RHO: -0.003, R2: -79.358
+INFO:root:train RMSE: 8.847, RHO: -0.073, R2: -93.078
+INFO:root:train RMSE: 9.195, RHO: 0.103, R2: -136.682
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 7.936, RHO: -0.036, R2: -90.352
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.48s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.48s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.386, RHO: -0.045, R2: -196.262
+INFO:root:train RMSE: 8.576, RHO: 0.024, R2: -167.356
+INFO:root:train RMSE: 7.559, RHO: 0.072, R2: -79.030
+INFO:root:train RMSE: 8.794, RHO: -0.092, R2: -135.983
+INFO:root:train RMSE: 8.676, RHO: -0.062, R2: -274.092
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.070, RHO: 0.020, R2: -133.761
+INFO:root:train RMSE: 9.613, RHO: -0.017, R2: -255.556
+INFO:root:train RMSE: 8.671, RHO: 0.142, R2: -136.858
+INFO:root:train RMSE: 9.058, RHO: -0.035, R2: -131.878
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.835, RHO: 0.554, R2: -150.611
+INFO:root:train RMSE: 8.138, RHO: 0.072, R2: -127.278
+INFO:root:train RMSE: 9.205, RHO: -0.053, R2: -122.637
+INFO:root:train RMSE: 8.320, RHO: 0.041, R2: -135.608
+INFO:root:train RMSE: 9.232, RHO: 0.021, R2: -233.467
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.107, RHO: 0.016, R2: -144.550
+INFO:root:train RMSE: 8.460, RHO: 0.067, R2: -100.385
+INFO:root:train RMSE: 8.522, RHO: 0.042, R2: -103.856
+INFO:root:train RMSE: 7.685, RHO: -0.036, R2: -122.325
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.62s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.403, RHO: 0.599, R2: -105.810
+INFO:root:train RMSE: 8.553, RHO: -0.084, R2: -109.738
+INFO:root:train RMSE: 8.600, RHO: 0.068, R2: -83.437
+INFO:root:train RMSE: 9.173, RHO: -0.027, R2: -188.991
+INFO:root:train RMSE: 8.857, RHO: 0.097, R2: -161.465
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.61s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.172, RHO: 0.575, R2: -138.670
+INFO:root:train RMSE: 8.115, RHO: 0.030, R2: -91.900
+INFO:root:train RMSE: 7.536, RHO: 0.065, R2: -111.219
+INFO:root:train RMSE: 8.892, RHO: -0.017, R2: -159.885
+INFO:root:train RMSE: 8.234, RHO: 0.116, R2: -151.990
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.48s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.425, RHO: -0.027, R2: -256.656
+INFO:root:train RMSE: 8.295, RHO: 0.086, R2: -137.584
+INFO:root:train RMSE: 8.541, RHO: 0.056, R2: -226.057
+INFO:root:train RMSE: 8.867, RHO: 0.015, R2: -212.525
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.427, RHO: 0.677, R2: -182.818
+INFO:root:train RMSE: 8.367, RHO: -0.004, R2: -161.373
+INFO:root:train RMSE: 7.640, RHO: -0.039, R2: -139.683
+INFO:root:train RMSE: 7.577, RHO: 0.046, R2: -188.831
+INFO:root:train RMSE: 8.547, RHO: 0.131, R2: -211.727
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.48s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.441, RHO: -0.091, R2: -162.808
+INFO:root:train RMSE: 8.867, RHO: -0.045, R2: -131.286
+INFO:root:train RMSE: 8.838, RHO: 0.041, R2: -178.170
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]INFO:root:train RMSE: 9.165, RHO: -0.103, R2: -194.861
+ 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.60s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.026, RHO: 0.595, R2: -157.511
+INFO:root:train RMSE: 9.102, RHO: 0.088, R2: -192.075
+INFO:root:train RMSE: 7.630, RHO: 0.026, R2: -212.804
+INFO:root:train RMSE: 9.055, RHO: 0.082, R2: -198.183
+INFO:root:train RMSE: 8.835, RHO: -0.041, R2: -237.343
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.913, RHO: -0.043, R2: -161.396
+INFO:root:train RMSE: 8.424, RHO: -0.068, R2: -158.261
+INFO:root:train RMSE: 8.211, RHO: -0.012, R2: -157.113
+INFO:root:train RMSE: 8.612, RHO: 0.000, R2: -180.295
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.125, RHO: 0.047, R2: -197.754
+INFO:root:train RMSE: 8.402, RHO: 0.032, R2: -117.176
+INFO:root:train RMSE: 7.649, RHO: -0.010, R2: -128.158
+INFO:root:train RMSE: 7.797, RHO: 0.011, R2: -129.174
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.43s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.135, RHO: -0.045, R2: -151.991
+INFO:root:train RMSE: 8.506, RHO: -0.070, R2: -120.177
+INFO:root:train RMSE: 8.292, RHO: -0.016, R2: -137.007
+INFO:root:train RMSE: 8.826, RHO: 0.024, R2: -212.109
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]100%|██████████| 8.00/8.00 [00:11<00:00, 1.50s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.50s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.129, RHO: 0.614, R2: -164.306
+INFO:root:train RMSE: 8.005, RHO: -0.043, R2: -127.390
+INFO:root:train RMSE: 10.016, RHO: -0.112, R2: -227.484
+INFO:root:train RMSE: 8.270, RHO: -0.094, R2: -169.834
+INFO:root:train RMSE: 9.369, RHO: 0.116, R2: -341.949
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.074, RHO: 0.043, R2: -180.357
+INFO:root:train RMSE: 9.297, RHO: -0.001, R2: -223.669
+INFO:root:train RMSE: 8.376, RHO: 0.032, R2: -289.537
+INFO:root:train RMSE: 8.454, RHO: 0.112, R2: -161.426
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.569, RHO: -0.012, R2: -208.130
+INFO:root:train RMSE: 8.158, RHO: -0.018, R2: -145.861
+INFO:root:train RMSE: 8.219, RHO: -0.059, R2: -108.293
+INFO:root:train RMSE: 9.325, RHO: 0.007, R2: -184.128
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.604, RHO: 0.513, R2: -173.064
+INFO:root:train RMSE: 8.355, RHO: 0.132, R2: -195.088
+INFO:root:train RMSE: 8.252, RHO: 0.137, R2: -171.141
+INFO:root:train RMSE: 8.519, RHO: 0.041, R2: -164.986
+INFO:root:train RMSE: 8.330, RHO: 0.016, R2: -164.676
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.275, RHO: -0.020, R2: -241.958
+INFO:root:train RMSE: 7.905, RHO: -0.062, R2: -109.631
+INFO:root:train RMSE: 7.852, RHO: -0.030, R2: -124.851
+INFO:root:train RMSE: 7.854, RHO: -0.045, R2: -182.184
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.58s/batch]INFO:root:train RMSE: 8.747, RHO: -0.062, R2: -226.038
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.877, RHO: 0.039, R2: -166.305
+INFO:root:train RMSE: 7.818, RHO: 0.092, R2: -140.100
+INFO:root:train RMSE: 8.748, RHO: 0.024, R2: -156.677
+INFO:root:train RMSE: 8.223, RHO: -0.015, R2: -230.307
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.338, RHO: -0.002, R2: -178.400
+INFO:root:train RMSE: 8.472, RHO: 0.018, R2: -174.798
+INFO:root:train RMSE: 8.799, RHO: -0.013, R2: -258.828
+INFO:root:train RMSE: 9.071, RHO: -0.022, R2: -182.835
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.43s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.252, RHO: 0.556, R2: -150.738
+INFO:root:train RMSE: 8.195, RHO: 0.042, R2: -119.296
+INFO:root:train RMSE: 8.778, RHO: -0.077, R2: -148.567
+INFO:root:train RMSE: 9.240, RHO: 0.041, R2: -174.950
+INFO:root:train RMSE: 8.404, RHO: -0.015, R2: -232.414
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.57s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.612, RHO: 0.035, R2: -103.856
+INFO:root:train RMSE: 8.518, RHO: 0.033, R2: -115.218
+INFO:root:train RMSE: 8.817, RHO: 0.001, R2: -175.077
+INFO:root:train RMSE: 8.906, RHO: -0.078, R2: -272.731
+  0%|          | 0.00/8.00 [00:12<?, ?batch/s]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.685, RHO: 0.559, R2: -134.375
+INFO:root:train RMSE: 7.785, RHO: 0.036, R2: -99.589
+INFO:root:train RMSE: 8.522, RHO: -0.081, R2: -160.716
+INFO:root:train RMSE: 8.507, RHO: 0.028, R2: -181.517
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.618, RHO: 0.534, R2: -199.185
+INFO:root:train RMSE: 7.635, RHO: 0.035, R2: -121.182
+INFO:root:train RMSE: 8.560, RHO: 0.067, R2: -186.912
+INFO:root:train RMSE: 9.245, RHO: -0.129, R2: -178.154
+INFO:root:train RMSE: 8.299, RHO: 0.032, R2: -144.893
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.883, RHO: 0.478, R2: -178.917
+INFO:root:train RMSE: 8.714, RHO: -0.069, R2: -158.816
+INFO:root:train RMSE: 9.104, RHO: -0.016, R2: -199.104
+INFO:root:train RMSE: 7.923, RHO: 0.020, R2: -151.518
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.39s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.366, RHO: 0.534, R2: -194.356
+INFO:root:train RMSE: 8.542, RHO: 0.009, R2: -232.036
+INFO:root:train RMSE: 8.111, RHO: 0.057, R2: -153.929
+INFO:root:train RMSE: 8.159, RHO: 0.035, R2: -168.035
+INFO:root:train RMSE: 7.776, RHO: 0.211, R2: -162.656
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.50s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.165, RHO: 0.520, R2: -152.153
+INFO:root:train RMSE: 8.005, RHO: 0.038, R2: -147.739
+INFO:root:train RMSE: 8.226, RHO: 0.024, R2: -162.622
+INFO:root:train RMSE: 8.578, RHO: -0.049, R2: -146.099
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.973, RHO: 0.524, R2: -155.579
+INFO:root:train RMSE: 8.271, RHO: -0.005, R2: -141.971
+INFO:root:train RMSE: 8.331, RHO: 0.053, R2: -132.285
+INFO:root:train RMSE: 8.257, RHO: 0.090, R2: -170.044
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.59s/batch]INFO:root:train RMSE: 9.373, RHO: -0.055, R2: -285.618
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.54s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.054, RHO: -0.025, R2: -213.932
+INFO:root:train RMSE: 8.521, RHO: -0.018, R2: -142.884
+INFO:root:train RMSE: 7.510, RHO: 0.050, R2: -153.177
+INFO:root:train RMSE: 9.117, RHO: 0.014, R2: -202.262
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.53s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.032, RHO: 0.676, R2: -145.594
+INFO:root:train RMSE: 9.144, RHO: -0.034, R2: -214.867
+INFO:root:train RMSE: 8.268, RHO: 0.030, R2: -150.607
+INFO:root:train RMSE: 8.834, RHO: 0.063, R2: -161.821
+100%|██████████| 8.00/8.00 [00:10<00:00, 1.37s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.572, RHO: 0.578, R2: -151.169
+INFO:root:train RMSE: 8.307, RHO: -0.095, R2: -172.370
+INFO:root:train RMSE: 8.319, RHO: 0.090, R2: -155.599
+INFO:root:train RMSE: 8.804, RHO: 0.007, R2: -201.048
+INFO:root:train RMSE: 8.965, RHO: -0.051, R2: -184.655
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.69s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.589, RHO: 0.602, R2: -205.147
+INFO:root:train RMSE: 8.414, RHO: 0.050, R2: -161.346
+INFO:root:train RMSE: 7.412, RHO: -0.002, R2: -117.382
+INFO:root:train RMSE: 8.123, RHO: 0.007, R2: -171.237
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]INFO:root:train RMSE: 8.167, RHO: 0.013, R2: -187.369
+ 88%|████████▊ | 7.00/8.00 [00:11<00:01, 1.58s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.176, RHO: 0.505, R2: -244.170
+INFO:root:train RMSE: 8.885, RHO: 0.069, R2: -209.593
+INFO:root:train RMSE: 8.233, RHO: 0.076, R2: -175.014
+INFO:root:train RMSE: 8.551, RHO: 0.075, R2: -182.460
+INFO:root:train RMSE: 8.736, RHO: 0.012, R2: -188.923
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.424, RHO: 0.007, R2: -184.472
+INFO:root:train RMSE: 8.204, RHO: 0.030, R2: -155.048
+INFO:root:train RMSE: 9.497, RHO: -0.087, R2: -136.447
+INFO:root:train RMSE: 7.769, RHO: 0.042, R2: -148.004
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.966, RHO: 0.716, R2: -118.737
+INFO:root:train RMSE: 8.346, RHO: -0.045, R2: -100.111
+INFO:root:train RMSE: 8.851, RHO: 0.098, R2: -150.091
+INFO:root:train RMSE: 7.363, RHO: 0.093, R2: -79.866
+INFO:root:train RMSE: 8.693, RHO: -0.025, R2: -105.852
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.63s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.423, RHO: 0.560, R2: -87.463
+INFO:root:train RMSE: 9.608, RHO: 0.022, R2: -93.108
+INFO:root:train RMSE: 9.579, RHO: 0.064, R2: -124.371
+INFO:root:train RMSE: 9.033, RHO: 0.069, R2: -169.697
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.833, RHO: -0.007, R2: -116.741
+ 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.77s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.68s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.755, RHO: 0.627, R2: -144.593
+INFO:root:train RMSE: 7.833, RHO: 0.076, R2: -117.291
+INFO:root:train RMSE: 9.249, RHO: -0.068, R2: -202.219
+INFO:root:train RMSE: 8.456, RHO: 0.026, R2: -132.948
+INFO:root:train RMSE: 8.711, RHO: 0.029, R2: -117.055
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.68s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.474, RHO: 0.562, R2: -115.394
+INFO:root:train RMSE: 7.403, RHO: -0.056, R2: -90.627
+INFO:root:train RMSE: 8.197, RHO: -0.015, R2: -97.774
+INFO:root:train RMSE: 10.037, RHO: -0.014, R2: -206.514
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.741, RHO: 0.594, R2: -205.016
+INFO:root:train RMSE: 8.041, RHO: 0.014, R2: -212.745
+INFO:root:train RMSE: 8.931, RHO: 0.014, R2: -245.737
+INFO:root:train RMSE: 8.801, RHO: -0.073, R2: -294.718
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]INFO:root:train RMSE: 8.176, RHO: 0.071, R2: -374.592
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.56s/batch]100%|██████████| 8.00/8.00 [00:12<00:00, 1.56s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.596, RHO: -0.005, R2: -158.514
+INFO:root:train RMSE: 8.635, RHO: 0.033, R2: -165.579
+INFO:root:train RMSE: 8.411, RHO: 0.067, R2: -111.857
+INFO:root:train RMSE: 9.326, RHO: -0.018, R2: -202.471
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.46s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.767, RHO: 0.580, R2: -132.211
+INFO:root:train RMSE: 8.066, RHO: -0.096, R2: -107.372
+INFO:root:train RMSE: 8.786, RHO: 0.048, R2: -144.017
+INFO:root:train RMSE: 8.506, RHO: 0.056, R2: -119.347
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.56s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.616, RHO: 0.590, R2: -113.841
+INFO:root:train RMSE: 7.643, RHO: -0.054, R2: -95.546
+INFO:root:train RMSE: 7.454, RHO: 0.037, R2: -98.942
+INFO:root:train RMSE: 8.093, RHO: -0.080, R2: -143.792
+INFO:root:train RMSE: 9.096, RHO: -0.057, R2: -174.059
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.50s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.382, RHO: -0.043, R2: -219.565
+INFO:root:train RMSE: 9.517, RHO: 0.023, R2: -163.134
+INFO:root:train RMSE: 7.458, RHO: -0.088, R2: -143.587
+INFO:root:train RMSE: 8.221, RHO: -0.032, R2: -181.289
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.59s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.039, RHO: 0.467, R2: -172.207
+INFO:root:train RMSE: 8.200, RHO: 0.020, R2: -104.626
+INFO:root:train RMSE: 8.569, RHO: 0.019, R2: -116.910
+INFO:root:train RMSE: 8.733, RHO: -0.051, R2: -118.442
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.454, RHO: 0.578, R2: -131.664
+INFO:root:train RMSE: 8.492, RHO: 0.136, R2: -115.933
+INFO:root:train RMSE: 7.823, RHO: -0.016, R2: -103.230
+INFO:root:train RMSE: 8.329, RHO: 0.075, R2: -121.117
+INFO:root:train RMSE: 7.921, RHO: -0.023, R2: -170.662
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.70s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.973, RHO: 0.558, R2: -132.640
+INFO:root:train RMSE: 9.311, RHO: 0.023, R2: -226.307
+INFO:root:train RMSE: 9.202, RHO: 0.026, R2: -191.437
+INFO:root:train RMSE: 7.947, RHO: 0.029, R2: -189.825
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.47s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.368, RHO: 0.562, R2: -208.576
+INFO:root:train RMSE: 8.516, RHO: 0.067, R2: -168.178
+INFO:root:train RMSE: 8.036, RHO: -0.081, R2: -145.635
+INFO:root:train RMSE: 9.011, RHO: 0.025, R2: -213.362
+INFO:root:train RMSE: 8.489, RHO: -0.035, R2: -191.768
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.67s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.903, RHO: 0.513, R2: -143.245
+INFO:root:train RMSE: 8.836, RHO: -0.225, R2: -188.068
+INFO:root:train RMSE: 8.632, RHO: -0.108, R2: -145.982
+INFO:root:train RMSE: 8.941, RHO: 0.012, R2: -221.489
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s]INFO:root:train RMSE: 9.129, RHO: 0.053, R2: -224.715
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.47s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.47s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 9.028, RHO: 0.024, R2: -150.824
+INFO:root:train RMSE: 8.416, RHO: 0.049, R2: -129.522
+INFO:root:train RMSE: 8.054, RHO: 0.107, R2: -146.967
+INFO:root:train RMSE: 8.590, RHO: 0.093, R2: -128.169
+INFO:root:train RMSE: 8.340, RHO: 0.005, R2: -151.476
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.60s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.314, RHO: 0.502, R2: -136.629
+INFO:root:train RMSE: 8.421, RHO: 0.047, R2: -130.574
+INFO:root:train RMSE: 8.505, RHO: -0.091, R2: -150.509
+INFO:root:train RMSE: 10.041, RHO: -0.085, R2: -200.282
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.52s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.562, RHO: 0.562, R2: -151.566
+INFO:root:train RMSE: 10.034, RHO: -0.067, R2: -137.620
+INFO:root:train RMSE: 9.340, RHO: 0.004, R2: -141.647
+INFO:root:train RMSE: 8.036, RHO: -0.070, R2: -200.787
+INFO:root:train RMSE: 8.202, RHO: -0.081, R2: -172.051
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.66s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.906, RHO: 0.622, R2: -143.807
+INFO:root:train RMSE: 8.378, RHO: -0.043, R2: -126.505
+INFO:root:train RMSE: 8.647, RHO: -0.000, R2: -106.799
+INFO:root:train RMSE: 7.887, RHO: 0.033, R2: -117.767
+  0%|          | 0.00/8.00 [00:10<?, ?batch/s] 88%|████████▊ | 7.00/8.00 [00:12<00:01, 1.56s/batch]INFO:root:train RMSE: 8.255, RHO: 0.126, R2: -108.525
+100%|██████████| 8.00/8.00 [00:13<00:00, 1.73s/batch]100%|██████████| 8.00/8.00 [00:13<00:00, 1.68s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.595, RHO: -0.067, R2: -107.285
+INFO:root:train RMSE: 8.107, RHO: -0.034, R2: -75.734
+INFO:root:train RMSE: 8.066, RHO: 0.011, R2: -78.919
+INFO:root:train RMSE: 8.166, RHO: -0.011, R2: -112.026
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.51s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.639, RHO: 0.068, R2: -85.898
+INFO:root:train RMSE: 8.114, RHO: 0.051, R2: -63.470
+INFO:root:train RMSE: 8.791, RHO: 0.053, R2: -59.373
+INFO:root:train RMSE: 8.403, RHO: -0.073, R2: -76.734
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.56s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.732, RHO: 0.640, R2: -54.827
+INFO:root:train RMSE: 8.883, RHO: -0.203, R2: -77.025
+INFO:root:train RMSE: 8.536, RHO: 0.130, R2: -76.243
+INFO:root:train RMSE: 9.118, RHO: 0.073, R2: -123.945
+INFO:root:train RMSE: 8.737, RHO: 0.050, R2: -116.209
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.58s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.471, RHO: 0.588, R2: -75.728
+INFO:root:train RMSE: 8.341, RHO: 0.109, R2: -84.143
+INFO:root:train RMSE: 8.543, RHO: -0.018, R2: -70.969
+INFO:root:train RMSE: 8.673, RHO: -0.109, R2: -58.153
+  0%|          | 0.00/8.00 [00:11<?, ?batch/s]100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]100%|██████████| 8.00/8.00 [00:11<00:00, 1.49s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.270, RHO: 0.521, R2: -108.847
+INFO:root:train RMSE: 9.000, RHO: 0.001, R2: -100.248
+INFO:root:train RMSE: 8.653, RHO: 0.045, R2: -136.204
+INFO:root:train RMSE: 9.126, RHO: 0.005, R2: -237.158
+INFO:root:train RMSE: 8.120, RHO: 0.135, R2: -336.890
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.47s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.134, RHO: -0.041, R2: -151.453
+INFO:root:train RMSE: 9.263, RHO: 0.042, R2: -96.621
+INFO:root:train RMSE: 9.332, RHO: -0.079, R2: -136.991
+INFO:root:train RMSE: 9.341, RHO: -0.121, R2: -147.821
+100%|██████████| 8.00/8.00 [00:11<00:00, 1.44s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 7.851, RHO: 0.522, R2: -119.868
+INFO:root:train RMSE: 7.943, RHO: 0.085, R2: -148.252
+INFO:root:train RMSE: 8.148, RHO: 0.046, R2: -121.401
+INFO:root:train RMSE: 9.478, RHO: -0.142, R2: -153.779
+INFO:root:train RMSE: 8.190, RHO: 0.015, R2: -177.143
+100%|██████████| 8.00/8.00 [00:12<00:00, 1.55s/batch]
+  0%|          | 0.00/8.00 [00:00<?, ?batch/s]INFO:root:train RMSE: 8.068, RHO: 0.583, R2: -120.751
+slurmstepd: error: *** JOB 58775047 ON gpu-q-23 CANCELLED AT 2022-04-12T17:41:32 DUE TO TIME LIMIT ***
+INFO:root:train RMSE: 7.916, RHO: -0.046, R2: -82.660
+slurmstepd: error: task_p_post_term: rmdir(/dev/cpuset/slurm58775047/slurm58775047.4294967294_0) failed Device or resource busy
+  0%|          | 0.00/8.00 [00:14<?, ?batch/s]
