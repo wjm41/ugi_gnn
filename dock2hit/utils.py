@@ -69,29 +69,54 @@ def write_slurm_script(job_name: str,
                        script: str,
                        args: List,
                        file_name: str,
-                       email: bool = False):
-    slurm_options = [
-        '#!/bin/bash',
-        f'#SBATCH -J {job_name}',
-        '#SBATCH -A LEE-WJM41-SL2-GPU',
-        '#SBATCH --nodes=1',
-        '#SBATCH --ntasks=1',
-        '#SBATCH --gres=gpu:1',
-        f'#SBATCH --time={run_time}',
-        '#SBATCH --mail-user=wjm41@cam.ac.uk',
-        f'#SBATCH --output={output_name}',
-        '#SBATCH -p ampere',
-    ]
+                       email: bool = False,
+                       gpu: bool = False):
+
+    if gpu:
+        slurm_options = [
+            '#!/bin/bash',
+            f'#SBATCH -J {job_name}',
+            '#SBATCH -A LEE-WJM41-SL2-GPU',
+            '#SBATCH --nodes=1',
+            '#SBATCH --ntasks=1',
+            '#SBATCH --gres=gpu:1',
+            f'#SBATCH --time={run_time}',
+            '#SBATCH --mail-user=wjm41@cam.ac.uk',
+            f'#SBATCH --output={output_name}',
+            '#SBATCH -p ampere',
+        ]
+    else:
+        slurm_options = [
+            '#!/bin/bash',
+            f'#SBATCH -J {job_name}',
+            '#SBATCH -A LEE-WJM41-SL2-CPU',
+            '#SBATCH --nodes=1',
+            '#SBATCH --ntasks=1',
+            ' #SBATCH --cpus-per-task=1',
+            f'#SBATCH --time={run_time}',
+            '#SBATCH --mail-user=wjm41@cam.ac.uk',
+            f'#SBATCH --output={output_name}',
+            '#SBATCH -p icelake-himem',
+        ]
     if email:
         slurm_options.append('#SBATCH --mail-type=ALL')
 
-    module_options = [
-        '. /etc/profile.d/modules.sh',
-        'module purge',
-        'module load rhel8/default-amp',
-        'module load miniconda/3',
-        'source activate dgl_life',
-    ]
+    if gpu:
+        module_options = [
+            '. /etc/profile.d/modules.sh',
+            'module purge',
+            'module load rhel8/default-amp',
+            'module load miniconda/3',
+            'source activate dgl_life',
+        ]
+    else:
+        module_options = [
+            '. /etc/profile.d/modules.sh',
+            'module purge',
+            'module load rhel8/default-amp',
+            'module load miniconda/3',
+            'source activate dgl_cpu',
+        ]
 
     pre_empt = f'cd {package_dir}; pip install . --use-feature=in-tree-build'
 
