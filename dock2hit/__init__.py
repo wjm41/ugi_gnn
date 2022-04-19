@@ -7,5 +7,6 @@ import dock2hit.parsing
 import dock2hit.custom_gnn
 import dock2hit.generate_mpnn_fps
 import dock2hit.fine_tuning
+import dock2hit.library_generation
 
 __version__ = "0.1.0"
