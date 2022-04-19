@@ -1,0 +1,3845 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 openmpi/4.1.1/gcc-9.4.0-epagguv
+Processing /rds-d2/user/wjm41/hpc-work/datasets/Ugis
+Building wheels for collected packages: dock2hit
+  Building wheel for dock2hit (setup.py): started
+  Building wheel for dock2hit (setup.py): finished with status 'done'
+  Created wheel for dock2hit: filename=dock2hit-0.1.0-py3-none-any.whl size=41098 sha256=60de17397762da19629a25fcbbef407e418025e80540737bb11a526d324fe9cd
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_hqckwu1/wheels/e9/46/b3/127c6cd122b7690cfca02e35d86062f3cf7fe58252c07c9b98
+Successfully built dock2hit
+Installing collected packages: dock2hit
+  Attempting uninstall: dock2hit
+    Found existing installation: dock2hit 0.1.0
+    Uninstalling dock2hit-0.1.0:
+      Successfully uninstalled dock2hit-0.1.0
+Successfully installed dock2hit-0.1.0
+  0%|          | 0/319 [00:00<?, ?it/s]  0%|          | 1/319 [01:15<6:41:23, 75.73s/it]  1%|          | 2/319 [01:24<3:10:44, 36.10s/it]  1%|          | 3/319 [01:39<2:21:29, 26.86s/it]  1%|▏         | 4/319 [02:10<2:28:55, 28.37s/it]  2%|▏         | 5/319 [02:22<1:57:19, 22.42s/it]  2%|▏         | 6/319 [02:28<1:27:47, 16.83s/it]  2%|▏         | 7/319 [03:15<2:18:30, 26.63s/it]  3%|▎         | 8/319 [03:21<1:45:03, 20.27s/it]  3%|▎         | 9/319 [03:50<1:57:57, 22.83s/it]  3%|▎         | 10/319 [04:18<2:06:00, 24.47s/it]  3%|▎         | 11/319 [04:47<2:12:46, 25.87s/it]  4%|▍         | 12/319 [05:48<3:07:13, 36.59s/it]  4%|▍         | 13/319 [07:33<4:51:25, 57.14s/it]  4%|▍         | 14/319 [07:52<3:53:06, 45.86s/it]  5%|▍         | 15/319 [08:09<3:08:03, 37.12s/it]  5%|▌         | 16/319 [08:48<3:09:24, 37.51s/it]  5%|▌         | 17/319 [10:34<4:53:21, 58.28s/it]  6%|▌         | 18/319 [10:49<3:46:24, 45.13s/it]  6%|▌         | 19/319 [10:59<2:52:56, 34.59s/it]  6%|▋         | 20/319 [11:02<2:05:53, 25.26s/it]  7%|▋         | 21/319 [11:21<1:55:47, 23.31s/it]  7%|▋         | 22/319 [13:16<4:11:59, 50.91s/it]  7%|▋         | 23/319 [14:34<4:50:45, 58.94s/it]  8%|▊         | 24/319 [14:44<3:38:06, 44.36s/it]  8%|▊         | 25/319 [15:24<3:30:39, 42.99s/it]  8%|▊         | 26/319 [16:04<3:25:13, 42.02s/it]  8%|▊         | 27/319 [16:10<2:32:40, 31.37s/it]  9%|▉         | 28/319 [16:26<2:08:39, 26.53s/it]  9%|▉         | 29/319 [16:45<1:57:28, 24.31s/it]  9%|▉         | 30/319 [17:39<2:40:24, 33.30s/it] 10%|▉         | 31/319 [18:16<2:44:29, 34.27s/it] 10%|█         | 32/319 [19:20<3:27:22, 43.35s/it] 10%|█         | 33/319 [19:34<2:44:40, 34.55s/it] 11%|█         | 34/319 [20:00<2:31:11, 31.83s/it] 11%|█         | 35/319 [21:07<3:20:51, 42.43s/it] 11%|█▏        | 36/319 [22:05<3:41:56, 47.05s/it] 12%|█▏        | 37/319 [22:44<3:30:53, 44.87s/it] 12%|█▏        | 38/319 [22:55<2:41:36, 34.51s/it] 12%|█▏        | 39/319 [23:29<2:40:41, 34.43s/it] 13%|█▎        | 40/319 [23:41<2:09:03, 27.76s/it] 13%|█▎        | 41/319 [25:07<3:29:32, 45.22s/it] 13%|█▎        | 42/319 [25:18<2:40:27, 34.76s/it] 13%|█▎        | 43/319 [26:30<3:31:59, 46.09s/it] 14%|█▍        | 44/319 [26:42<2:44:11, 35.82s/it] 14%|█▍        | 45/319 [27:07<2:29:11, 32.67s/it] 14%|█▍        | 46/319 [27:20<2:01:30, 26.70s/it] 15%|█▍        | 47/319 [27:26<1:33:11, 20.56s/it] 15%|█▌        | 48/319 [27:31<1:11:17, 15.78s/it] 15%|█▌        | 49/319 [28:20<1:55:34, 25.68s/it] 16%|█▌        | 50/319 [29:19<2:40:00, 35.69s/it] 16%|█▌        | 51/319 [30:20<3:14:13, 43.48s/it] 16%|█▋        | 52/319 [30:55<3:01:50, 40.86s/it] 17%|█▋        | 53/319 [31:21<2:41:09, 36.35s/it] 17%|█▋        | 54/319 [31:27<1:59:50, 27.13s/it] 17%|█▋        | 55/319 [32:08<2:17:36, 31.27s/it] 18%|█▊        | 56/319 [33:40<3:37:02, 49.52s/it] 18%|█▊        | 57/319 [33:54<2:50:17, 39.00s/it] 18%|█▊        | 58/319 [34:18<2:29:49, 34.44s/it] 18%|█▊        | 59/319 [34:28<1:58:06, 27.25s/it] 19%|█▉        | 60/319 [34:39<1:36:35, 22.38s/it] 19%|█▉        | 61/319 [35:29<2:11:30, 30.58s/it] 19%|█▉        | 62/319 [36:28<2:47:49, 39.18s/it] 20%|█▉        | 63/319 [36:44<2:17:00, 32.11s/it] 20%|██        | 64/319 [37:10<2:08:20, 30.20s/it] 20%|██        | 65/319 [37:52<2:23:39, 33.94s/it] 21%|██        | 66/319 [38:13<2:06:05, 29.91s/it] 21%|██        | 67/319 [39:24<2:58:03, 42.39s/it] 21%|██▏       | 68/319 [40:30<3:26:23, 49.34s/it] 22%|██▏       | 69/319 [41:09<3:12:37, 46.23s/it] 22%|██▏       | 70/319 [42:20<3:42:55, 53.72s/it] 22%|██▏       | 71/319 [42:32<2:50:07, 41.16s/it] 23%|██▎       | 72/319 [42:56<2:28:07, 35.98s/it] 23%|██▎       | 73/319 [43:11<2:01:26, 29.62s/it] 23%|██▎       | 74/319 [43:58<2:22:45, 34.96s/it] 24%|██▎       | 75/319 [44:19<2:04:33, 30.63s/it] 24%|██▍       | 76/319 [45:34<2:58:07, 43.98s/it] 24%|██▍       | 77/319 [45:47<2:20:10, 34.75s/it] 24%|██▍       | 78/319 [46:19<2:16:41, 34.03s/it] 25%|██▍       | 79/319 [46:38<1:58:09, 29.54s/it] 25%|██▌       | 80/319 [47:35<2:30:17, 37.73s/it] 25%|██▌       | 81/319 [48:49<3:12:10, 48.45s/it] 26%|██▌       | 82/319 [49:07<2:35:40, 39.41s/it] 26%|██▌       | 83/319 [49:18<2:01:22, 30.86s/it] 26%|██▋       | 84/319 [49:42<1:52:54, 28.83s/it] 27%|██▋       | 85/319 [49:57<1:36:42, 24.80s/it] 27%|██▋       | 86/319 [50:10<1:22:10, 21.16s/it] 27%|██▋       | 87/319 [50:28<1:18:12, 20.23s/it] 28%|██▊       | 88/319 [51:12<1:45:24, 27.38s/it] 28%|██▊       | 89/319 [51:28<1:31:19, 23.82s/it] 28%|██▊       | 90/319 [51:38<1:15:27, 19.77s/it] 29%|██▊       | 91/319 [51:52<1:09:01, 18.16s/it] 29%|██▉       | 92/319 [51:59<55:03, 14.55s/it]   29%|██▉       | 93/319 [52:15<57:30, 15.27s/it] 29%|██▉       | 94/319 [52:31<57:47, 15.41s/it] 30%|██▉       | 95/319 [52:57<1:08:59, 18.48s/it] 30%|███       | 96/319 [54:32<2:34:01, 41.44s/it] 30%|███       | 97/319 [54:50<2:07:16, 34.40s/it] 31%|███       | 98/319 [55:38<2:22:06, 38.58s/it] 31%|███       | 99/319 [56:20<2:25:16, 39.62s/it] 31%|███▏      | 100/319 [56:46<2:09:10, 35.39s/it] 32%|███▏      | 101/319 [56:52<1:36:40, 26.61s/it] 32%|███▏      | 102/319 [58:12<2:34:30, 42.72s/it] 32%|███▏      | 103/319 [58:31<2:07:42, 35.47s/it] 33%|███▎      | 104/319 [59:54<2:58:38, 49.85s/it] 33%|███▎      | 105/319 [1:00:09<2:20:29, 39.39s/it] 33%|███▎      | 106/319 [1:01:46<3:21:01, 56.63s/it] 34%|███▎      | 107/319 [1:02:01<2:36:06, 44.18s/it] 34%|███▍      | 108/319 [1:02:17<2:05:14, 35.61s/it] 34%|███▍      | 109/319 [1:02:48<2:00:14, 34.36s/it] 34%|███▍      | 110/319 [1:03:31<2:08:48, 36.98s/it] 35%|███▍      | 111/319 [1:04:37<2:38:18, 45.66s/it] 35%|███▌      | 112/319 [1:05:20<2:34:08, 44.68s/it] 35%|███▌      | 113/319 [1:05:58<2:27:17, 42.90s/it] 36%|███▌      | 114/319 [1:06:26<2:11:24, 38.46s/it] 36%|███▌      | 115/319 [1:06:56<2:01:49, 35.83s/it] 36%|███▋      | 116/319 [1:07:02<1:30:56, 26.88s/it] 37%|███▋      | 117/319 [1:07:15<1:16:35, 22.75s/it] 37%|███▋      | 118/319 [1:07:26<1:04:08, 19.15s/it] 37%|███▋      | 119/319 [1:07:57<1:15:45, 22.73s/it] 38%|███▊      | 120/319 [1:08:48<1:43:29, 31.20s/it] 38%|███▊      | 121/319 [1:09:16<1:40:09, 30.35s/it] 38%|███▊      | 122/319 [1:09:44<1:37:02, 29.56s/it] 39%|███▊      | 123/319 [1:10:02<1:24:49, 25.96s/it] 39%|███▉      | 124/319 [1:10:20<1:16:39, 23.59s/it] 39%|███▉      | 125/319 [1:11:01<1:33:32, 28.93s/it] 39%|███▉      | 126/319 [1:12:13<2:14:37, 41.85s/it] 40%|███▉      | 127/319 [1:12:27<1:46:41, 33.34s/it] 40%|████      | 128/319 [1:12:45<1:32:20, 29.01s/it] 40%|████      | 129/319 [1:12:55<1:13:14, 23.13s/it] 41%|████      | 130/319 [1:13:41<1:34:57, 30.14s/it] 41%|████      | 131/319 [1:14:38<1:58:52, 37.94s/it] 41%|████▏     | 132/319 [1:15:29<2:10:29, 41.87s/it] 42%|████▏     | 133/319 [1:15:36<1:38:08, 31.66s/it] 42%|████▏     | 134/319 [1:16:28<1:56:11, 37.68s/it] 42%|████▏     | 135/319 [1:16:54<1:44:51, 34.19s/it] 43%|████▎     | 136/319 [1:17:43<1:57:24, 38.49s/it] 43%|████▎     | 137/319 [1:17:56<1:33:47, 30.92s/it] 43%|████▎     | 138/319 [1:18:08<1:16:02, 25.21s/it] 44%|████▎     | 139/319 [1:18:37<1:19:12, 26.41s/it] 44%|████▍     | 140/319 [1:18:51<1:07:37, 22.67s/it] 44%|████▍     | 141/319 [1:19:32<1:23:37, 28.19s/it] 45%|████▍     | 142/319 [1:19:45<1:09:15, 23.48s/it] 45%|████▍     | 143/319 [1:20:36<1:33:17, 31.80s/it] 45%|████▌     | 144/319 [1:21:00<1:26:00, 29.49s/it] 45%|████▌     | 145/319 [1:21:21<1:18:00, 26.90s/it] 46%|████▌     | 146/319 [1:22:50<2:11:23, 45.57s/it] 46%|████▌     | 147/319 [1:23:18<1:55:16, 40.21s/it] 46%|████▋     | 148/319 [1:24:01<1:57:07, 41.09s/it] 47%|████▋     | 149/319 [1:25:24<2:32:06, 53.69s/it] 47%|████▋     | 150/319 [1:26:18<2:31:58, 53.96s/it] 47%|████▋     | 151/319 [1:26:32<1:57:34, 41.99s/it] 48%|████▊     | 152/319 [1:26:41<1:28:55, 31.95s/it] 48%|████▊     | 153/319 [1:27:40<1:50:38, 39.99s/it] 48%|████▊     | 154/319 [1:28:22<1:52:03, 40.75s/it] 49%|████▊     | 155/319 [1:28:32<1:26:16, 31.57s/it] 49%|████▉     | 156/319 [1:29:10<1:30:57, 33.48s/it] 49%|████▉     | 157/319 [1:29:43<1:29:57, 33.32s/it] 50%|████▉     | 158/319 [1:31:06<2:08:49, 48.01s/it] 50%|████▉     | 159/319 [1:31:12<1:35:04, 35.65s/it] 50%|█████     | 160/319 [1:31:23<1:14:23, 28.07s/it] 50%|█████     | 161/319 [1:31:53<1:15:59, 28.85s/it] 51%|█████     | 162/319 [1:32:05<1:02:11, 23.77s/it] 51%|█████     | 163/319 [1:32:17<52:38, 20.25s/it]   51%|█████▏    | 164/319 [1:33:08<1:16:03, 29.44s/it] 52%|█████▏    | 165/319 [1:33:25<1:05:50, 25.66s/it] 52%|█████▏    | 166/319 [1:34:21<1:28:49, 34.83s/it] 52%|█████▏    | 167/319 [1:35:02<1:32:22, 36.47s/it] 53%|█████▎    | 168/319 [1:36:08<1:54:11, 45.37s/it] 53%|█████▎    | 169/319 [1:36:36<1:40:55, 40.37s/it] 53%|█████▎    | 170/319 [1:36:48<1:18:53, 31.77s/it] 54%|█████▎    | 171/319 [1:36:57<1:01:15, 24.84s/it] 54%|█████▍    | 172/319 [1:37:51<1:22:10, 33.54s/it] 54%|█████▍    | 173/319 [1:38:16<1:15:21, 30.97s/it] 55%|█████▍    | 174/319 [1:38:33<1:05:03, 26.92s/it] 55%|█████▍    | 175/319 [1:38:50<57:31, 23.97s/it]   55%|█████▌    | 176/319 [1:39:12<55:38, 23.35s/it] 55%|█████▌    | 177/319 [1:39:38<57:02, 24.10s/it] 56%|█████▌    | 178/319 [1:39:57<53:07, 22.61s/it] 56%|█████▌    | 179/319 [1:40:48<1:12:47, 31.20s/it] 56%|█████▋    | 180/319 [1:41:54<1:36:11, 41.52s/it] 57%|█████▋    | 181/319 [1:42:11<1:18:46, 34.25s/it] 57%|█████▋    | 182/319 [1:42:44<1:16:54, 33.68s/it] 57%|█████▋    | 183/319 [1:43:18<1:16:42, 33.84s/it] 58%|█████▊    | 184/319 [1:43:43<1:10:32, 31.35s/it] 58%|█████▊    | 185/319 [1:43:57<58:22, 26.14s/it]   58%|█████▊    | 186/319 [1:44:10<48:54, 22.06s/it] 59%|█████▊    | 187/319 [1:44:16<37:54, 17.23s/it] 59%|█████▉    | 188/319 [1:44:55<52:02, 23.83s/it] 59%|█████▉    | 189/319 [1:45:26<56:11, 25.93s/it] 60%|█████▉    | 190/319 [1:46:04<1:03:26, 29.51s/it] 60%|█████▉    | 191/319 [1:46:23<56:07, 26.31s/it]   60%|██████    | 192/319 [1:47:07<1:07:02, 31.67s/it] 61%|██████    | 193/319 [1:47:49<1:13:21, 34.93s/it] 61%|██████    | 194/319 [1:48:45<1:25:30, 41.05s/it] 61%|██████    | 195/319 [1:49:31<1:28:08, 42.65s/it] 61%|██████▏   | 196/319 [1:49:56<1:16:37, 37.38s/it] 62%|██████▏   | 197/319 [1:50:35<1:17:05, 37.91s/it] 62%|██████▏   | 198/319 [1:50:47<1:00:38, 30.07s/it] 62%|██████▏   | 199/319 [1:51:21<1:02:42, 31.36s/it] 63%|██████▎   | 200/319 [1:52:49<1:35:43, 48.26s/it] 63%|██████▎   | 201/319 [1:53:01<1:13:14, 37.24s/it] 63%|██████▎   | 202/319 [1:53:10<56:20, 28.89s/it]   64%|██████▎   | 203/319 [1:53:50<1:02:16, 32.21s/it] 64%|██████▍   | 204/319 [1:54:07<52:59, 27.65s/it]   64%|██████▍   | 205/319 [1:54:51<1:01:41, 32.47s/it] 65%|██████▍   | 206/319 [1:55:42<1:11:36, 38.02s/it] 65%|██████▍   | 207/319 [1:56:34<1:18:49, 42.23s/it] 65%|██████▌   | 208/319 [1:56:46<1:01:34, 33.28s/it] 66%|██████▌   | 209/319 [1:57:33<1:08:43, 37.49s/it] 66%|██████▌   | 210/319 [1:58:18<1:11:56, 39.60s/it] 66%|██████▌   | 211/319 [1:59:09<1:17:21, 42.97s/it] 66%|██████▋   | 212/319 [1:59:20<59:38, 33.45s/it]   67%|██████▋   | 213/319 [1:59:27<44:53, 25.41s/it] 67%|██████▋   | 214/319 [1:59:45<40:39, 23.23s/it] 67%|██████▋   | 215/319 [2:00:19<46:13, 26.67s/it] 68%|██████▊   | 216/319 [2:00:33<39:04, 22.76s/it] 68%|██████▊   | 217/319 [2:00:51<36:10, 21.28s/it] 68%|██████▊   | 218/319 [2:00:59<28:53, 17.16s/it] 69%|██████▊   | 219/319 [2:01:31<36:29, 21.90s/it] 69%|██████▉   | 220/319 [2:02:07<43:01, 26.08s/it] 69%|██████▉   | 221/319 [2:02:29<40:24, 24.73s/it] 70%|██████▉   | 222/319 [2:03:10<47:41, 29.50s/it] 70%|██████▉   | 223/319 [2:03:21<38:42, 24.20s/it] 70%|███████   | 224/319 [2:03:53<41:46, 26.39s/it] 71%|███████   | 225/319 [2:04:20<41:40, 26.60s/it] 71%|███████   | 226/319 [2:04:29<33:03, 21.33s/it] 71%|███████   | 227/319 [2:05:11<42:22, 27.64s/it] 71%|███████▏  | 228/319 [2:05:48<45:50, 30.23s/it] 72%|███████▏  | 229/319 [2:06:04<39:05, 26.06s/it] 72%|███████▏  | 230/319 [2:06:51<48:05, 32.42s/it] 72%|███████▏  | 231/319 [2:07:03<38:16, 26.10s/it] 73%|███████▎  | 232/319 [2:08:01<52:04, 35.91s/it] 73%|███████▎  | 233/319 [2:08:14<41:20, 28.84s/it] 73%|███████▎  | 234/319 [2:08:16<29:36, 20.90s/it] 74%|███████▎  | 235/319 [2:08:41<30:57, 22.12s/it] 74%|███████▍  | 236/319 [2:09:06<31:47, 22.98s/it] 74%|███████▍  | 237/319 [2:09:55<42:01, 30.75s/it] 75%|███████▍  | 238/319 [2:10:10<35:05, 25.99s/it] 75%|███████▍  | 239/319 [2:10:38<35:37, 26.72s/it] 75%|███████▌  | 240/319 [2:12:20<1:04:56, 49.32s/it] 76%|███████▌  | 241/319 [2:14:23<1:32:35, 71.22s/it] 76%|███████▌  | 242/319 [2:14:51<1:14:55, 58.38s/it] 76%|███████▌  | 243/319 [2:15:08<58:16, 46.01s/it]   76%|███████▋  | 244/319 [2:16:34<1:12:30, 58.01s/it] 77%|███████▋  | 245/319 [2:16:49<55:40, 45.14s/it]   77%|███████▋  | 246/319 [2:17:43<58:13, 47.86s/it] 77%|███████▋  | 247/319 [2:18:09<49:33, 41.31s/it] 78%|███████▊  | 248/319 [2:18:22<38:49, 32.81s/it] 78%|███████▊  | 249/319 [2:19:35<52:17, 44.83s/it] 78%|███████▊  | 250/319 [2:19:57<43:33, 37.88s/it] 79%|███████▊  | 251/319 [2:20:59<51:03, 45.05s/it] 79%|███████▉  | 252/319 [2:21:26<44:27, 39.82s/it] 79%|███████▉  | 253/319 [2:21:36<33:48, 30.74s/it] 80%|███████▉  | 254/319 [2:21:48<27:04, 24.99s/it] 80%|███████▉  | 255/319 [2:21:58<22:02, 20.66s/it] 80%|████████  | 256/319 [2:22:17<21:16, 20.27s/it] 81%|████████  | 257/319 [2:22:59<27:34, 26.69s/it] 81%|████████  | 258/319 [2:23:24<26:29, 26.06s/it] 81%|████████  | 259/319 [2:23:36<21:50, 21.85s/it] 82%|████████▏ | 260/319 [2:23:40<16:18, 16.58s/it] 82%|████████▏ | 261/319 [2:23:52<14:38, 15.14s/it] 82%|████████▏ | 262/319 [2:24:21<18:16, 19.24s/it] 82%|████████▏ | 263/319 [2:24:28<14:39, 15.71s/it] 83%|████████▎ | 264/319 [2:24:47<15:22, 16.78s/it] 83%|████████▎ | 265/319 [2:25:32<22:39, 25.18s/it] 83%|████████▎ | 266/319 [2:26:37<32:48, 37.14s/it] 84%|████████▎ | 267/319 [2:26:47<25:01, 28.87s/it] 84%|████████▍ | 268/319 [2:27:24<26:44, 31.47s/it] 84%|████████▍ | 269/319 [2:28:06<28:41, 34.44s/it] 85%|████████▍ | 270/319 [2:29:13<36:16, 44.41s/it] 85%|████████▍ | 271/319 [2:29:17<25:52, 32.34s/it] 85%|████████▌ | 272/319 [2:29:27<19:51, 25.35s/it] 86%|████████▌ | 273/319 [2:30:13<24:22, 31.80s/it] 86%|████████▌ | 274/319 [2:30:45<23:45, 31.67s/it] 86%|████████▌ | 275/319 [2:30:57<18:59, 25.90s/it] 87%|████████▋ | 276/319 [2:31:27<19:20, 26.98s/it] 87%|████████▋ | 277/319 [2:32:18<24:05, 34.41s/it] 87%|████████▋ | 278/319 [2:32:25<17:53, 26.17s/it] 87%|████████▋ | 279/319 [2:32:30<13:10, 19.77s/it] 88%|████████▊ | 280/319 [2:33:30<20:37, 31.74s/it] 88%|████████▊ | 281/319 [2:34:38<26:58, 42.60s/it] 88%|████████▊ | 282/319 [2:34:53<21:17, 34.52s/it] 89%|████████▊ | 283/319 [2:35:08<17:08, 28.56s/it] 89%|████████▉ | 284/319 [2:35:38<16:49, 28.84s/it] 89%|████████▉ | 285/319 [2:36:43<22:35, 39.88s/it] 90%|████████▉ | 286/319 [2:37:47<25:48, 46.92s/it] 90%|████████▉ | 287/319 [2:37:59<19:30, 36.57s/it] 90%|█████████ | 288/319 [2:38:49<20:59, 40.62s/it] 91%|█████████ | 289/319 [2:39:45<22:34, 45.16s/it] 91%|█████████ | 290/319 [2:40:20<20:21, 42.13s/it] 91%|█████████ | 291/319 [2:40:28<14:56, 32.03s/it] 92%|█████████▏| 292/319 [2:41:10<15:40, 34.83s/it] 92%|█████████▏| 293/319 [2:41:58<16:48, 38.80s/it] 92%|█████████▏| 294/319 [2:42:10<12:52, 30.89s/it] 92%|█████████▏| 295/319 [2:42:19<09:44, 24.36s/it] 93%|█████████▎| 296/319 [2:42:27<07:25, 19.37s/it] 93%|█████████▎| 297/319 [2:43:06<09:16, 25.31s/it] 93%|█████████▎| 298/319 [2:43:28<08:25, 24.09s/it] 94%|█████████▎| 299/319 [2:43:55<08:23, 25.16s/it] 94%|█████████▍| 300/319 [2:44:08<06:48, 21.48s/it] 94%|█████████▍| 301/319 [2:44:16<05:14, 17.49s/it] 95%|█████████▍| 302/319 [2:44:28<04:30, 15.91s/it] 95%|█████████▍| 303/319 [2:45:03<05:42, 21.41s/it] 95%|█████████▌| 304/319 [2:45:11<04:21, 17.41s/it] 96%|█████████▌| 305/319 [2:45:16<03:12, 13.77s/it] 96%|█████████▌| 306/319 [2:45:25<02:39, 12.28s/it] 96%|█████████▌| 307/319 [2:45:40<02:38, 13.22s/it] 97%|█████████▋| 308/319 [2:46:05<03:04, 16.76s/it] 97%|█████████▋| 309/319 [2:46:16<02:30, 15.02s/it] 97%|█████████▋| 310/319 [2:46:46<02:54, 19.37s/it] 97%|█████████▋| 311/319 [2:46:54<02:07, 15.89s/it] 98%|█████████▊| 312/319 [2:47:56<03:28, 29.82s/it] 98%|█████████▊| 313/319 [2:48:12<02:35, 25.86s/it] 98%|█████████▊| 314/319 [2:48:59<02:40, 32.08s/it] 99%|█████████▊| 315/319 [2:49:31<02:08, 32.14s/it] 99%|█████████▉| 316/319 [2:50:15<01:46, 35.53s/it] 99%|█████████▉| 317/319 [2:50:24<00:55, 27.65s/it]100%|█████████▉| 318/319 [2:50:53<00:28, 28.12s/it]100%|██████████| 319/319 [2:51:05<00:00, 23.14s/it]100%|██████████| 319/319 [2:51:05<00:00, 32.18s/it]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0      0  ...  4.381518
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0      0  ...  4.881827
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0      1  ...  4.892494
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+1      1  ...  4.588747
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0      2  ...  4.674922
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+2      2  ...  4.711604
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0      3  ...  4.319759
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+3      3  ...  4.590552
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0      4  ...  4.383936
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+4      4  ...  4.646211
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0      5  ...  4.299311
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+5      5  ...  4.545588
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0      6  ...  4.145092
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+6      6  ...  4.020339
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0      7  ...  4.555314
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+7      7  ...  4.623321
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0      8  ...  4.356892
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+8      8  ...  4.400834
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0      9  ...  4.879945
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+9      9  ...  4.727998
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     10  ...  5.292681
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+    index  ...   score_0
+10     10  ...  4.722374
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     11  ...  4.334264
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+    index  ...   score_0
+11     11  ...  4.705973
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     12  ...  5.213631
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+    index  ...   score_0
+12     12  ...  5.093553
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     13  ...  4.304531
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+    index  ...  score_0
+13     13  ...  4.58946
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     14  ...  5.790105
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+14     14  ...  4.666543
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     15  ...  5.535478
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+    index  ...   score_0
+15     15  ...  4.080486
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     16  ...  4.121096
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+    index  ...   score_0
+16     16  ...  4.806856
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0     17  ...  4.293615
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+    index  ...   score_0
+17     17  ...  4.716013
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     18  ...  4.141512
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+    index  ...   score_0
+18     18  ...  4.538472
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...  score_0
+0     19  ...  4.17668
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+19     19  ...  4.561814
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     20  ...  5.036238
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+    index  ...   score_0
+20     20  ...  4.566084
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     21  ...  4.037745
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+    index  ...   score_0
+21     21  ...  4.140515
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+   index  ...  score_0
+0     22  ...  4.10138
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+    index  ...   score_0
+22     22  ...  4.264595
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     23  ...  4.333155
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+    index  ...   score_0
+23     23  ...  4.583474
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     24  ...  5.041224
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+    index  ...   score_0
+24     24  ...  4.781378
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     25  ...  4.262604
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+    index  ...   score_0
+25     25  ...  4.712599
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     26  ...  4.256618
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+    index  ...   score_0
+26     26  ...  4.463593
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     27  ...  4.214883
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+    index  ...   score_0
+27     27  ...  4.673294
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ... score_0
+0     28  ...  4.3541
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+    index  ...  score_0
+28     28  ...  4.54105
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     29  ...  4.324001
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+    index  ... score_0
+29     29  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     30  ...  5.189564
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+    index  ...   score_0
+30     30  ...  4.608429
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     31  ...  4.006542
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+    index  ...   score_0
+31     31  ...  4.519253
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     32  ...  4.135147
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+    index  ...   score_0
+32     32  ...  4.586054
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     33  ...  4.431154
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+33     33  ...  4.668969
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     34  ...  4.173517
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+    index  ...   score_0
+34     34  ...  4.070486
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     35  ...  4.335155
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+    index  ...   score_0
+35     35  ...  4.820203
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     36  ...  4.128693
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+    index  ...  score_0
+36     36  ...  4.43412
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     37  ...  4.318256
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+    index  ...   score_0
+37     37  ...  4.541526
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     38  ...  4.749032
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+    index  ...   score_0
+38     38  ...  4.049426
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     39  ...  4.422268
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+39     39  ...  4.673966
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     40  ...  4.527462
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+    index  ...   score_0
+40     40  ...  4.004309
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     41  ...  4.250751
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+    index  ...   score_0
+41     41  ...  4.594027
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     42  ...  4.239722
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+    index  ...   score_0
+42     42  ...  4.053655
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     43  ...  4.332797
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+    index  ...   score_0
+43     43  ...  4.572956
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     44  ...  4.339944
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+    index  ...  score_0
+44     44  ...  4.66995
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     45  ...  4.235379
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+    index  ...   score_0
+45     45  ...  4.560365
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     46  ...  4.287999
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+46     46  ...  4.512751
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     47  ...  4.408764
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+    index  ...   score_0
+47     47  ...  4.500785
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     48  ...  4.681653
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+    index  ...   score_0
+48     48  ...  4.450692
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     49  ...  4.210905
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+    index  ...   score_0
+49     49  ...  4.806856
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...  score_0
+0     50  ...  4.30015
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+    index  ...   score_0
+50     50  ...  4.632302
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     51  ...  4.051075
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+    index  ...   score_0
+51     51  ...  4.171047
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     52  ...  4.302406
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+    index  ...   score_0
+52     52  ...  4.716013
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     53  ...  4.492886
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+    index  ...   score_0
+53     53  ...  4.620409
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     54  ...  4.128693
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+    index  ...   score_0
+54     54  ...  4.652268
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     55  ...  4.091214
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+    index  ...   score_0
+55     55  ...  4.049171
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     56  ...  4.224022
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+    index  ... score_0
+56     56  ...  4.5703
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     57  ...  4.329567
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+    index  ...   score_0
+57     57  ...  4.987382
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     58  ...  4.216221
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+    index  ...   score_0
+58     58  ...  4.525393
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     59  ...  4.304505
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+    index  ...   score_0
+59     59  ...  4.497559
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ... score_0
+0     60  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+    index  ...   score_0
+60     60  ...  4.574014
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0     61  ...  4.082514
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+    index  ...   score_0
+61     61  ...  4.589495
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     62  ...  4.002502
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+62     62  ...  4.677771
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     63  ...  4.231972
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+63     63  ...  4.678304
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     64  ...  4.153889
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+64     64  ...  4.162961
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     65  ...  5.186907
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+65     65  ...  4.590494
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     66  ...  4.155012
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+    index  ...   score_0
+66     66  ...  5.378355
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     67  ...  4.944308
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+    index  ...   score_0
+67     67  ...  5.074317
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+   index  ...  score_0
+0     68  ...  4.11277
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+    index  ...   score_0
+68     68  ...  4.762601
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+   index  ... score_0
+0     69  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+    index  ...   score_0
+69     69  ...  4.619051
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     70  ...  4.454783
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+    index  ...   score_0
+70     70  ...  4.573297
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     71  ...  4.896725
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+    index  ...   score_0
+71     71  ...  4.716013
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     72  ...  6.160796
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+    index  ...   score_0
+72     72  ...  4.595477
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 934, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     73  ...  5.580044
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+    index  ...   score_0
+73     73  ...  4.836762
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     74  ...  4.507823
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+    index  ...   score_0
+74     74  ...  4.584791
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0     75  ...  4.757626
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+    index  ...   score_0
+75     75  ...  4.844386
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     76  ...  6.210256
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+    index  ...  score_0
+76     76  ...  5.06006
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     77  ...  6.173017
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+    index  ...   score_0
+77     77  ...  4.522029
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     78  ...  5.100166
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+    index  ...   score_0
+78     78  ...  5.074317
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     79  ...  6.301534
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+    index  ...   score_0
+79     79  ...  4.917595
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     80  ...  4.211597
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+80     80  ...  4.708723
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     81  ...  4.491609
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+    index  ...   score_0
+81     81  ...  4.466732
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     82  ...  4.463492
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+82     82  ...  4.564686
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 934, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     83  ...  4.397197
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+    index  ...   score_0
+83     83  ...  4.829113
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     84  ...  4.959201
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+84     84  ...  4.611726
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     85  ...  4.516432
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+    index  ...   score_0
+85     85  ...  4.644835
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     86  ...  4.818223
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+    index  ...   score_0
+86     86  ...  4.633186
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...  score_0
+0     87  ...  4.88764
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+    index  ...   score_0
+87     87  ...  4.467224
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     88  ...  5.643193
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+    index  ...   score_0
+88     88  ...  4.595318
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     89  ...  5.767288
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+    index  ...   score_0
+89     89  ...  4.812175
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     90  ...  5.773178
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+    index  ...   score_0
+90     90  ...  4.844009
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     91  ...  5.715246
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+    index  ...   score_0
+91     91  ...  4.818856
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     92  ...  5.976812
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+    index  ...   score_0
+92     92  ...  5.082704
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     93  ...  4.836361
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+    index  ...   score_0
+93     93  ...  4.701739
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     94  ...  4.984182
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+    index  ...   score_0
+94     94  ...  4.760841
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     95  ...  4.895509
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+    index  ...   score_0
+95     95  ...  4.908166
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...  score_0
+0     96  ...  4.65893
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+    index  ...   score_0
+96     96  ...  4.849102
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0      0  ...  4.417441
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+    index  ...   score_0
+97      0  ...  4.841208
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0      1  ...  4.525213
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+    index  ...   score_0
+98      1  ...  4.848543
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0      2  ...  6.349191
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+    index  ...   score_0
+99      2  ...  4.900851
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0      3  ...  4.360662
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+     index  ...   score_0
+100      3  ...  4.600465
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0      4  ...  5.938469
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+101      4  ...  4.826014
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0      5  ...  4.437217
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...  score_0
+102      5  ...  4.76343
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0      6  ...  4.901064
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+103      6  ...  5.074317
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0      7  ...  4.580598
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+104      7  ...  4.825465
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0      8  ...  4.573073
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+105      8  ...  4.187583
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0      9  ...  5.820472
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+     index  ...   score_0
+106      9  ...  4.720228
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     10  ...  5.768999
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+     index  ...  score_0
+107     10  ...  4.92017
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     11  ...  4.311865
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+108     11  ...  4.438458
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     12  ...  4.278129
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+109     12  ...  4.298152
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     13  ...  4.211989
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+110     13  ...  4.074264
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     14  ...  6.100747
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+111     14  ...  4.637048
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     15  ...  4.379983
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+112     15  ...  4.081413
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     16  ...  4.186126
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+113     16  ...  4.988891
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     17  ...  4.736446
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+114     17  ...  4.839921
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     18  ...  4.266556
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+115     18  ...  4.607584
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     19  ...  4.443153
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+116     19  ...  4.628687
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     20  ...  4.444653
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+117     20  ...  4.582532
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     21  ...  4.108949
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+118     21  ...  4.469094
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ... score_0
+0     22  ...  4.3004
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+119     22  ...  4.288884
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...  score_0
+0     23  ...  4.74957
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...  score_0
+120     23  ...  4.61409
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     24  ...  4.266114
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+     index  ...   score_0
+121     24  ...  4.592372
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     25  ...  4.280032
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+     index  ...  score_0
+122     25  ...  4.59881
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     26  ...  4.190552
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+123     26  ...  4.074264
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     27  ...  5.080271
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+124     27  ...  4.055581
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     28  ...  4.250457
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+125     28  ...  4.074264
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     29  ...  5.329705
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+126     29  ...  4.137389
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     30  ...  4.332643
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+127     30  ...  4.587279
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     31  ...  4.491258
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+128     31  ...  4.366814
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     32  ...  4.266549
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+129     32  ...  4.554971
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     33  ...  6.158026
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+130     33  ...  5.178684
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     34  ...  6.079937
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+131     34  ...  5.371497
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0      0  ...  4.280853
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+132      0  ...  4.764962
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0      1  ...  4.312836
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+133      1  ...  4.114517
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0      2  ...  4.434426
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+134      2  ...  4.655546
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...  score_0
+0      3  ...  4.28765
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+135      3  ...  4.220638
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0      4  ...  4.699109
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+136      4  ...  4.459974
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0      5  ...  4.302758
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+137      5  ...  4.441908
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0      6  ...  4.271568
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+138      6  ...  4.713497
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 934, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0      7  ...  5.305213
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+     index  ...   score_0
+139      7  ...  4.414662
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0      8  ...  4.130142
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+140      8  ...  4.200769
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0      9  ...  4.129581
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+141      9  ...  4.421566
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ... score_0
+0     10  ...  4.2554
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+142     10  ...  4.202218
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     11  ...  4.150604
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+143     11  ...  4.429394
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     12  ...  4.724266
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+     index  ...   score_0
+144     12  ...  5.090109
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     13  ...  4.223946
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+145     13  ...  4.004309
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0     14  ...  4.281185
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+     index  ...   score_0
+146     14  ...  4.535142
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     15  ...  4.065937
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+147     15  ...  4.764962
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     16  ...  6.375048
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+148     16  ...  5.468786
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     17  ...  5.079326
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+149     17  ...  4.815576
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     18  ...  5.069717
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+150     18  ...  4.493584
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+   index  ...  score_0
+0     19  ...  4.06604
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...  score_0
+151     19  ...  4.35393
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     20  ...  4.098619
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+152     20  ...  4.100546
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     21  ...  4.121096
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+153     21  ...  4.183062
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     22  ...  4.726928
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+     index  ...  score_0
+154     22  ...  4.10488
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     23  ...  4.905714
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+155     23  ...  4.177941
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     24  ...  4.132557
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+156     24  ...  4.402396
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     25  ...  4.968927
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+157     25  ...  4.076755
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ... score_0
+0     26  ...  4.3051
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+158     26  ...  4.477671
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     27  ...  4.154826
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+159     27  ...  4.358254
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     28  ...  4.266114
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+160     28  ...  4.033815
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     29  ...  5.714443
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+161     29  ...  4.315548
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     30  ...  4.149728
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+     index  ...  score_0
+162     30  ...  4.19183
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     31  ...  4.098245
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+163     31  ...  4.399086
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     32  ...  4.228315
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+164     32  ...  4.262743
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     33  ...  4.529677
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+165     33  ...  4.037739
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...  score_0
+0     34  ...  4.77965
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+166     34  ...  4.379627
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     35  ...  4.304636
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ... score_0
+167     35  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+   index  ...  score_0
+0     36  ...  4.37307
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+168     36  ...  4.479102
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     37  ...  4.272304
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+169     37  ...  4.129608
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     38  ...  4.204358
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+170     38  ...  4.293368
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     39  ...  4.201524
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+     index  ... score_0
+171     39  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     40  ...  4.288475
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+172     40  ...  4.761203
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     41  ...  4.164004
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+173     41  ...  4.459179
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...  score_0
+0     42  ...  4.16554
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+174     42  ...  4.342127
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     43  ...  4.304531
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+175     43  ...  4.065045
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     44  ...  4.154641
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...  score_0
+176     44  ...  4.10081
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     45  ...  4.103792
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+177     45  ...  4.165901
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     46  ...  4.112894
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+178     46  ...  4.091843
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+   index  ... score_0
+0     47  ...   4.184
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+179     47  ...  4.083313
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     48  ...  4.118424
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+180     48  ...  4.281841
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     49  ...  4.396181
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+     index  ...   score_0
+181     49  ...  5.092015
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     50  ...  4.211916
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+182     50  ...  4.417738
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     51  ...  4.511002
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+183     51  ...  4.414648
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...  score_0
+0     52  ...  4.66257
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+184     52  ...  4.483268
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     53  ...  4.075203
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+185     53  ...  4.116653
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     54  ...  4.304531
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+186     54  ...  4.458198
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     55  ...  4.000577
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+187     55  ...  4.449855
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     56  ...  4.919941
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+188     56  ...  4.466669
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     57  ...  4.203965
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+189     57  ...  4.260663
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0     58  ...  4.314487
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+     index  ...   score_0
+190     58  ...  4.565291
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     59  ...  4.128578
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+191     59  ...  4.130666
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     60  ...  4.145452
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+192     60  ...  4.072672
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     61  ...  4.067041
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+193     61  ...  4.027236
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     62  ...  4.024715
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+194     62  ...  4.482109
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     63  ...  4.229098
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+195     63  ...  4.135905
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     64  ...  4.121096
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+196     64  ...  4.463975
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     65  ...  4.128646
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+197     65  ...  4.444593
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     66  ...  4.104769
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...  score_0
+198     66  ...  4.11552
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     67  ...  6.076898
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+199     67  ...  4.868276
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     68  ...  4.451407
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+200     68  ...  4.297487
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 934, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...  score_0
+0     69  ...  4.24625
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+201     69  ...  4.184062
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     70  ...  5.896892
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+202     70  ...  6.491365
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0     71  ...  6.019251
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+     index  ...   score_0
+203     71  ...  5.208044
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     72  ...  4.441999
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+204     72  ...  5.083244
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     73  ...  4.248028
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+     index  ...   score_0
+205     73  ...  4.042504
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     74  ...  4.203642
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+206     74  ...  4.413155
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ... score_0
+0     75  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+207     75  ...  4.307017
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...  score_0
+0     76  ...  4.69982
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+     index  ...   score_0
+208     76  ...  4.315465
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     77  ...  4.017976
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+209     77  ...  4.383495
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     78  ...  4.115805
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+210     78  ...  4.071688
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     79  ...  5.436068
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+211     79  ...  4.570538
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0     80  ...  4.818304
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+212     80  ...  4.769307
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     81  ...  5.116777
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+213     81  ...  4.575734
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     82  ...  4.156849
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+214     82  ...  4.013225
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     83  ...  4.070495
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+215     83  ...  4.416743
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     84  ...  4.104269
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...  score_0
+216     84  ...  4.13577
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     85  ...  4.596865
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+217     85  ...  4.505052
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0     86  ...  4.562537
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+218     86  ...  4.069024
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     87  ...  4.203421
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+219     87  ...  4.763348
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0     88  ...  4.252845
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+220     88  ...  4.212886
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     89  ...  4.810156
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+221     89  ...  4.248677
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     90  ...  4.232167
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+222     90  ...  4.528377
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     91  ...  4.266114
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+     index  ...  score_0
+223     91  ...  4.49197
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...  score_0
+0     92  ...  4.25814
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+224     92  ...  4.286504
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     93  ...  4.413853
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+     index  ...   score_0
+225     93  ...  4.523269
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     94  ...  4.202486
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+226     94  ...  4.033815
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     95  ...  5.308093
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+227     95  ...  4.788803
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     96  ...  4.420773
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+228     96  ...  4.157097
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     97  ...  4.299176
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...  score_0
+229     97  ...  4.21069
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     98  ...  4.438879
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+230     98  ...  4.337293
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0     99  ...  5.876894
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+231     99  ...  4.692729
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1302, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0    100  ...  6.084065
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+232    100  ...  5.089339
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0    101  ...  5.696237
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+233    101  ...  4.635919
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0    102  ...  6.001301
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+234    102  ...  4.846012
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0    103  ...  4.119554
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+235    103  ...  4.426267
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0    104  ...  4.300953
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ... score_0
+236    104  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0    105  ...  4.086682
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+237    105  ...  4.339893
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    106  ...  4.184417
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+238    106  ...  4.062753
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...   score_0
+0    107  ...  4.698022
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1265, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+239    107  ...  5.065912
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 2000, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+   index  ...   score_0
+0    108  ...  4.465258
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+240    108  ...  4.052581
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    109  ...  4.216856
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+241    109  ...  4.013904
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0    110  ...  4.244051
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1853, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+242    110  ...  4.424041
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0    111  ...  4.628826
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+243    111  ...  4.673751
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0    112  ...  5.273703
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+244    112  ...  4.402352
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 934, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+   index  ...  score_0
+0    113  ...  4.14995
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+245    113  ...  4.104918
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    114  ...  4.163297
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+246    114  ...  4.056425
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0    115  ...  4.313968
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+247    115  ...  4.289963
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    116  ...  4.149809
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+248    116  ...  4.036032
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0    117  ...  4.188777
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+249    117  ...  4.290559
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0    118  ...  4.075501
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+250    118  ...  4.336707
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0    119  ...  4.202771
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 971, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+251    119  ...  4.324462
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    120  ...  4.154754
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+252    120  ...  4.340623
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0    121  ...  4.150036
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+253    121  ...  4.251667
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...  score_0
+0    122  ...  4.22606
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+254    122  ...  4.346808
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0    123  ...  4.066774
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+255    123  ...  4.494202
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...  score_0
+0    124  ...  4.71387
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+256    124  ...  4.031589
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    125  ...  4.159499
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+257    125  ...  4.149074
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0    126  ...  4.304531
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ... score_0
+258    126  ...  4.2517
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0    127  ...  4.736277
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+259    127  ...  4.338562
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0    128  ...  4.110368
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+260    128  ...  4.303547
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0    129  ...  4.648339
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+261    129  ...  4.572888
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0    130  ...  4.902834
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+     index  ...   score_0
+262    130  ...  4.344574
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...  score_0
+0    131  ...  4.48089
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+263    131  ...  4.448337
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...  score_0
+0    132  ...  4.12203
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+264    132  ...  4.351082
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1926, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...  score_0
+0    133  ...  4.98956
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+     index  ...  score_0
+265    133  ...  4.68029
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 420, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0    134  ...  4.478532
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+266    134  ...  4.436004
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0    135  ...  4.266114
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+267    135  ...  4.024488
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1044, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0    136  ...  4.193392
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+268    136  ...  4.070765
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1338, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+   index  ...   score_0
+0    137  ...  4.098907
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ... score_0
+269    137  ...     4.0
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0    138  ...  4.520746
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': True}
+     index  ...   score_0
+270    138  ...  4.583613
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0    139  ...  4.334964
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1118, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...  score_0
+271    139  ...  4.50692
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0    140  ...  5.363397
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1889, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+272    140  ...  4.827017
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+   index  ...  score_0
+0      0  ...  4.99936
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 8, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+273      0  ...  5.245027
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...   score_0
+0      1  ...  4.913819
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+274      1  ...  5.047636
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': True}
+   index  ...   score_0
+0      2  ...  5.289096
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+     index  ...  score_0
+275      2  ...  5.39673
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0      3  ...  5.551967
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+276      3  ...  4.839459
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0      4  ...  5.206329
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...   score_0
+277      4  ...  4.732869
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0      5  ...  4.675064
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+278      5  ...  4.858727
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0      6  ...  4.284625
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+279      6  ...  4.957227
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0      7  ...  5.002672
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+     index  ...   score_0
+280      7  ...  5.165761
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0      8  ...  4.266114
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+281      8  ...  4.592971
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0      9  ...  5.141714
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1632, 'min_samples_split': 4, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+     index  ...   score_0
+282      9  ...  4.872786
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     10  ...  5.353088
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+283     10  ...  5.029943
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...  score_0
+0     11  ...  5.07435
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1485, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': False}
+     index  ...   score_0
+284     11  ...  4.986712
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...  score_0
+0     12  ...  4.44579
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+285     12  ...  5.057548
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 200, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     13  ...  4.931158
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+286     13  ...  5.171402
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 8, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+   index  ... score_0
+0     14  ...  4.3692
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+287     14  ...  4.715102
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     15  ...  4.881226
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+288     15  ...  4.994942
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     16  ...  5.138383
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+289     16  ...  5.077514
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1228, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     17  ...  5.113245
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 567, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+290     17  ...  5.091501
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 714, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+   index  ...   score_0
+0     18  ...  4.879201
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 897, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}
+     index  ...   score_0
+291     18  ...  5.118315
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1375, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     19  ...  5.463038
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': False}
+     index  ...   score_0
+292     19  ...  5.610508
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1412, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False}
+   index  ...  score_0
+0     20  ...  5.00486
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+293     20  ...  4.983239
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     21  ...  5.187509
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+294     21  ...  5.183466
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 457, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+   index  ...   score_0
+0     22  ...  5.077955
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1081, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+295     22  ...  4.971027
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     23  ...  4.971911
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+296     23  ...  5.072207
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+   index  ...   score_0
+0     24  ...  4.779811
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+     index  ...  score_0
+297     24  ...  5.03146
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     25  ...  5.324643
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 10, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+298     25  ...  5.212538
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1669, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+   index  ...   score_0
+0     26  ...  5.066869
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 6, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': False}
+     index  ...  score_0
+299     26  ...  4.72604
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 934, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     27  ...  5.108272
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': False}
+     index  ...   score_0
+300     27  ...  4.821405
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 9, 'bootstrap': True}
+   index  ...   score_0
+0     28  ...  5.221431
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 861, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': False}
+     index  ...   score_0
+301     28  ...  4.928449
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 677, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...  score_0
+0     29  ...  4.41657
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+302     29  ...  5.279775
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1155, 'min_samples_split': 4, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     30  ...  4.506559
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+     index  ... score_0
+303     30  ...   4.772
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     31  ...  4.313352
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 236, 'min_samples_split': 10, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+     index  ...  score_0
+304     31  ...  4.85491
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1191, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     32  ...  4.386753
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 604, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+305     32  ...  4.952034
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     33  ...  5.604771
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}
+     index  ...  score_0
+306     33  ...  5.05622
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 787, 'min_samples_split': 4, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': False}
+   index  ...   score_0
+0     34  ...  5.200546
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 5, 'bootstrap': True}
+     index  ...   score_0
+307     34  ...  4.925575
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 824, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': False}
+   index  ...   score_0
+0     35  ...  5.048755
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 273, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 6, 'bootstrap': True}
+     index  ...   score_0
+308     35  ...  5.047452
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+   index  ...   score_0
+0     36  ...  4.658879
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+309     36  ...  5.081705
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1008, 'min_samples_split': 6, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}
+   index  ...   score_0
+0     37  ...  4.721349
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 346, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 4, 'bootstrap': True}
+     index  ...   score_0
+310     37  ...  4.925608
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1963, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+   index  ...   score_0
+0     38  ...  5.096686
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1522, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': True}
+     index  ...   score_0
+311     38  ...  4.891524
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1816, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     39  ...  4.842151
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1742, 'min_samples_split': 6, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 9, 'bootstrap': False}
+     index  ...   score_0
+312     39  ...  5.286001
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1779, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     40  ...  5.272903
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1595, 'min_samples_split': 6, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+313     40  ...  5.156028
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1448, 'min_samples_split': 4, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 6, 'bootstrap': True}
+   index  ...   score_0
+0     41  ...  4.997339
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 640, 'min_samples_split': 8, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 5, 'bootstrap': False}
+     index  ...   score_0
+314     41  ...  4.783302
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 751, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 2, 'bootstrap': False}
+   index  ...   score_0
+0     42  ...  4.987776
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1559, 'min_samples_split': 8, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 7, 'bootstrap': True}
+     index  ...   score_0
+315     42  ...  5.164032
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 493, 'min_samples_split': 4, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 3, 'bootstrap': False}
+   index  ...   score_0
+0     43  ...  5.386049
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 310, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 8, 'bootstrap': True}
+     index  ...   score_0
+316     43  ...  5.073682
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 1706, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 1, 'bootstrap': True}
+   index  ...   score_0
+0     44  ...  4.809356
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}
+     index  ...   score_0
+317     44  ...  4.964493
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 530, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 3, 'bootstrap': True}
+   index  ...   score_0
+0     45  ...  5.899648
+
+[1 rows x 16 columns]
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+{'n_estimators': 383, 'min_samples_split': 6, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 1, 'bootstrap': True}
+     index  ...   score_0
+318     45  ...  4.670231
+
+[1 rows x 16 columns]
