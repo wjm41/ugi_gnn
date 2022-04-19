@@ -1,3 +1,4 @@
+import plotly.express as px
 import pandas as pd
 import numpy as np
 
@@ -62,16 +63,54 @@ def train_and_score(df_to_score: pd.DataFrame,
     for n in range(n_models):
         score_name = 'score_'+str(n)
         list_of_score_names.append(score_name)
-        x = np.vstack(df_training_data['mpnn_fp'].to_numpy())
+        x = np.vstack(df_training_data[input_rep].to_numpy())
         random_forest_trained_on_all_data = fit_forest(
-            np.vstack(df_training_data[input_rep].to_numpy()), df_training_data['pIC50'].to_numpy())
+            x, df_training_data['pIC50'].to_numpy())
 
         df_with_predictions = run_prediction_on_dataframe(
             df_to_score, model=random_forest_trained_on_all_data, input_rep=input_rep, load_name=model_ckpt)
         df_with_predictions.rename(
             columns={'predicted_pIC50': score_name}, inplace=True)
+        print(df_with_predictions)
         list_of_score_dfs.append(df_with_predictions)
 
     df_mean = merge_ensemble_of_score_dfs(
         list_of_score_dfs, names_of_scores=list_of_score_names)
+    df_mean = df_mean.rename(
+        columns={'pred_mean': f'{input_rep}_pred_mean'})
+    df_mean[f'predicted_IC50_{input_rep}'] = np.power(
+        10, -(df_mean[f'{input_rep}_pred_mean']-6))
+
     return df_mean
+
+
+def plot_regression_comparison(df_with_scores, title):
+
+    fig_scatter = px.scatter(df_with_scores,
+                             x='IC50',
+                             y='predicted_IC50_mpnn_fp',
+                             log_x=True,
+                             log_y=True,
+                             height=800,
+                             title=title)
+
+    fig_scatter_morgan = px.scatter(df_with_scores,
+                                    x='IC50',
+                                    y='predicted_IC50_morgan_fp',
+                                    color_discrete_sequence=['red'],
+                                    log_x=True,
+                                    log_y=True)
+
+    fig_scatter['data'][0]['showlegend'] = True
+    fig_scatter['data'][0]['name'] = 'mpnn_fp'
+    fig_scatter_morgan['data'][0]['showlegend'] = True
+    fig_scatter_morgan['data'][0]['name'] = 'morgan_fp'
+
+    fig_scatter.add_trace(fig_scatter_morgan.data[0])
+    fig_scatter.add_shape(type='line',
+                          x0=0.1,
+                          x1=100,
+                          y0=0.1,
+                          y1=100,
+                          line=dict(color='black', dash='dash'))
+    fig_scatter.show()
