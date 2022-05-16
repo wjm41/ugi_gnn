@@ -8,11 +8,18 @@ from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*')  # removes annoying RDKit warnings
 
 
+def ugi_decomposition_rxn() -> rdChemReactions.ChemicalReaction:
+
+    # ugi into acid, amine, aldehyde, isocyanide
+    ugi_decomposition_smarts = '[*:1][C](=[O])[N]([*:2])[C]([*:3])([*:4])[C](=[O])[N]([#1])[*:5]>>[#6:1][C](=[O])[O][#1].[#6:2][N]([#1])[#1].[#6:3][C](=[O])[#1:4].[#6:5][N+]#[C-]'
+    ugi_rxn = rdChemReactions.ReactionFromSmarts(ugi_decomposition_smarts)
+    return ugi_rxn
+
+
 def decompose_ugi_molecule_into_components(smiles_or_mol):
 
     # ugi into acid, amine, aldehyde, isocyanide
-    decomp_smarts = '[*:1][C](=[O])[N]([*:2])[C]([*:3])([*:4])[C](=[O])[N]([#1])[*:5]>>[#6:1][C](=[O])[O][#1].[#6:2][N]([#1])[#1].[#6:3][C](=[O])[#1:4].[#6:5][N+]#[C-]'
-    decomp_rxn = rdChemReactions.ReactionFromSmarts(decomp_smarts)
+    decomp_rxn = ugi_decomposition_rxn()
 
     if isinstance(smiles_or_mol, str):
         mol = Chem.MolFromSmiles(smiles_or_mol)
