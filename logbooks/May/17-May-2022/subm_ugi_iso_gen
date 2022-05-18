@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -J subm_ugi_iso_gen
+#SBATCH -A LEE-WJM41-SL2-CPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=76
+#SBATCH --cpus-per-task=1
+#SBATCH --time=12:00:00
+#SBATCH --mail-user=wjm41@cam.ac.uk
+#SBATCH --output=/rds-d2/user/wjm41/hpc-work/datasets/Ugis/logbooks/May/17-May-2022/subm_ugi_iso_gen.out
+#SBATCH -p icelake-himem
+#SBATCH --mail-type=ALL
+. /etc/profile.d/modules.sh
+module purge
+module load rhel8/default-icl
+module load miniconda/3
+source activate dgl_cpu
+cd /rds-d2/user/wjm41/hpc-work/datasets/Ugis/; pip install . --use-feature=in-tree-build
+mpirun -np 76 -ppn 76 python /rds-d2/user/wjm41/hpc-work/datasets/Ugis/logbooks/May/17-May-2022/generate_ugi_library_from_isocyanides.py --input_smiles_file=/rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/enamine_library_generation/enumerated_primary_amine_library.csv --output_file=/rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/enamine_library_generation/enumerated_isocyanide_library.csv
