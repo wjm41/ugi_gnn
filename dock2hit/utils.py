@@ -113,7 +113,7 @@ def write_slurm_script(job_name: str,
         module_options = [
             '. /etc/profile.d/modules.sh',
             'module purge',
-            'module load rhel8/default-amp',
+            'module load rhel8/default-icl',
             'module load miniconda/3',
             'source activate dgl_cpu',
         ]
