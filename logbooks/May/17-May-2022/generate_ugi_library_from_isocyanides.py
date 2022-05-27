@@ -61,6 +61,23 @@ def replace_isocyanide_for_single_ugi(input_ugi_mol: Union[str, Mol],
     return df_this_ugi
 
 
+def load_enamine_amines(test: bool = False,):
+    enamine_dir = '/rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/enamine_library_generation/'
+    primary_sdf = enamine_dir + 'Enamine_Primary_Amines_37221cmpds_20220404.sdf'
+    secondary_sdf = enamine_dir + 'Enamine_Secondary_Amines_25592cmpds_20220404.sdf'
+
+    df_amines = PandasTools.LoadSDF(
+        primary_sdf, idName='rdkit_ID', smilesName='SMILES', molColName='mol')[['ID', 'SMILES', 'mol']]
+
+    if test:
+        df_amines = df_amines.head()
+    else:
+        df_secondary = PandasTools.LoadSDF(
+            secondary_sdf, idName='rdkit_ID', smilesName='SMILES', molColName='mol')[['ID', 'SMILES', 'mol']]
+        df_amines = pd.concat([df_amines, df_secondary]).reset_index(drop=True)
+    return df_amines
+
+
 def slice_indices_according_to_rank_and_size(my_rank: int, mpi_size: int, object_to_slice: int):
 
     if not isinstance(object_to_slice, int):
@@ -80,20 +97,8 @@ def enumerate_isocyanides_for_library_of_ugis(input_df: str,
                                               test: bool = False,):
 
     replacement_rxn = replace_isocyanide()
-    enamine_dir = '/rds-d2/user/wjm41/hpc-work/datasets/Ugis/datasets/enamine_library_generation/'
-    primary_sdf = enamine_dir + 'Enamine_Primary_Amines_37221cmpds_20220404.sdf'
-    secondary_sdf = enamine_dir + 'Enamine_Secondary_Amines_25592cmpds_20220404.sdf'
 
-    df_amines = PandasTools.LoadSDF(
-        primary_sdf, idName='rdkit_ID', smilesName='SMILES', molColName='mol')[['ID', 'SMILES', 'mol']]
-
-    if test:
-        df_amines = df_amines.head()
-    else:
-        df_secondary = PandasTools.LoadSDF(
-            secondary_sdf, idName='rdkit_ID', smilesName='SMILES', molColName='mol')[['ID', 'SMILES', 'mol']]
-        df_amines = pd.concat([df_amines, df_secondary])
-
+    df_amines = load_enamine_amines(test)
     df_amines = df_amines.rename(
         columns={'ID': 'ID_x', 'SMILES': 'SMILES_x'})
 
@@ -202,5 +207,18 @@ def mpi_enumeration(input_smiles_file: str,
     return
 
 
+def enumeration_with_best_mol(output_file: str,
+                              test: bool = False):
+    best_ugi_mol = 'CC(C)Oc1ccc(cc1)N(C(C(=O)NCCc1ccns1)c1cccnc1)C(=O)c1cocn1'
+    df_amines = load_enamine_amines(test)
+
+    replacement_rxn = replace_isocyanide()
+
+    df_isocyanide = replace_isocyanide_for_single_ugi(
+        Chem.MolFromSmiles(best_ugi_mol), df_amines, replacement_rxn)
+
+    df_isocyanide.drop(columns='mol').to_csv(output_file, index=False)
+
+
 if __name__ == '__main__':
-    Fire(mpi_enumeration)
+    Fire(enumeration_with_best_mol)

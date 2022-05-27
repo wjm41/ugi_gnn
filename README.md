@@ -4,12 +4,9 @@ Using learnt embeddings from GNNs pretrained on docking scores to predict pIC50 
 
 ## Backlog
 
-- [x] Write tests for data loading and other utility functions
-- [x] Decouple scripts
-  - [ ] genfps
-  - [x] training
-- [ ] Weigh data by dockscore - how much of a difference does it make to the model performance?
-- [x] Begin model training
+- [ ] Implement structure filters (same as FRESCO)
+- [ ] Check if predicted structures already present
+- [ ] 
 
 ## Log
 
